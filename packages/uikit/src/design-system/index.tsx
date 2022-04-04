@@ -1,3 +1,5 @@
+/// <reference types="./mui"/>
+
 export { mergeSx } from "./utils/merge-sx";
 export { addSxProp } from "./utils/add-sx-prop";
 export { bindPropsSxMerge } from "./utils/bind-props-sx-merge";

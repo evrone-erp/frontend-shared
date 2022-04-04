@@ -9,10 +9,6 @@ module.exports = {
             src: "src/design-system/design-tokens/design-tokens.json",
             dest: "dist/design-system/design-tokens",
           },
-          {
-            src: "src/design-system/mui.d.ts",
-            dest: "dist/design-system",
-          },
         ],
       })
     );
