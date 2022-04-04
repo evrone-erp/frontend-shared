@@ -1,0 +1,1 @@
+export { BaseAvatarUpload } from "./BaseAvatarUpload";

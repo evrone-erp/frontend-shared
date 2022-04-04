@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="ui/templates"/>
+
+## Templates
+
+Component template where $1 - component name
+```tsx
+import { Box } from "@mui/material";
+
+import { Sx } from "design-system";
+
+export type $1Props = {
+	sx?: Sx;
+	className?: string;
+};
+
+export function $1({ sx, className }: $1Props) {
+	return <Box sx={sx} className={className}>$2</Box>;
+}
+```
+
+Template for storybook where $1 - component name
+```
+import { ComponentMeta, Story } from "@storybook/react";
+import { $1, $1Props } from "./$1";
+
+export default {
+	title: "UI/$1",
+	component: $1,
+} as ComponentMeta<typeof $1>;
+
+function Template(props: Partial<$1Props>) {
+	return <$1 {...props} />;
+}
+
+export const Main: Story = Template.bind({});
+Main.args = {};
+```
