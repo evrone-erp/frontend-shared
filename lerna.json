@@ -1,8 +1,10 @@
 {
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/*"
+  ],
   "useWorkspaces": true,
   "npmClient": "yarn",
-  "version": "independ",
+  "version": null,
   "command": {
     "publish": {
       "registry": ""
