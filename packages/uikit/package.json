@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -85,13 +85,13 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
+    "@evrone-erp/react-std": "*",
     "browser-image-compression": "^1.0.17",
     "classnames": "^2.3.1",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "luxon": "^2.3.1",
     "react-dropzone": "^12.0.4",
-    "react-number-format": "^4.9.1",
-    "@evrone-erp/react-std": "*"
+    "react-number-format": "^4.9.1"
   }
 }
