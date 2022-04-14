@@ -10,8 +10,9 @@ Main tools
 - [Get github personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with `write:packages` rules and replace `Token` in .npmrc file.
 - `yarn`
 
-### Publish
-
+### Manual Publishing
+- if you did't create/verify your user in the registry early - do it.  
+`npm adduser` 
 - `npx lerna publish`
 
 ### Integration
