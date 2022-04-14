@@ -1,4 +1,5 @@
-/// <reference types="./mui"/>
+// necessary for exporting of mui overrides outside of this package.  (https://github.com/mui/material-ui/issues/31097)
+import './mui-module-overrides';
 
 export { mergeSx } from "./utils/merge-sx";
 export { addSxProp } from "./utils/add-sx-prop";

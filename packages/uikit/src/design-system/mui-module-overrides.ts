@@ -1,4 +1,5 @@
-import { TypographyName, ColorName } from "../src/design-tokens";
+import { CSSProperties } from "react";
+import { TypographyName, ColorName } from "./design-tokens";
 
 declare module "@mui/material/styles" {
   interface BreakpointOverrides {
