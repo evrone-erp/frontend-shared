@@ -30,8 +30,7 @@ jobs:
       - name: Install
         run: yarn install
       - name: "Version and publish"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npx lerna version --conventional-commits --yes
-          npx lerna publish from-git --yes
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          registry: https://npm.pkg.github.com
