@@ -12,9 +12,10 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v3
         with:
-          node-version: '12'
+          node-version: '16'
           cache: 'yarn'
           registry-url: 'https://npm.pkg.github.com'
+          scope: '@evrone-erp'
       - name: Git Identity
         run: |
           git config --global user.name 'github-actions[bot]'
@@ -32,5 +33,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npx lerna version --conventional-commits --conventional-graduate --yes
+          npx lerna version minor --yes
           npx lerna publish from git --yes
