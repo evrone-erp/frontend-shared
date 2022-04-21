@@ -11,6 +11,7 @@ Main tools
 - `yarn`
 
 ### Manual Publishing
+Notice: packages are published automatically after merging PR to the master branch.
 - if you did't create/verify your user in the registry early - do it.  
 `npm adduser` 
 - `npx lerna publish`
@@ -24,6 +25,9 @@ Main tools
 - [Get github personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with `read:packages` rules and replace `Token` in .npmrc file.
 - Install package `yarn add @evrone-erp/lib-name`
 
+### Integration with Ui-kit package
+If some evrone-erp/package needs to use ui-kit - must install MUI (@emotion/react, @emotion/styled, @mui/lab, @mui/material) and Next.js libraries in that package.
+Reason: thus solution give unified stack of libraries, predefined design-system and the ability to install more recent minor versions of stack's libraries
 
 ### Create new lib
 
