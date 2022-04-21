@@ -7,6 +7,11 @@
   ],
   "devDependencies": {
     "lerna": "^4.0.0",
-    "eslint-plugin-prettier": "3.4.1"
+    "eslint-plugin-prettier": "3.4.1",
+    "_webpack-comment": "help to solve problem of storybook's building - https://github.com/storybookjs/storybook/issues/15336",
+    "webpack": "^5.72.0"
+  },
+  "resolutions": {
+    "@types/react": "^17.0.44"
   }
 }
