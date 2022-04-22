@@ -11,7 +11,9 @@ Main tools
 - `yarn`
 
 ### Manual Publishing
-Notice: packages are published automatically after merging PR to the master branch.
+IMPORTANT: packages are published automatically after merging PR to the master branch!!!
+So, manual publishing and next steps usefull ONLY for unusual cases.
+
 - if you did't create/verify your user in the registry early - do it.  
 `npm adduser` 
 - `npx lerna publish`
