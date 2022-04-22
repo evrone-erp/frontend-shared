@@ -1,6 +1,7 @@
 import { ComponentMeta, Story } from "@storybook/react";
 import React, { useState } from "react";
-import { BaseTextField, BaseTextFieldProps } from "./BaseTextField";
+import { BaseTextField } from "./BaseTextField";
+import { BaseTextFieldProps } from "./types";
 
 export default {
   title: "UI/BaseTextField",
@@ -21,30 +22,39 @@ function Template({ onChange, ...props }: BaseTextFieldProps): JSX.Element {
   );
 }
 
-export const Base: Story = Template.bind({});
+type TextFieldStory = Story<BaseTextFieldProps>;
+
+export const Base: TextFieldStory = Template.bind({});
 Base.args = {
   label: "Label",
+  type: "text",
 };
 
-export const Multiline: Story = Template.bind({});
+export const Multiline: TextFieldStory = Template.bind({});
 Multiline.args = {
   label: "Multiline",
   multiline: true,
 };
 
-export const WithError: Story = Template.bind({});
+export const WithError: TextFieldStory = Template.bind({});
 WithError.args = {
   label: "Label",
   error: "Error text",
 };
 
-export const Phone: Story = Template.bind({});
+export const Phone: TextFieldStory = Template.bind({});
 Phone.args = {
   label: "Phone number",
-  type: "phone",
+  type: "tel",
 };
 
-export const Select: Story = Template.bind({});
+export const Password: TextFieldStory = Template.bind({});
+Password.args = {
+  label: "Password",
+  type: 'password',
+};
+
+export const Select: TextFieldStory = Template.bind({});
 Select.args = {
   label: "Label",
   options: [

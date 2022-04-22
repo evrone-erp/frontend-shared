@@ -13,5 +13,11 @@ function Template(props: Partial<BaseTextButtonProps>) {
 
 export const Main: Story = Template.bind({});
 Main.args = {
-  children: "Раскрыть",
+  children: "Кликнуть",
+};
+
+export const Disabled: Story = Template.bind({});
+Disabled.args = {
+  disabled: true,
+  children: "Не кликнуть =(",
 };
