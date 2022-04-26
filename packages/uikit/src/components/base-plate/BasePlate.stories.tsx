@@ -4,6 +4,10 @@ import { BaseButton } from "../base-button";
 import { BaseLink } from "../base-link";
 import { BasePlate, BasePlateProps } from "./BasePlate";
 import { BasePlateHeader } from "./BasePlateHeader";
+import { BasePlateFooter } from "./BasePlateFooter";
+import { BaseTextButton } from "components/base-text-button";
+import { BaseCheckBox } from "components/base-check-box";
+import { Box } from "@mui/material";
 
 export default {
   title: "UI/BasePlate",
@@ -57,5 +61,25 @@ WithHeader2.args = {
       subTitle="Middle+"
       link={<BaseLink href="#">How to lvlup</BaseLink>}
     />
+  ),
+};
+
+export const WithHeaderAndFooter: Story = Template.bind({});
+WithHeaderAndFooter.args = {
+  children: (
+    <>
+      <BasePlateHeader
+        title="Account manager"
+        subTitle="Middle+"
+        link={<BaseLink href="#">How to lvlup</BaseLink>}
+      />
+      <Box component="p" typography="title-2">Important information. Absolutly.</Box>
+      <BasePlateFooter
+        primaryAction={<BaseTextButton onClick={() => alert('Krasavchik.')}>Click here!</BaseTextButton>}
+        secondaryAction={
+          <BaseCheckBox label="Is true?" sx={{ marginRight: 0 }} />
+        }
+      />
+    </>
   ),
 };

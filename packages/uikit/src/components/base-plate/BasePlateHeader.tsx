@@ -1,17 +1,16 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-import { mergeSx, Sx } from "design-system";
+import { mergeSx } from "design-system";
+import { BaseComponentProps } from "design-system/types";
 
 export type BasePlateHeaderProps = {
-  sx?: Sx;
-  className?: string;
   title: string;
   subTitle?: string;
   inlineSubtitle?: boolean;
   action?: JSX.Element;
   link?: JSX.Element;
-};
+} & BaseComponentProps;
 
 export function BasePlateHeader({
   sx,
@@ -48,6 +47,7 @@ export function BasePlateHeader({
           </Typography>
         )}
       </Box>
+      {/* TODO: maybe need to combine link and action to one prop */}
       {link}
       {action && (
         <Box sx={{ position: "absolute", right: "-6px", top: "-6px" }}>

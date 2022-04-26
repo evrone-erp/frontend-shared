@@ -1,7 +1,9 @@
 const copy = require("rollup-plugin-copy");
+const svgr = require('@svgr/rollup');
+
 module.exports = {
   // This function will run for each entry/format/env combination
-  rollup(config, options) {
+  rollup(config) {
     config.plugins.push(
       copy({
         targets: [
@@ -10,8 +12,10 @@ module.exports = {
             dest: "dist/design-system/design-tokens",
           },
         ],
-      })
+      }),
+      svgr(),
     );
+
     return config;
   },
 };
