@@ -31,8 +31,9 @@ export const createTheme = (type: ThemeKey) => {
     breakpoints: {
       values: {
         mob: 0,
-        tab: 900,
-        desk: 1360,
+        tab: 540,
+        lap: 1080,
+        desk: 1366,
       },
     },
   });
