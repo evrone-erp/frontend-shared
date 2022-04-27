@@ -12,6 +12,8 @@ import { ArrowRightIcon } from "./ArrowRightIcon";
 import { UnpaidIcon } from "./UnpaidIcon";
 import { SickIcon } from "./SickIcon";
 import { VacationIcon } from "./VacationIcon";
+import { OpenedEyeIcon } from "./OpenedEyeIcon";
+import { ClosedEyeIcon } from "./ClosedEyeIcon";
 
 export const icons = {
   plus: PlusIcon,
@@ -28,6 +30,8 @@ export const icons = {
   unpaid: UnpaidIcon,
   sick: SickIcon,
   vacation: VacationIcon,
+  "opened-eye": OpenedEyeIcon,
+  "closed-eye": ClosedEyeIcon,
 };
 export type IconType = keyof typeof icons;
 export const iconTypes = Object.keys(icons) as IconType[];
