@@ -1,4 +1,4 @@
-import { ThemeKey } from "@evrone-erp/uikit";
+import { ThemeKey } from "design-system";
 
 export const getSystemColorScheme = (defaultKey: ThemeKey): ThemeKey => {
   if (typeof window !== "undefined" && window.matchMedia) {
