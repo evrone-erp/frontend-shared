@@ -4,8 +4,7 @@ import { BaseIconButton } from "components/base-icon-button";
 import { StyledMuiTextField } from "../../view/StyledMuiTextField";
 import { PasswordFieldProps } from "../../types";
 import { getCommonTextFieldProps } from "../../lib/getCommonTextFieldProps";
-import PasswordHidden from "./assets/closed-eye.svg";
-import PasswordVisible from "./assets/opened-eye.svg";
+import { BaseIcon } from "components/base-icon";
 
 export const PasswordField: React.FC<PasswordFieldProps> = (props) => {
   const commonProps = getCommonTextFieldProps(props, true);
@@ -27,7 +26,11 @@ export const PasswordField: React.FC<PasswordFieldProps> = (props) => {
               aria-label="toggle password visibility"
               onClick={handlePasswordVisibilityIconClick}
             >
-              {isValueVisibile ? <PasswordVisible /> : <PasswordHidden />}
+              {isValueVisibile ? (
+                <BaseIcon type="opened-eye" />
+              ) : (
+                <BaseIcon type="closed-eye" />
+              )}
             </BaseIconButton>
           </InputAdornment>
         ),

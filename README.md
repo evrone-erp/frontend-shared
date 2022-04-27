@@ -11,6 +11,7 @@ Main tools
 - `yarn`
 
 ### Manual Publishing
+
 IMPORTANT: packages are published automatically after merging PR to the master branch!!!
 So, manual publishing and next steps usefull ONLY for unusual cases.
 
@@ -28,6 +29,7 @@ So, manual publishing and next steps usefull ONLY for unusual cases.
 - Install package `yarn add @evrone-erp/lib-name`
 
 ### Integration with Ui-kit package
+
 If some evrone-erp/package needs to use ui-kit - must install MUI (@emotion/react, @emotion/styled, @mui/lab, @mui/material) and Next.js libraries in that package.
 Reason: thus solution give unified stack of libraries, predefined design-system and the ability to install more recent minor versions of stack's libraries
 
@@ -46,6 +48,11 @@ It is recommended to use [tsdx](https://tsdx.io/) to create new libraries
     "@evrone-erp:registry": "https://npm.pkg.github.com/evrone-erp"
   },
   `
+### Adding and using SVG icons
 
-
-
+BaseIcon component helps to use custom SVG icons inside ui-kit and outisde.
+Adding a new icon:
+- Minimize svg - https://jakearchibald.github.io/svgomg/
+- Create new component in base-icon/icons
+- Use IconRoot in the root of new icon component
+- Pass minimized svg in IconRoot

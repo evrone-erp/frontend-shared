@@ -32,7 +32,7 @@ declare module "@mui/material/Typography" {
     body1: false;
     body2: false;
     button: false;
-    caption: false;
+    caption: true;
     overline: false;
   }
 }

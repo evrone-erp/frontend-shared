@@ -8,6 +8,7 @@ export * from "./base-help";
 export * from "./base-icon";
 export * from "./base-icon-button";
 export * from "./base-link";
+export * from "./base-nav-header";
 export * from "./base-plate";
 export * from "./base-progess";
 export * from "./base-progress-bar";
