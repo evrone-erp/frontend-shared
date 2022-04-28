@@ -12,49 +12,47 @@ function Template({
   children,
   ...props
 }: PropsWithChildren<BaseGridProps>): JSX.Element {
-  return <BaseGrid {...props}>{children}</BaseGrid>;
+  return (
+    <BaseGrid container {...props}>
+      {children}
+    </BaseGrid>
+  );
 }
 
 export const Main: Story<PropsWithChildren<BaseGridProps>> = Template.bind({});
 Main.args = {
   children: (
     <>
-      <BaseGrid.Item mob={12} tab={8} lap={6} desk={4}>
+      <BaseGrid item mob={12} tab={8} lap={6} desk={4}>
         <BasePlate>
           <BasePlateHeader title="Grid Item" />
           <span>mob - 12, tab - 8, lap - 6, desk - 4</span>
         </BasePlate>
-      </BaseGrid.Item>
-      <BaseGrid.Item mob={12} tab={8} lap={6} desk={4}>
+      </BaseGrid>
+      <BaseGrid item mob={12} tab={8} lap={6} desk={4}>
         <BasePlate>
           <BasePlateHeader title="Grid Item" />
           <span>mob - 12, tab - 8, lap - 6, desk - 4</span>
         </BasePlate>
-      </BaseGrid.Item>{" "}
-      <BaseGrid.Item mob={12} tab={8} lap={6} desk={4}>
+      </BaseGrid>
+      <BaseGrid item mob={12} tab={8} lap={6} desk={4}>
         <BasePlate>
           <BasePlateHeader title="Grid Item" />
           <span>mob - 12, tab - 8, lap - 6, desk - 4</span>
         </BasePlate>
-      </BaseGrid.Item>{" "}
-      <BaseGrid.Item mob={12} tab={8} lap={6} desk={4}>
+      </BaseGrid>
+      <BaseGrid item mob={12} tab={8} lap={6} desk={4}>
         <BasePlate>
           <BasePlateHeader title="Grid Item" />
           <span>mob - 12, tab - 8, lap - 6, desk - 4</span>
         </BasePlate>
-      </BaseGrid.Item>{" "}
-      <BaseGrid.Item mob={12} tab={8} lap={6} desk={4}>
+      </BaseGrid>
+      <BaseGrid item mob={12} tab={8} lap={6} desk={4}>
         <BasePlate>
           <BasePlateHeader title="Grid Item" />
           <span>mob - 12, tab - 8, lap - 6, desk - 4</span>
         </BasePlate>
-      </BaseGrid.Item>{" "}
-      <BaseGrid.Item mob={12} tab={8} lap={6} desk={4}>
-        <BasePlate>
-          <BasePlateHeader title="Grid Item" />
-          <span>mob - 12, tab - 8, lap - 6, desk - 4</span>
-        </BasePlate>
-      </BaseGrid.Item>
+      </BaseGrid>
     </>
   ),
 };

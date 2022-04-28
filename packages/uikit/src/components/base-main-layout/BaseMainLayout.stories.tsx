@@ -22,31 +22,31 @@ export const Main: Story<PropsWithChildren<BaseMainLayoutProps>> =
 Main.args = {
   header: <BaseNavHeader hideThemeToggle />,
   children: (
-    <BaseGrid>
-      <BaseGrid.Item tab={6}>
+    <BaseGrid container>
+      <BaseGrid item tab={6}>
         <BasePlate>
           <BasePlateHeader title="Plate title" />
           <span>some content</span>
         </BasePlate>
-      </BaseGrid.Item>
-      <BaseGrid.Item tab={6}>
+      </BaseGrid>
+      <BaseGrid item tab={6}>
         <BasePlate>
           <BasePlateHeader title="Plate title" />
           <span>some content</span>
         </BasePlate>
-      </BaseGrid.Item>
-      <BaseGrid.Item tab={6}>
+      </BaseGrid>
+      <BaseGrid item tab={6}>
         <BasePlate>
           <BasePlateHeader title="Plate title" />
           <span>some content</span>
         </BasePlate>
-      </BaseGrid.Item>
-      <BaseGrid.Item tab={6}>
+      </BaseGrid>
+      <BaseGrid item tab={6}>
         <BasePlate>
           <BasePlateHeader title="Plate title" />
           <span>some content</span>
         </BasePlate>
-      </BaseGrid.Item>
+      </BaseGrid>
     </BaseGrid>
   ),
 };
