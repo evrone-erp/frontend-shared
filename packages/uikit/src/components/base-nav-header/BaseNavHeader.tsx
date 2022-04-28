@@ -37,7 +37,7 @@ export const BaseNavHeader: React.FC<BaseNavHeaderProps> = ({
   const toggleThemeButton = hideThemeToggle ? null : <ToggleThemeIconButton />;
 
   {
-    /* TODO: now realized a simpllified version of header. need to realized 2nd level for menus, avatar for user, NavMenuItem, logo redirection, etc. */
+    /* TODO: now realized a simpllified version of header. need to realized mobile-view, 2nd level for menus, avatar for user, NavMenuItem, logo redirection, etc. */
   }
   return (
     <Root sx={sx} className={className} onMouseLeave={handleRootMouseLeave}>
