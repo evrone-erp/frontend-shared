@@ -10,6 +10,7 @@ declare module "@mui/material/styles" {
     xl: false;
     mob: true;
     tab: true;
+    lap: true;
     desk: true;
   }
 
