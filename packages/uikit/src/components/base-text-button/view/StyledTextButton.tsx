@@ -6,7 +6,9 @@ export type StyledTextButtonProps = {
   hoverColor?: ColorName;
 };
 
-export const StyledTextButton = styled(ButtonBase)<StyledTextButtonProps>(
+export const StyledTextButton = styled(ButtonBase, {
+  shouldForwardProp: (p) => p !== "hoverColor",
+})<StyledTextButtonProps>(
   ({ theme, color = theme.palette["6"], hoverColor }) => ({
     color,
     typography: "text",
@@ -18,7 +20,7 @@ export const StyledTextButton = styled(ButtonBase)<StyledTextButtonProps>(
     },
     "&.Mui-disabled": {
       color: theme.palette["4"],
-      cursor: 'not-allowed'
+      cursor: "not-allowed",
     },
     "&:hover": {
       color: hoverColor ?? color,

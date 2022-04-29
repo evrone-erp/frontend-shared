@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Theme } from "@mui/material";
 import { mergeSx } from "design-system";
 import { BaseComponentProps } from "design-system/types";
 
@@ -15,11 +15,16 @@ export const Root: React.FC<RootProps> = ({
   <Box
     component="header"
     sx={mergeSx(
-      {
-        padding: [2.5, 5],
+      (theme: Theme) => ({
+        [theme.breakpoints.up("mob")]: {
+          padding: 2.5,
+        },
+        [theme.breakpoints.up("desk")]: {
+          padding: 5,
+        },
         display: "flex",
         justifyContent: "space-between",
-      },
+      }),
       sx
     )}
     onMouseLeave={onMouseLeave}

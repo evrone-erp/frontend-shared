@@ -14,9 +14,9 @@ export function ClosedEyeIcon(props: ConcreteIconProps) {
       <path
         d="m20.485 12-.59.452a13 13 0 0 1-15.79 0L3.516 12M12 16v2M17.5 14.134l1 1.732M6.5 14.134l-1 1.732"
         stroke="#64656A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </IconRoot>
   );
