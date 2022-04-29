@@ -1,3 +1,4 @@
+import { TextFieldProps } from "@mui/material";
 import { BaseComponentProps } from "design-system/types";
 
 export type TextFieldType = "select" | "tel" | "email" | "text" | "password";
@@ -8,7 +9,11 @@ export type BaseTextFieldProps =
   | NumberFieldProps
   | PasswordFieldProps;
 
-export type CommonTextFieldProps = BaseComponentProps & {
+export type CommonTextFieldProps = BaseComponentProps &
+  Omit<TextFieldProps, keyof OverridedTextFieldProps> &
+  OverridedTextFieldProps;
+
+type OverridedTextFieldProps = {
   type?: TextFieldType;
   label?: string;
   value?: string;
