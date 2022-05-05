@@ -1,18 +1,15 @@
 import React from "react";
-import { SelectTextFieldProps } from "../types";
+import { SelectFieldProps } from "../types";
 import { StyledMuiTextField } from "../view/StyledMuiTextField";
 import { StyledMuiMenuItem } from "../view/StyledMuiMenuItem";
-import { getCommonTextFieldProps } from "../lib/getCommonTextFieldProps";
 
-export const SelectField: React.FC<SelectTextFieldProps> = ({
+export const SelectField: React.FC<SelectFieldProps> = ({
   options,
-  ...props
+  ...commonProps
 }) => {
-  const commonProps = getCommonTextFieldProps(props, true);
-
   return (
     <StyledMuiTextField {...commonProps} select>
-      {options?.map((option: SelectTextFieldProps["options"][0]) =>
+      {options?.map((option: SelectFieldProps["options"][0]) =>
         typeof option === "object" ? (
           <StyledMuiMenuItem key={option.value} value={option.value}>
             {option.label}
