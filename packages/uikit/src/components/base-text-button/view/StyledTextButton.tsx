@@ -1,7 +1,7 @@
-import { ButtonBase, styled } from "@mui/material";
+import { ButtonBase, ButtonBaseProps, styled } from "@mui/material";
 import { ColorName } from "design-system";
 
-export type StyledTextButtonProps = {
+export type StyledTextButtonProps = ButtonBaseProps & {
   color?: ColorName;
   hoverColor?: ColorName;
 };
