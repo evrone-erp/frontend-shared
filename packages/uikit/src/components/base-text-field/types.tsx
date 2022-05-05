@@ -1,5 +1,5 @@
 import { TextFieldProps } from "@mui/material";
-import { BaseComponentProps } from "../../design-system/types";
+import { BaseComponentProps } from "design-system/types";
 import { NumberFormatProps } from "react-number-format";
 
 export type BaseTextFieldProps =
@@ -19,7 +19,7 @@ export type PasswordFieldProps = BasePasswordField & MuiProps;
 type CustomizedPasswordFieldProps = BasePasswordField & CustomMuiProps;
 type BasePasswordField = {
   type: "password";
-  multiline: never;
+  multiline?: never;
 };
 
 export type PhoneFieldProps = BasePhoneField & Omit<MuiProps, "ref">;
