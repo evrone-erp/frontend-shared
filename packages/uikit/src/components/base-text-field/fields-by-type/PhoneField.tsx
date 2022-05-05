@@ -1,18 +1,15 @@
 import { TextFieldProps } from "@mui/material";
-import React, { ComponentType } from "react";
+import React from "react";
 import NumberFormat from "react-number-format";
-import { getCommonTextFieldProps } from "../lib/getCommonTextFieldProps";
-import { NumberFieldProps } from "../types";
+import { PhoneFieldProps } from "../types";
 import { StyledMuiTextField } from "../view/StyledMuiTextField";
 
-export const PhoneField: React.FC<NumberFieldProps> = (props) => {
-  const commonProps = getCommonTextFieldProps(props);
+export const PhoneField: React.FC<PhoneFieldProps> = (props) => {
   return (
-    <NumberFormat
-      {...commonProps}
-      customInput={StyledMuiTextField as ComponentType<TextFieldProps>}
+    <NumberFormat<TextFieldProps>
+      {...props}
+      customInput={StyledMuiTextField}
       format="+# ### ### ## ##"
-      type={props.type}
     />
   );
 };

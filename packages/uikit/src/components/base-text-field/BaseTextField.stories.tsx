@@ -48,10 +48,11 @@ Phone.args = {
   type: "tel",
 };
 
-export const Password: TextFieldStory = Template.bind({});
-Password.args = {
+export const FullWidthPassword: TextFieldStory = Template.bind({});
+FullWidthPassword.args = {
   label: "Password",
-  type: 'password',
+  type: "password",
+  fullWidth: true,
 };
 
 export const Select: TextFieldStory = Template.bind({});
