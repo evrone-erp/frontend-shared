@@ -3,7 +3,7 @@
   "include": [
     "src",
     "types",
-    "../design-system/src/bind-props.tsx",
+    "../design-system/src/bind-props.tsx"
   ],
   "compilerOptions": {
     "module": "esnext",
