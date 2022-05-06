@@ -1,9 +1,9 @@
 {
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
-  "include": ["src", "types", "next-env.d.ts"],
+  "include": ["src", "types"],
   "compilerOptions": {
     "module": "esnext",
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "lib": ["dom", "esnext"],
     "importHelpers": true,
     // output .d.ts declaration files for consumers
@@ -34,5 +34,15 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "preserveSymlinks": true,
+    "paths": {
+      "design-system/*": ["design-system/*"],
+      "components/*": ["components/*"]
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": ["*"]
+      }
+    ]
   }
 }

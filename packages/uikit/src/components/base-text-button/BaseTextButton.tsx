@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactNode, Ref } from "react";
+import React, { forwardRef, ReactNode } from "react";
 
 import { BaseComponentProps } from "design-system/types";
 import {
@@ -12,15 +12,13 @@ export type BaseTextButtonProps = {
 } & BaseComponentProps &
   StyledTextButtonProps;
 
-export const BaseTextButton = forwardRef(
-  (
-    { children, ...restProps }: BaseTextButtonProps,
-    ref: Ref<HTMLButtonElement>
-  ) => (
-    <StyledTextButton ref={ref} {...restProps}>
-      {children}
-    </StyledTextButton>
-  )
-);
+export const BaseTextButton = forwardRef<
+  HTMLButtonElement,
+  BaseTextButtonProps
+>(({ children, ...restProps }, ref) => (
+  <StyledTextButton ref={ref} {...restProps}>
+    {children}
+  </StyledTextButton>
+));
 
 BaseTextButton.displayName = "BaseTextButton";

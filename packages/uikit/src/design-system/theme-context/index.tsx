@@ -1,5 +1,5 @@
 import { useCookie } from "@evrone-erp/react-std";
-import { ThemeKey } from "design-system";
+import { ThemeKey } from "../types";
 import React, { createContext, ReactNode, useContext, useEffect } from "react";
 import { getSystemColorScheme } from "./get-system-color-scheme";
 

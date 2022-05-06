@@ -4,6 +4,9 @@ Main tools
 - [lerna](https://lerna.js.org/): Manage and create monorepo 
 - [tsdx](https://tsdx.io/): Tool to create ts libraries
 
+## Clone error
+If you have got an auth error after git clone - need to get github personal access token (see to 'Get started' section how to do it)
+
 ### Get started
 
 - `cp .npmrc.example .npmrc`  
