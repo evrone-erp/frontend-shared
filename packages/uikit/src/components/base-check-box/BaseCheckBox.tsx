@@ -6,6 +6,7 @@ import { StyledMuiFormControlLabel } from "./view/StyledMuiFormControlLabel";
 
 export type BaseCheckBoxProps = {
   sx?: Sx;
+  name?: string;
   className?: string;
   label?: string;
   value?: boolean;
@@ -13,6 +14,7 @@ export type BaseCheckBoxProps = {
 };
 export function BaseCheckBox({
   className,
+  name,
   sx,
   label = "",
   onChange,
@@ -22,6 +24,7 @@ export function BaseCheckBox({
     <StyledMuiFormControlLabel
       label={label}
       checked={value}
+      name={name}
       sx={sx}
       className={className}
       onChange={(_: unknown, checked: boolean) => onChange?.(!checked)}
