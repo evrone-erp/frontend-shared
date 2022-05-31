@@ -1,16 +1,13 @@
 import React from "react";
 import { Sx } from "design-system";
 
-import { StyledMuiCheckbox } from "./view/StyledMuiCheckbox";
+import { StyledMuiCheckbox, StyledMuiCheckboxProps } from "./view/StyledMuiCheckbox";
 import { StyledMuiFormControlLabel } from "./view/StyledMuiFormControlLabel";
 
-export type BaseCheckBoxProps = {
+export type BaseCheckBoxProps = Pick<StyledMuiCheckboxProps, 'name' | 'className' | 'onChange'> & {
   sx?: Sx;
-  name?: string;
-  className?: string;
   label?: string;
   value?: boolean;
-  onChange?: (newValue?: boolean) => void;
 };
 export function BaseCheckBox({
   className,
@@ -27,8 +24,7 @@ export function BaseCheckBox({
       name={name}
       sx={sx}
       className={className}
-      onChange={(_: unknown, checked: boolean) => onChange?.(!checked)}
-      control={<StyledMuiCheckbox size="small" />}
+      control={<StyledMuiCheckbox size="small" onChange={onChange} />}
     />
   );
 }

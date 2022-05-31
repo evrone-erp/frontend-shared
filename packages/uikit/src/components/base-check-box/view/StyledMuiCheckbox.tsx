@@ -1,4 +1,6 @@
-import { Checkbox, styled } from "@mui/material";
+import { styled, Checkbox, CheckboxProps } from "@mui/material";
+
+export type StyledMuiCheckboxProps = CheckboxProps;
 
 export const StyledMuiCheckbox = styled(Checkbox)(() => ({
   padding: 10,
