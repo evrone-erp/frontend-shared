@@ -1,7 +1,7 @@
-import { Link as MuiLink } from "@mui/material";
 import Link, { LinkProps } from "next/link";
 import React, { ReactNode } from "react";
-import { mergeSx, Sx } from "design-system";
+import { Sx } from "design-system";
+import { StyledLink } from "./view/StyledLink";
 
 export type BaseLinkProps = {
   sx?: Sx;
@@ -19,22 +19,13 @@ export function BaseLink({
 }: BaseLinkProps) {
   return (
     <Link passHref {...linkProps}>
-      <MuiLink
+      <StyledLink
         variant="text"
-        sx={mergeSx(
-          {
-            typography: "text",
-            textDecoration: "none",
-            cursor: "pointer",
-            color: "5",
-          },
-          sx
-        )}
+        sx={sx}
         className={className}
-        component="a"
       >
         {children} {!noSign && "↗"}
-      </MuiLink>
+      </StyledLink>
     </Link>
   );
 }
