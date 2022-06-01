@@ -5,6 +5,7 @@ import { BaseCheckBox, BaseCheckBoxProps } from "./BaseCheckBox";
 export default {
   title: "UI/BaseCheckBox",
   component: BaseCheckBox,
+  argTypes: { onChange: { action: 'changed' } },
 } as ComponentMeta<typeof BaseCheckBox>;
 
 function Template(props: BaseCheckBoxProps): JSX.Element {

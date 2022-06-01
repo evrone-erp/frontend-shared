@@ -4,6 +4,7 @@ import { BaseIcon, IconType } from "components/base-icon";
 import { SxProps, Theme } from "@mui/material";
 
 import { StyledButton } from "./view/StyledButton";
+import { StyledCircularProgress } from "./view/StyledCircularProgress";
 
 export type BaseButtonProps = {
   onClick?: () => void;
@@ -11,20 +12,24 @@ export type BaseButtonProps = {
   disabled?: boolean;
   variant?: "primary" | "secondary";
   icon?: IconType;
-  isRound?: boolean;
   className?: string;
   sx?: SxProps<Theme>;
+  isRound?: boolean;
+  isLoading?: boolean;
 };
 
+// `isLoading` and `isRound` cant'be together because of
+// the problem with showing the spinner in the rounded view
 export function BaseButton({
   children,
-  onClick,
-  disabled = false,
-  variant = "primary",
   icon,
-  isRound = false,
   className,
   sx,
+  disabled = false,
+  variant = "primary",
+  isRound = false,
+  isLoading = false,
+  onClick,
 }: BaseButtonProps): JSX.Element {
   return (
     <StyledButton
@@ -38,6 +43,7 @@ export function BaseButton({
     >
       {!isRound && children}
       {icon && <BaseIcon type={icon} size="1.5em" />}
+      {isLoading && !isRound && <StyledCircularProgress size="20px" />}
     </StyledButton>
   );
 }

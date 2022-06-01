@@ -47,3 +47,9 @@ RoundButton.args = {
   icon: "plus",
   isRound: true,
 };
+
+export const WithSpinner: Story = Template.bind({});
+WithSpinner.args = {
+  children: "Submit",
+  isLoading: true,
+};
