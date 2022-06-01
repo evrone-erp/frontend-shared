@@ -21,3 +21,9 @@ Disabled.args = {
   disabled: true,
   children: "Не кликнуть =(",
 };
+
+export const Loading: Story = Template.bind({});
+Loading.args = {
+  children: "Submit",
+  isLoading: true,
+};
