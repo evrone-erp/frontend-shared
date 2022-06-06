@@ -15,6 +15,7 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
+  staticDirs: [{ from: '../src/assets/fonts', to: '/fonts' }],
   webpackFinal: async (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),

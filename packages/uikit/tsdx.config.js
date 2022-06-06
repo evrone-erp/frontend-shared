@@ -12,6 +12,10 @@ module.exports = {
             src: "src/design-system/design-tokens/design-tokens.json",
             dest: "dist/design-system/design-tokens",
           },
+          {
+            src: "src/assets/fonts/**/*",
+            dest: "dist/assets/fonts",
+          }
         ],
       }),
     );
