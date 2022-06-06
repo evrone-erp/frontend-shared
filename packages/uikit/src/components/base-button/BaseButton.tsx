@@ -16,8 +16,6 @@ export type BaseButtonProps = {
   isRound?: boolean;
 };
 
-// `isLoading` and `isRound` cant'be together because of
-// the problem with showing the spinner in the rounded view
 export function BaseButton({
   children,
   icon,
