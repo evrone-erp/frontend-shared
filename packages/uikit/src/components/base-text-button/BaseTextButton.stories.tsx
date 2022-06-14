@@ -27,3 +27,9 @@ Loading.args = {
   children: "Submit",
   isLoading: true,
 };
+
+export const WithIcon: Story = Template.bind({});
+WithIcon.args = {
+  children: "Submit",
+  iconType: 'lock',
+};

@@ -1,14 +1,17 @@
 import React, { forwardRef, ReactNode } from "react";
+import { CircularProgress } from "@mui/material";
 
 import { BaseComponentProps } from "design-system/types";
+import { BaseIcon, IconType } from "components/base-icon";
 import {
   StyledTextButton,
   StyledTextButtonProps,
 } from "./view/StyledTextButton";
-import { StyledCircularProgress } from "./view/StyledCircularProgress";
+import { StyledIconContainer } from "./view/StyledIconContainer";
 
 export type BaseTextButtonProps = {
   children?: ReactNode;
+  iconType?: IconType;
   isLoading?: boolean;
   onClick?: () => void;
 } & BaseComponentProps &
@@ -17,10 +20,21 @@ export type BaseTextButtonProps = {
 export const BaseTextButton = forwardRef<
   HTMLButtonElement,
   BaseTextButtonProps
->(({ children, isLoading, ...restProps }, ref) => (
+>(({ children, isLoading, iconType, ...restProps }, ref) => (
   <StyledTextButton ref={ref} {...restProps}>
     {children}
-    {isLoading && <StyledCircularProgress size="20px" />}
+
+    {iconType && (
+      <StyledIconContainer>
+        <BaseIcon type={iconType} />
+      </StyledIconContainer>
+    )}
+
+    {isLoading && (
+      <StyledIconContainer>
+        <CircularProgress size="20px" />
+      </StyledIconContainer>
+    )}
   </StyledTextButton>
 ));
 
