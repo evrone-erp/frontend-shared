@@ -28,6 +28,8 @@ module.exports = {
   'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   'import/prefer-default-export': 'off',
   'import/extensions': ['error', 'ignorePackages', { ts: 'never', tsx: 'never', js: 'never', jsx: 'never' }],
+
+  // to support https://feature-sliced.design/
   'import/no-restricted-paths': [
     'error',
     {
