@@ -30,6 +30,6 @@ Loading.args = {
 
 export const WithIcon: Story = Template.bind({});
 WithIcon.args = {
-  children: "Submit",
+  children: "Locked",
   iconType: 'lock',
 };
