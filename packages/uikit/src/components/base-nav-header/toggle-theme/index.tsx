@@ -1,10 +1,11 @@
 import React from "react";
 import { BaseIconButton } from "components/base-icon-button";
 import { BaseComponentProps } from "design-system/types";
-import { useThemeType } from "design-system";
+import { useTheme } from "design-system";
 
 export const ToggleThemeIconButton: React.FC<BaseComponentProps> = (props) => {
-  const [theme, setTheme] = useThemeType();
+  const [theme, setTheme] = useTheme();
+
   const handleClick = () => {
     if (theme === "light") {
       setTheme("dark");
