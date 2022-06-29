@@ -1,24 +1,19 @@
 import { ComponentMeta, Story } from "@storybook/react";
 import { BaseTextButton } from "components/base-text-button";
-import { ThemeTypeProvider } from "design-system";
+import { ThemeProvider } from "design-system";
 import React from "react";
 import { BaseNavHeader, BaseNavHeaderProps } from "./BaseNavHeader";
-import { CookiesProvider } from "@evrone-erp/react-std";
 
 export default {
   title: "UI/BaseNavHeader",
   component: BaseNavHeader,
 } as ComponentMeta<typeof BaseNavHeader>;
 
-function Template(props: BaseNavHeaderProps): JSX.Element {
-  return (
-    <CookiesProvider serverCookies={undefined}>
-      <ThemeTypeProvider>
-        <BaseNavHeader {...props} />
-      </ThemeTypeProvider>
-    </CookiesProvider>
-  );
-}
+const Template = (props: BaseNavHeaderProps): JSX.Element => (
+  <ThemeProvider>
+    <BaseNavHeader {...props} />
+  </ThemeProvider>
+)
 
 export const UnauthorizedMode: Story<BaseNavHeaderProps> = Template.bind({});
 

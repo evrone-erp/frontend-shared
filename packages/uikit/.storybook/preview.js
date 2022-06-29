@@ -3,7 +3,6 @@ import AdapterLuxon from "@mui/lab/AdapterLuxon";
 import { LocalizationProvider } from "@mui/lab";
 import { ThemeProvider } from "emotion-theming";
 import { withThemes } from "@react-theming/storybook-addon";
-
 import { createTheme } from "../src/design-system";
 
 export const parameters = {
