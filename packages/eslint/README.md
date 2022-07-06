@@ -15,3 +15,10 @@ module.exports = {
 };
 
 ```
+
+3. Once ready you may use built in script `next lint` (https://nextjs.org/docs/basic-features/eslint) for Next.js or write your own script:
+```javascript
+"scripts": {
+  "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'"
+},
+```

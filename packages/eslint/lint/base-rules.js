@@ -14,13 +14,26 @@ module.exports = {
   ],
   'no-console': ['error', { allow: ['warn', 'error'] }],
 
-  'jsx-a11y/anchor-is-valid': 'off', // To enable support of Next.Link passHref
+  // to enable support of Next.Link passHref
+  'jsx-a11y/anchor-is-valid': 'off',
+  // we want to use assert: either instead of both https://github.com/airbnb/javascript/pull/1951
+  'jsx-a11y/label-has-associated-control': [
+    'error',
+    {
+      labelComponents: [],
+      labelAttributes: [],
+      controlComponents: [],
+      assert: 'either',
+      depth: 25,
+    },
+  ],
   'react/jsx-props-no-spreading': 'off',
   'react/function-component-definition': 'off',
   'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
   'react/prop-types': 'off',
   'react/react-in-jsx-scope': 'off',
   'react/require-default-props': 'off',
+  'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
   'react-perf/jsx-no-new-array-as-prop': 'off',
   'react-perf/jsx-no-new-object-as-prop': 'off',
   'react-perf/jsx-no-new-function-as-prop': 'off',
