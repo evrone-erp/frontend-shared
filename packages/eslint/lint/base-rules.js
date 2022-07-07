@@ -14,9 +14,9 @@ module.exports = {
   ],
   'no-console': ['error', { allow: ['warn', 'error'] }],
 
-  // to enable support of Next.Link passHref
+  // To enable support of Next.Link passHref
   'jsx-a11y/anchor-is-valid': 'off',
-  // we want to use assert: either instead of both https://github.com/airbnb/javascript/pull/1951
+  // We want to use assert: either instead of both https://github.com/airbnb/javascript/pull/1951
   'jsx-a11y/label-has-associated-control': [
     'error',
     {
@@ -42,7 +42,7 @@ module.exports = {
   'import/prefer-default-export': 'off',
   'import/extensions': ['error', 'ignorePackages', { ts: 'never', tsx: 'never', js: 'never', jsx: 'never' }],
 
-  // to support https://feature-sliced.design/
+  // To support https://feature-sliced.design/
   'import/no-restricted-paths': [
     'error',
     {
