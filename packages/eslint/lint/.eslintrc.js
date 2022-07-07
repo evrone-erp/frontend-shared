@@ -20,6 +20,7 @@ module.exports = {
         'airbnb-typescript',
         'plugin:@next/next/recommended',
         'plugin:import/typescript',
+        'plugin:@typescript-eslint/recommended',
         'prettier', // it's here to override previous formatting rules
       ],
       parser: '@typescript-eslint/parser',
