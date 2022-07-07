@@ -8,7 +8,10 @@ module.exports = {
     },
   ],
   '@typescript-eslint/no-explicit-any': ['error'],
-  '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+  '@typescript-eslint/no-unused-vars': [
+    'error',
+    { argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_', varsIgnorePattern: '^_' },
+  ],
   '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
   '@typescript-eslint/naming-convention': [
     'error',
@@ -16,11 +19,6 @@ module.exports = {
     {
       selector: 'typeLike',
       format: ['PascalCase'],
-    },
-    // From airbnb-eslint-typescript
-    {
-      selector: 'variable',
-      format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
     },
     // From airbnb-eslint-typescript
     {
