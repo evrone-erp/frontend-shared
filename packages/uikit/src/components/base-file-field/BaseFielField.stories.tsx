@@ -1,9 +1,9 @@
-import { ComponentMeta, Story } from "@storybook/react";
-import React, { useState } from "react";
-import { BaseFileField, BaseFileFieldProps } from "./BaseFileField";
+import { ComponentMeta, Story } from '@storybook/react';
+import React, { useState } from 'react';
+import { BaseFileField, BaseFileFieldProps } from './BaseFileField';
 
 export default {
-  title: "UI/BaseFileField",
+  title: 'UI/BaseFileField',
   component: BaseFileField,
 } as ComponentMeta<typeof BaseFileField>;
 
@@ -14,5 +14,5 @@ function Template(props: Partial<BaseFileFieldProps>): JSX.Element {
 
 export const Base: Story = Template.bind({});
 Base.args = {
-  label: "Label",
+  label: 'Label',
 };

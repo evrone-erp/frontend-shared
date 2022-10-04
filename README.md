@@ -59,3 +59,30 @@ Adding a new icon:
 - Create new component in base-icon/icons
 - Use IconRoot in the root of new icon component
 - Pass minimized svg in IconRoot
+
+### UIKit rules
+- Add unique className to each element inside a component to make it possible to override styles of every elements by 
+
+```
+  const Component = ({sx}) => (
+    <Box sx={sx}>
+      <Box className='child-one'>Child One</Box>
+      <Box className='child-two'>Child Two</Box>
+    </Box>
+  )
+```
+
+```
+  <Component 
+    sx={{
+      '& .child-one': {
+        // styles
+      },
+      '& .child-two': {
+        // styles
+      }
+    }}
+  />
+```
+
+How it should works you can read here [MUI Sx props](https://mui.com/system/getting-started/the-sx-prop/#passing-the-sx-prop)

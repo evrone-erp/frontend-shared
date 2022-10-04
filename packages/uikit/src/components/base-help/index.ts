@@ -1,1 +1,1 @@
-export { BaseHelp } from "./BaseHelp";
+export { BaseHelp } from './BaseHelp';

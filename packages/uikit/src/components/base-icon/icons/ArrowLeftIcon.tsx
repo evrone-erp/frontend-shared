@@ -1,16 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { ConcreteIconProps } from "../types/concrete-icon-props";
-import { IconRoot } from "../view/IconRoot";
+import { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
+import { IconRoot } from 'components/base-icon/view/IconRoot';
 
 export function ArrowLeftIcon(props: ConcreteIconProps) {
   return (
-    <IconRoot
-      {...props}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <IconRoot {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13 20L5 12.5L13 5" stroke="currentColor" strokeWidth="1.5" />
       <path d="M5.5 12.5H22" stroke="currentColor" strokeWidth="1.5" />
     </IconRoot>

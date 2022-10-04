@@ -1,11 +1,11 @@
-import React from "react";
-import { ComponentMeta, Story } from "@storybook/react";
-import { repeat } from "lodash";
-import { BaseLink } from "../base-link/BaseLink";
-import { BaseHelp, BaseHelpProps } from "./BaseHelp";
+import React from 'react';
+import { ComponentMeta, Story } from '@storybook/react';
+import { repeat } from 'lodash';
+import { BaseLink } from 'components/base-link/BaseLink';
+import { BaseHelp, BaseHelpProps } from './BaseHelp';
 
 export default {
-  title: "UI/BaseHelp",
+  title: 'UI/BaseHelp',
   component: BaseHelp,
 } as ComponentMeta<typeof BaseHelp>;
 
@@ -15,9 +15,9 @@ function Template(props: Partial<BaseHelpProps>) {
 
 export const Main: Story = Template.bind({});
 Main.args = {
-  title: "Benefits formula",
+  title: 'Benefits formula',
   withClose: true,
-  text: "Start sum + 10 000 ₽ × Years at Evrone",
+  text: 'Start sum + 10 000 ₽ × Years at Evrone',
 };
 
 export const WithLink: Story = Template.bind({});
@@ -34,5 +34,5 @@ WithLink.args = {
 
 export const LongText: Story = Template.bind({});
 LongText.args = {
-  text: repeat("Start sum + 10 000 ₽ × Years at Evrone ", 20),
+  text: repeat('Start sum + 10 000 ₽ × Years at Evrone ', 20),
 };

@@ -1,12 +1,12 @@
-import React, { useCallback } from "react";
-import Image from "next/image";
-import { useDropzone } from "react-dropzone";
+import React, { useCallback } from 'react';
+import Image from 'next/image';
+import { useDropzone } from 'react-dropzone';
 
-import { Sx } from "design-system";
+import { Sx } from 'design-system';
 
-import { useFileUrl } from "./lib/use-file-url";
-import { AvatarContainer } from "./view/AvatarContainer";
-import { AvatarSkeleton } from "./view/AvatarSkeleton";
+import { useFileUrl } from './lib/use-file-url';
+import { AvatarContainer } from './view/AvatarContainer';
+import { AvatarSkeleton } from './view/AvatarSkeleton';
 
 export type BaseAvatarUploadProps = {
   sx?: Sx;
@@ -16,17 +16,8 @@ export type BaseAvatarUploadProps = {
   isLoading?: boolean;
 };
 
-export function BaseAvatarUpload({
-  sx,
-  className,
-  onChange,
-  value,
-  isLoading,
-}: BaseAvatarUploadProps) {
-  const onDrop = useCallback(
-    (files: File[]) => onChange?.(files[0]),
-    [onChange]
-  );
+export function BaseAvatarUpload({ sx, className, onChange, value, isLoading }: BaseAvatarUploadProps) {
+  const onDrop = useCallback((files: File[]) => onChange?.(files[0]), [onChange]);
   const { getInputProps, getRootProps } = useDropzone({ onDrop });
   const src = useFileUrl(value);
 

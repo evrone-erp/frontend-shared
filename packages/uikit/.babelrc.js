@@ -1,10 +1,4 @@
 module.exports = {
-  presets: [
-    "@babel/preset-typescript",
-  ],
-  plugins: [
-    [
-      "tsconfig-paths-module-resolver"
-    ],
-  ]
+  presets: ["@babel/preset-typescript"],
+  plugins: [["tsconfig-paths-module-resolver"]],
 };

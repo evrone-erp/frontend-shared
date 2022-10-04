@@ -56,6 +56,6 @@ export const decorators = [
     {
       providerFn,
       onThemeSwitch,
-    }
+    },
   ),
 ];

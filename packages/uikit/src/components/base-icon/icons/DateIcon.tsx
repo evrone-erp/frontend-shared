@@ -1,16 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { IconRoot } from "../view/IconRoot";
-import { ConcreteIconProps } from "../types/concrete-icon-props";
+import { IconRoot } from 'components/base-icon/view/IconRoot';
+import { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
 
 export function DateIcon(props: ConcreteIconProps) {
   return (
-    <IconRoot
-      {...props}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <IconRoot {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <mask id="path-2-inside-1_324_1393" fill="white">
         <rect x="5" y="6" width="14" height="14" rx="1" />
       </mask>

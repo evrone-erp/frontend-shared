@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import { Box, BoxProps, Typography } from "@mui/material";
-import { Sx, mergeSx } from "design-system";
+import React, { ReactNode } from 'react';
+import { Box, BoxProps, Typography } from '@mui/material';
+import { Sx, mergeSx } from 'design-system';
 
 type AvatarContainerProps = {
   sx?: Sx;
@@ -9,30 +9,25 @@ type AvatarContainerProps = {
   children?: ReactNode;
 };
 
-export function AvatarContainer({
-  rootProps,
-  children,
-  className,
-  sx,
-}: AvatarContainerProps) {
+export function AvatarContainer({ rootProps, children, className, sx }: AvatarContainerProps) {
   return (
     <Box
       {...rootProps}
       sx={mergeSx(sx, {
-        backgroundColor: "3",
+        backgroundColor: 'bg-1',
         width: 120,
         height: 120,
-        borderRadius: "50%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        cursor: "pointer",
-        overflow: "hidden",
-        position: "relative",
+        borderRadius: '50%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        cursor: 'pointer',
+        overflow: 'hidden',
+        position: 'relative',
       })}
       className={className}
     >
-      <Typography component="div" color="4" align="center">
+      <Typography component="div" color="element-2" align="center">
         Change <br /> cover
       </Typography>
       {children}

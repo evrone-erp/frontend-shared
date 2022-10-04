@@ -1,9 +1,9 @@
-import React from "react";
-import { ComponentMeta, Story } from "@storybook/react";
-import { BaseCheckBox, BaseCheckBoxProps } from "./BaseCheckBox";
+import React from 'react';
+import { ComponentMeta, Story } from '@storybook/react';
+import { BaseCheckBox, BaseCheckBoxProps } from './BaseCheckBox';
 
 export default {
-  title: "UI/BaseCheckBox",
+  title: 'UI/BaseCheckBox',
   component: BaseCheckBox,
   argTypes: { onChange: { action: 'changed' } },
 } as ComponentMeta<typeof BaseCheckBox>;
@@ -14,5 +14,5 @@ function Template(props: BaseCheckBoxProps): JSX.Element {
 
 export const Primary: Story = Template.bind({});
 Primary.args = {
-  label: "Hello Checkbox",
+  label: 'Hello Checkbox',
 };

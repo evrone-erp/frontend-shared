@@ -1,7 +1,7 @@
-import { useTheme } from "@mui/material";
-import { useCallback } from "react";
-import type { TabId, Tab } from "../types";
-import { useTabsWidths } from "./use-tabs-widths";
+import { useTheme } from '@mui/material';
+import { useCallback } from 'react';
+import type { TabId, Tab } from 'components/base-tabs/types';
+import { useTabsWidths } from './use-tabs-widths';
 
 export function useTabCenterOffset(tabs: Tab[], gap: number) {
   const { getTabRef, tabSizes } = useTabsWidths(tabs);
@@ -23,7 +23,7 @@ export function useTabCenterOffset(tabs: Tab[], gap: number) {
       }
       return offset;
     },
-    [tabSizes, tabs, gap, theme]
+    [tabSizes, tabs, gap, theme],
   );
 
   return {

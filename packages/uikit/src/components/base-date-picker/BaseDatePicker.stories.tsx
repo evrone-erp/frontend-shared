@@ -1,11 +1,10 @@
-import React from "react";
-import { ComponentMeta, Story } from "@storybook/react";
-import { DateTime } from "luxon";
-import { useState } from "react";
-import { BaseDatePicker, BaseDatePickerProps } from "./BaseDatePicker";
+import React, { useState } from 'react';
+import { ComponentMeta, Story } from '@storybook/react';
+import { DateTime } from 'luxon';
+import { BaseDatePicker, BaseDatePickerProps } from './BaseDatePicker';
 
 export default {
-  title: "UI/BaseDatePicker",
+  title: 'UI/BaseDatePicker',
   component: BaseDatePicker,
 } as ComponentMeta<typeof BaseDatePicker>;
 
@@ -25,5 +24,5 @@ function Template({ onChange, ...props }: BaseDatePickerProps): JSX.Element {
 
 export const Base: Story = Template.bind({});
 Base.args = {
-  label: "Label",
+  label: 'Label',
 };

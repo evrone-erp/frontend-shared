@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import { IconButton } from "@mui/material";
+import React, { ReactNode } from 'react';
+import { IconButton } from '@mui/material';
 
-import { ColorName, mergeSx, Sx } from "design-system";
-import { BaseIcon, IconType } from "components/base-icon";
+import { ColorName, mergeSx, Sx } from 'design-system';
+import { BaseIcon, IconType } from 'components/base-icon';
 
 export type BaseIconButtonProps = {
   sx?: Sx;
@@ -21,7 +21,7 @@ export function BaseIconButton({
   sx,
   className,
   size = 24,
-  color = "6",
+  color = 'element-2',
   visibleIndent = 0,
   paddingPx = 0,
   disabled,
@@ -38,7 +38,7 @@ export function BaseIconButton({
           margin: `-${visibleIndent}px`,
           padding: `${visibleIndent + paddingPx}px`,
         },
-        sx
+        sx,
       )}
       className={className}
       disabled={disabled}
