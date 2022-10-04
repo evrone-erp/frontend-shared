@@ -1,6 +1,6 @@
 import React from 'react';
 import { DateTime } from 'luxon';
-import { DatePicker } from '@mui/lab';
+import { DatePicker, DatePickerProps } from '@mui/lab';
 import { noop } from 'lodash';
 
 import { Sx, bindPropsSxMerge } from 'design-system';
@@ -27,7 +27,7 @@ export function BaseDatePicker({ label, onChange, value, className, sx }: BaseDa
         OpenPickerIcon: DateIcon,
       }}
       mask="__.__.____"
-      renderInput={(props) => <StyledMuiTextField sx={sx} variant="standard" {...props} />}
+      renderInput={(props: DatePickerProps<DateTime>) => <StyledMuiTextField sx={sx} variant="standard" {...props} />}
     />
   );
 }

@@ -4,8 +4,9 @@ import { useGetRef } from '@evrone-erp/react-std';
 
 import type { TabId, Tab } from 'components/base-tabs/types';
 
+type TabWidths = Record<TabId, number>;
+
 export function useTabsWidths(tabs: Tab[]) {
-  type TabWidths = Record<TabId, number>;
   const [tabWidths, setTabWidths] = useState<TabWidths>({});
 
   const getTabRef = useGetRef<HTMLButtonElement>();
@@ -22,7 +23,7 @@ export function useTabsWidths(tabs: Tab[]) {
     });
 
     setTabWidths(newWidths);
-  }, [tabs, getTabRef]);
+  }, [tabs, getTabRef, setTabWidths]);
 
   return {
     getTabRef,
