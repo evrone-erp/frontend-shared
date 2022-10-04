@@ -1,9 +1,9 @@
-import React, { PropsWithChildren } from "react";
-import { ComponentMeta, Story } from "@storybook/react";
-import { BaseIcon, BaseIconProps } from "./BaseIcon";
+import React, { PropsWithChildren } from 'react';
+import { ComponentMeta, Story } from '@storybook/react';
+import { BaseIcon, BaseIconProps } from './BaseIcon';
 
 export default {
-  title: "UI/BaseIcon",
+  title: 'UI/BaseIcon',
   component: BaseIcon,
 } as ComponentMeta<typeof BaseIcon>;
 
@@ -13,11 +13,11 @@ function Template(props: PropsWithChildren<Partial<BaseIconProps>>) {
 
 export const InText: Story = Template.bind({});
 InText.args = {
-  type: "plus",
+  type: 'plus',
 };
 InText.decorators = [
   (StoryComponent) => (
-    <div style={{ color: "lightskyblue", fontSize: "24px" }}>
+    <div style={{ color: 'lightskyblue', fontSize: '24px' }}>
       Hello icon <StoryComponent />
     </div>
   ),
@@ -25,20 +25,20 @@ InText.decorators = [
 
 export const Plus: Story = Template.bind({});
 Plus.args = {
-  type: "plus",
+  type: 'plus',
   size: 60,
-  color: "6",
+  color: 'element-2',
 };
 
 export const Choice: Story = Template.bind({});
 Choice.args = {
-  type: "choice",
+  type: 'choice',
   size: 60,
-  color: "6",
+  color: 'element-2',
 };
 export const Date: Story = Template.bind({});
 Date.args = {
-  type: "date",
+  type: 'date',
   size: 60,
-  color: "6",
+  color: 'element-2',
 };

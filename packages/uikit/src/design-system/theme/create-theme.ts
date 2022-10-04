@@ -1,7 +1,7 @@
-import { createTheme as createMuiTheme } from "@mui/material";
-import { addTypographyToTheme, addColorsToTheme } from "../design-tokens";
-import { fontFaces } from "../font-faces";
-import { ThemeKey } from "../types";
+import { createTheme as createMuiTheme } from '@mui/material';
+import { addTypographyToTheme, addColorsToTheme } from 'design-system/design-tokens';
+import { fontFaces } from 'design-system/font-faces';
+import { ThemeKey } from 'design-system/types';
 
 export const createTheme = (type: ThemeKey) => {
   const theme = createMuiTheme({
@@ -13,7 +13,7 @@ export const createTheme = (type: ThemeKey) => {
       mode: type,
     },
     typography: {
-      fontFamily: "SuisseIntl, sans-serif",
+      fontFamily: 'SuisseIntl, sans-serif',
     },
     components: {
       MuiCssBaseline: {
@@ -23,26 +23,26 @@ export const createTheme = (type: ThemeKey) => {
       },
       MuiTypography: {
         defaultProps: {
-          variant: "text",
-          color: "6",
+          variant: 'text',
+          color: 'element-2',
         },
       },
     },
     breakpoints: {
       values: {
-        mob: 0,
-        tab: 540,
+        mob: 375,
+        tab: 720,
         lap: 1080,
-        desk: 1366,
+        desk: 1920,
       },
     },
   });
 
   addTypographyToTheme(theme);
   addColorsToTheme(theme, type);
-  theme.palette.primary.main = theme.palette["6"];
-  theme.palette.error.main = theme.palette["orange-l"];
-  theme.palette.background.default = theme.palette.core;
+  theme.palette.primary.main = theme.palette['element-2'];
+  theme.palette.error.main = theme.palette['good-1'];
+  theme.palette.background.default = theme.palette['bg-0'];
 
   return theme;
 };

@@ -1,5 +1,6 @@
+/* eslint-disable */
 import { CSSProperties } from "react";
-import { TypographyName, ColorName } from "./design-tokens";
+import { TypographyName, ColorName } from "./types";
 
 declare module "@mui/material/styles" {
   interface BreakpointOverrides {
@@ -20,8 +21,7 @@ declare module "@mui/material/styles" {
 }
 
 declare module "@mui/material/Typography" {
-  interface TypographyPropsVariantOverrides
-    extends Record<TypographyName, true> {
+  interface TypographyPropsVariantOverrides extends Record<TypographyName, true> {
     h1: false;
     h2: false;
     h3: false;

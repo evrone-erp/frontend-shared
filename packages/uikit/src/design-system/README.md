@@ -1,9 +1,8 @@
-
-# Design system  
+# Design system
 
 Module for creating and working with a mui design system.
 
-*Built using [tsdx](https://tsdx.io/)*
+_Built using [tsdx](https://tsdx.io/)_
 
 ## interface
 
@@ -13,17 +12,17 @@ Module for creating and working with a mui design system.
 - `ThemeKey`: Theme variants type
 - `Breakpoint`: Breakpoints variants type
 - `mergeSx`: helps to merge values with `Sx` type
-- `addSxProp`: add sx prop to `JSX.Element` 
+- `addSxProp`: add sx prop to `JSX.Element`
 - `createTheme`: function which create `mui` theme
-- `Baseline`:  component with add global styles
-
+- `Baseline`: component with add global styles
 
 ### addSxProp
 
 This feature helps layout components add styles to passed elements without using the render prop pattern.
-**Do not use this function in other cases. Implicit relationships can cause strange bugs** 
+**Do not use this function in other cases. Implicit relationships can cause strange bugs**
 
 Example
+
 ```tsx
 type OtherLayoutProps = {
   sx?: Sx;
@@ -53,5 +52,3 @@ export function OtherLayout({ sx, events, history }: OtherLayoutProps) {
   );
 }
 ```
-
-

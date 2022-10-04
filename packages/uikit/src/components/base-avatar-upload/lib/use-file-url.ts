@@ -1,5 +1,5 @@
-import { noop } from "lodash";
-import { useEffect, useState } from "react";
+import { noop } from 'lodash';
+import { useEffect, useState } from 'react';
 
 export function useFileUrl(file?: File) {
   const [url, setUrl] = useState<string>();

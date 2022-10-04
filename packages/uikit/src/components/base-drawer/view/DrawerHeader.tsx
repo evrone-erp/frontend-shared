@@ -1,6 +1,6 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
-import { BaseIconButton } from "components/base-icon-button";
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+import { BaseIconButton } from 'components/base-icon-button';
 
 type DrawerHeaderProps = {
   onClose: () => void;
@@ -12,20 +12,20 @@ export function DrawerHeader({ onClose, title }: DrawerHeaderProps) {
     <Box
       className="BaseDrawer-header"
       sx={{
-        display: "flex",
+        display: 'flex',
         p: 5,
-        position: "relative",
+        position: 'relative',
       }}
     >
       <Typography variant="subtitle" component="h2">
         {title}
       </Typography>
       <BaseIconButton
-        sx={{ ml: "auto" }}
+        sx={{ ml: 'auto' }}
         type="close"
         size={22}
         visibleIndent={8}
-        color="5"
+        color="element-2"
         onClick={onClose}
       />
     </Box>

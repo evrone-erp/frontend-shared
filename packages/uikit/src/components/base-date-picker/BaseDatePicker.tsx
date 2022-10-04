@@ -1,13 +1,13 @@
-import React from "react";
-import { DateTime } from "luxon";
-import { DatePicker } from "@mui/lab";
-import { noop } from "lodash";
+import React from 'react';
+import { DateTime } from 'luxon';
+import { DatePicker } from '@mui/lab';
+import { noop } from 'lodash';
 
-import { Sx, bindPropsSxMerge } from "design-system";
-import { StyledMuiTextField } from "components/base-text-field";
-import { BaseIcon } from "components/base-icon";
+import { Sx, bindPropsSxMerge } from 'design-system';
+import { StyledMuiTextField } from 'components/base-text-field';
+import { BaseIcon } from 'components/base-icon';
 
-const DateIcon = bindPropsSxMerge(BaseIcon, { type: "date", size: 24 });
+const DateIcon = bindPropsSxMerge(BaseIcon, { type: 'date', size: 24 });
 
 export type BaseDatePickerProps = {
   sx?: Sx;
@@ -16,13 +16,7 @@ export type BaseDatePickerProps = {
   value?: DateTime | null;
   onChange?: (d: DateTime | null) => void;
 };
-export function BaseDatePicker({
-  label,
-  onChange,
-  value,
-  className,
-  sx,
-}: BaseDatePickerProps) {
+export function BaseDatePicker({ label, onChange, value, className, sx }: BaseDatePickerProps) {
   return (
     <DatePicker
       className={className}
@@ -33,9 +27,7 @@ export function BaseDatePicker({
         OpenPickerIcon: DateIcon,
       }}
       mask="__.__.____"
-      renderInput={(props) => (
-        <StyledMuiTextField sx={sx} variant="standard" {...props} />
-      )}
+      renderInput={(props) => <StyledMuiTextField sx={sx} variant="standard" {...props} />}
     />
   );
 }

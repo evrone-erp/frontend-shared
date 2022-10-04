@@ -1,5 +1,6 @@
-import tokens from "./design-tokens.json";
-import { Theme } from "@mui/material";
+import { Theme } from '@mui/material';
+import { TypographyName } from 'design-system/types';
+import tokens from './design-tokens.json';
 
 type TokenFont = {
   fontSize: number;
@@ -19,14 +20,12 @@ const tokenFontToStyle = (tokenFont: TokenFont) => ({
   letterSpacing: `${tokenFont.letterSpacing}px`,
 });
 
-export type TypographyName = keyof typeof tokens.font;
-
 export const addTypographyToTheme = (theme: Theme) => {
   const { typography } = theme;
-  Object.entries(tokens.font).forEach(([key, { desk }]) => {
+  Object.entries(tokens.font).forEach(([key, font]) => {
     typography[key as TypographyName] = {
       fontFamily: typography.fontFamily,
-      ...tokenFontToStyle(desk.value),
+      ...tokenFontToStyle(font.value),
     };
   });
 };

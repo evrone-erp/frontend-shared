@@ -1,1 +1,1 @@
-export { BaseTabs } from "./BaseTabs";
+export { BaseTabs } from './BaseTabs';

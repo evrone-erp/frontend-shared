@@ -1,9 +1,9 @@
-import { ComponentMeta, Story } from "@storybook/react";
-import React, { useState } from "react";
-import { BaseAvatarUpload, BaseAvatarUploadProps } from "./BaseAvatarUpload";
+import { ComponentMeta, Story } from '@storybook/react';
+import React, { useState } from 'react';
+import { BaseAvatarUpload, BaseAvatarUploadProps } from './BaseAvatarUpload';
 
 export default {
-  title: "UI/BaseAvatarUpload",
+  title: 'UI/BaseAvatarUpload',
   component: BaseAvatarUpload,
 } as ComponentMeta<typeof BaseAvatarUpload>;
 

@@ -1,9 +1,9 @@
-import { Typography } from "@mui/material";
-import React, { ReactNode } from "react";
-import { useBooleanState } from "@evrone-erp/react-std";
-import { ExpandButton } from "./ExpandButton";
-import { useElementLineHeight } from "../lib/use-element-line-height";
-import { useOverflow } from "../lib/use-overflow";
+import { Typography } from '@mui/material';
+import React, { ReactNode } from 'react';
+import { useBooleanState } from '@evrone-erp/react-std';
+import { useElementLineHeight } from 'components/base-help/lib/use-element-line-height';
+import { useOverflow } from 'components/base-help/lib/use-overflow';
+import { ExpandButton } from './ExpandButton';
 
 type TextContentProps = { children?: ReactNode; maxLines: number };
 
@@ -16,20 +16,18 @@ export function TextContent({ children, maxLines }: TextContentProps) {
   return (
     <Typography
       sx={{
-        typography: "text",
-        color: "5",
-        overflow: "hidden",
-        maxHeight:
-          lineHeight && !textExpanded.is ? lineHeight * maxLines : undefined,
-        position: "relative",
+        typography: 'text',
+        color: 'element-1',
+        overflow: 'hidden',
+        maxHeight: lineHeight && !textExpanded.is ? lineHeight * maxLines : undefined,
+        position: 'relative',
       }}
+      className="BaseHelp__text"
       ref={ref}
       component="p"
     >
       {children}
-      {isOverflow && textExpanded.not && (
-        <ExpandButton onClick={textExpanded.setTrue} />
-      )}
+      {isOverflow && textExpanded.not && <ExpandButton onClick={textExpanded.setTrue} />}
     </Typography>
   );
 }

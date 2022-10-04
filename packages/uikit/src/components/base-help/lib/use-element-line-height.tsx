@@ -1,5 +1,5 @@
-import { useIsomorphicLayoutEffect } from "@evrone-erp/react-std";
-import { useState, useRef } from "react";
+import { useIsomorphicLayoutEffect } from '@evrone-erp/react-std';
+import { useState, useRef } from 'react';
 
 export function useElementLineHeight() {
   const [lineHeight, setLineHeight] = useState<number>();

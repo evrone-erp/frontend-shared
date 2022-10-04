@@ -1,17 +1,14 @@
-import { ComponentMeta, Story } from "@storybook/react";
-import React, { PropsWithChildren } from "react";
-import { BasePlate, BasePlateHeader } from "components/base-plate";
-import { BaseGrid, BaseGridProps } from "./BaseGrid";
+import { ComponentMeta, Story } from '@storybook/react';
+import React, { PropsWithChildren } from 'react';
+import { BasePlate, BasePlateHeader } from 'components/base-plate';
+import { BaseGrid, BaseGridProps } from './BaseGrid';
 
 export default {
-  title: "UI/BaseGrid",
+  title: 'UI/BaseGrid',
   component: BaseGrid,
 } as ComponentMeta<typeof BaseGrid>;
 
-function Template({
-  children,
-  ...props
-}: PropsWithChildren<BaseGridProps>): JSX.Element {
+function Template({ children, ...props }: PropsWithChildren<BaseGridProps>): JSX.Element {
   return (
     <BaseGrid container {...props}>
       {children}

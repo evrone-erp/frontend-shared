@@ -1,44 +1,44 @@
-import { styled, TextField } from "@mui/material";
+import { styled, TextField } from '@mui/material';
 
 export const StyledMuiTextField = styled(TextField)(({ theme }) => ({
   // Input
-  "& .MuiInput-root": {
-    color: theme.palette["6"],
+  '& .MuiInput-root': {
+    color: theme.palette['element-2'],
     ...theme.typography.text,
   },
-  "& .MuiInput-root::before": {
-    borderColor: `${theme.palette["5"]} !important`,
+  '& .MuiInput-root::before': {
+    borderColor: `${theme.palette['element-1']} !important`,
     borderWidth: `1px !important`,
   },
-  "& .MuiInput-root::after": {
+  '& .MuiInput-root::after': {
     borderWidth: 1,
-    borderColor: theme.palette["6"],
+    borderColor: theme.palette['element-2'],
   },
 
   // Label
-  "& .MuiInputLabel-root": {
-    color: theme.palette["4"],
+  '& .MuiInputLabel-root': {
+    color: theme.palette['element-1'],
     ...theme.typography.text,
   },
-  "&:hover .MuiInputLabel-root": {
-    color: theme.palette["5"],
+  '&:hover .MuiInputLabel-root': {
+    color: theme.palette['element-1'],
   },
-  "& .MuiInputLabel-root.Mui-error": {
-    color: theme.palette["4"],
+  '& .MuiInputLabel-root.Mui-error': {
+    color: theme.palette['element-1'],
   },
-  "& .MuiInputLabel-root.Mui-focused": {
-    color: theme.palette["4"],
+  '& .MuiInputLabel-root.Mui-focused': {
+    color: theme.palette['element-1'],
   },
 
   // Helper text
-  "& .MuiFormHelperText-root": {
+  '& .MuiFormHelperText-root': {
     ...theme.typography.caption,
-    color: theme.palette["5"],
+    color: theme.palette['element-1'],
   },
-  "& .BaseIcon": {
-    color: theme.palette["4"],
+  '& .BaseIcon': {
+    color: theme.palette['element-1'],
   },
-  "&:hover .BaseIcon": {
-    color: theme.palette["5"],
+  '&:hover .BaseIcon': {
+    color: theme.palette['element-1'],
   },
 }));
