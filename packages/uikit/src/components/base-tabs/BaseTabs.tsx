@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Sx } from "design-system";
+import { Sx } from 'design-system';
 
-import { Tab, TabId } from "./types";
-import { useTabCenterOffset } from "./lib/use-tab-center-offset";
-import { TabItem } from "./view/TabItem";
-import { TabsContainer } from "./view/TabsContainer";
-import { TabsRow } from "./view/TabsRow";
+import { Tab, TabId } from './types';
+import { useTabCenterOffset } from './lib/use-tab-center-offset';
+import { TabItem } from './view/TabItem';
+import { TabsContainer } from './view/TabsContainer';
+import { TabsRow } from './view/TabsRow';
 
 export type BaseTabsProps = {
   sx?: Sx;
@@ -17,14 +17,7 @@ export type BaseTabsProps = {
   onChangeActiveTabId?: (tabId?: TabId) => void;
 };
 
-export function BaseTabs({
-  sx,
-  className,
-  tabs,
-  gap = 5,
-  onChangeActiveTabId,
-  activeTabId,
-}: BaseTabsProps) {
+export function BaseTabs({ sx, className, tabs, gap = 5, onChangeActiveTabId, activeTabId }: BaseTabsProps) {
   const { getTabCenterOffset, getTabRef } = useTabCenterOffset(tabs, gap);
 
   const renderTab = (tab: Tab) => (

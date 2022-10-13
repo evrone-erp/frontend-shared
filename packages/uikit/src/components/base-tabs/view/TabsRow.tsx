@@ -1,5 +1,5 @@
-import { Box } from "@mui/material";
-import React, { ReactNode } from "react";
+import { Box } from '@mui/material';
+import React, { ReactNode } from 'react';
 
 type TabsRowProps = {
   currentTabOffset: number;
@@ -12,14 +12,14 @@ export function TabsRow({ gap, currentTabOffset, children }: TabsRowProps) {
     <Box
       className="BaseTabs-row"
       sx={{
-        flexShrink: "0",
-        position: "relative",
+        flexShrink: '0',
+        position: 'relative',
         top: 0,
-        left: "50%",
-        display: "grid",
-        gridAutoFlow: "column",
+        left: '50%',
+        display: 'grid',
+        gridAutoFlow: 'column',
         gap,
-        transition: "transform 0.5s",
+        transition: 'transform 0.5s',
       }}
       style={{
         transform: `translateX(-${currentTabOffset}px)`,

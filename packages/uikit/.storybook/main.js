@@ -15,14 +15,14 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
-  staticDirs: [{ from: '../src/assets/fonts', to: '/fonts' }],
+  staticDirs: [{ from: "../src/assets/fonts", to: "/fonts" }],
   webpackFinal: async (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
       "design-system": path.resolve(__dirname, "../src/design-system"),
       components: path.resolve(__dirname, "../src/components"),
-    }
+    };
 
-    return config
-  }
-}
+    return config;
+  },
+};

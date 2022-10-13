@@ -1,1 +1,1 @@
-export { BaseProgress } from "./BaseProgress";
+export { BaseProgress } from './BaseProgress';

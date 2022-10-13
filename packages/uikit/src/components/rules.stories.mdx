@@ -1,20 +1,21 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from "@storybook/addon-docs";
 
-<Meta title="ui/rules"/>
+<Meta title="ui/rules" />
 
 ## Ui components rules
 
 - Ui component can't depend on outher layers (entities, widgets), but can depend on components from shared layer.
 - Ui component must have public interface.
-Other modules can't import files from component directory. 
-In component directory should be index file with public fragments re-exports.
-There is eslint rule for it, but it not work with relative imports. 
+  Other modules can't import files from component directory.
+  In component directory should be index file with public fragments re-exports.
+  There is eslint rule for it, but it not work with relative imports.
 - Ui component must contain stories. There must be stories file in component directory. Stories file name pattern `ComponentName.stories.tsx`
 - Ui component must have sx and className props passed to root component element
-- Deep customization should be implemented through classNames on nested elements 
-classNames pattern `ComponentName-partName` and for state modifications `ComponentName-partName--action`.
+- Deep customization should be implemented through classNames on nested elements
+  classNames pattern `ComponentName-partName` and for state modifications `ComponentName-partName--action`.
 
 Example
+
 ```tsx
 <BaseDrawer sx={{
   "& .BaseDrawer-body": {
@@ -25,5 +26,3 @@ Example
   },
 }}>
 ```
-
-

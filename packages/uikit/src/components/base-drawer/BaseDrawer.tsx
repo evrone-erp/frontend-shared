@@ -1,13 +1,13 @@
-import React, { ReactNode } from "react";
-import { noop } from "lodash";
+import React, { ReactNode } from 'react';
+import { noop } from 'lodash';
 
-import { Sx } from "design-system";
+import { Sx } from 'design-system';
 
-import { StyledMuiDrawer } from "./view/StyledMuiDrawer";
-import { DrawerHeader } from "./view/DrawerHeader";
-import { DrawerBody } from "./view/DrawerBody";
-import { DrawerFooter } from "./view/DrawerFooter";
-import { ScrollBorderGradient } from "./view/ScrollBorderGradient";
+import { StyledMuiDrawer } from './view/StyledMuiDrawer';
+import { DrawerHeader } from './view/DrawerHeader';
+import { DrawerBody } from './view/DrawerBody';
+import { DrawerFooter } from './view/DrawerFooter';
+import { ScrollBorderGradient } from './view/ScrollBorderGradient';
 
 export type BaseDrawerProps = {
   sx?: Sx;
@@ -35,14 +35,7 @@ export function BaseDrawer({
   hideTopShadow,
 }: BaseDrawerProps) {
   return (
-    <StyledMuiDrawer
-      onOpen={onOpen}
-      onClose={onClose}
-      className={className}
-      sx={sx}
-      anchor="bottom"
-      open={open}
-    >
+    <StyledMuiDrawer onOpen={onOpen} onClose={onClose} className={className} sx={sx} anchor="bottom" open={open}>
       <DrawerHeader title={title} onClose={onClose} />
       {!hideTopShadow && <ScrollBorderGradient variant="top" />}
       <DrawerBody>{children}</DrawerBody>

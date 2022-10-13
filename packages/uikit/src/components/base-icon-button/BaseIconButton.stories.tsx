@@ -1,10 +1,10 @@
-import React from "react";
-import { Box } from "@mui/material";
-import { ComponentMeta, Story } from "@storybook/react";
-import { BaseIconButton, BaseIconButtonProps } from "./BaseIconButton";
+import React from 'react';
+import { Box } from '@mui/material';
+import { ComponentMeta, Story } from '@storybook/react';
+import { BaseIconButton, BaseIconButtonProps } from './BaseIconButton';
 
 export default {
-  title: "UI/BaseIconButton",
+  title: 'UI/BaseIconButton',
   component: BaseIconButton,
   decorators: [
     (StoryComponent) => (
@@ -21,16 +21,16 @@ function Template(props: Partial<BaseIconButtonProps>) {
 
 export const Primary: Story = Template.bind({});
 Primary.args = {
-  type: "delete",
+  type: 'delete',
   size: 60,
-  color: "orange-l",
+  color: 'orange-l',
 };
 
 export const WithVisibleIndent: Story = Template.bind({});
 WithVisibleIndent.args = {
-  type: "delete",
+  type: 'delete',
   size: 60,
-  color: "orange-l",
+  color: 'orange-l',
   visibleIndent: 20,
 };
 
@@ -39,15 +39,15 @@ CustomContent.args = {
   children: (
     <Box
       sx={{
-        typography: "caption",
-        width: "100%",
-        height: "100%",
-        borderRadius: "50%",
-        backgroundColor: "blue-d",
-        color: "core",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        typography: 'caption',
+        width: '100%',
+        height: '100%',
+        borderRadius: '50%',
+        backgroundColor: 'good-2',
+        color: 'bg-0',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       3

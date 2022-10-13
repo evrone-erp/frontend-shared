@@ -1,12 +1,13 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+import classNames from 'classnames';
 
-import { mergeSx } from "design-system";
-import { BaseComponentProps } from "design-system/types";
+import { mergeSx } from 'design-system';
+import { BaseComponentProps } from 'design-system/types';
 
 export type BasePlateHeaderProps = {
   title: string;
-  subTitle?: string;
+  subtitle?: string;
   inlineSubtitle?: boolean;
   action?: JSX.Element;
   link?: JSX.Element;
@@ -18,39 +19,43 @@ export function BasePlateHeader({
   action,
   inlineSubtitle = false,
   link,
-  subTitle,
+  subtitle,
   title,
 }: BasePlateHeaderProps) {
   return (
     <Box
       display="flex"
-      sx={mergeSx({ position: "relative" }, sx)}
-      className={className}
+      sx={mergeSx({ position: 'relative', mb: 'auto' }, sx)}
+      className={classNames('BasePlateHeader__root', 'BasePlate__header', className)}
     >
       <Box
         mr="auto"
-        sx={[inlineSubtitle && { display: "flex", alignItems: "flex-end" }]}
+        sx={[inlineSubtitle && { display: 'flex', alignItems: 'flex-end' }]}
+        className="BasePlateHeader__title-wrapper"
       >
         <Typography
           component="div"
-          color="6"
-          sx={mergeSx(
-            { typography: "subtitle" },
-            inlineSubtitle ? { mr: 3 } : { mb: 1 }
-          )}
+          color="element-2"
+          sx={mergeSx({ typography: 'subtitle' })}
+          className="BasePlateHeader__title"
         >
           {title}
         </Typography>
-        {subTitle && (
-          <Typography component="div" color="5" sx={{ typography: "text" }}>
-            {subTitle}
+        {subtitle && (
+          <Typography
+            component="div"
+            color="element-0"
+            sx={mergeSx({ typography: 'text', mt: 2 }, inlineSubtitle && { mt: 0, ml: 3 })}
+            className="BasePlateHeader__subtitle"
+          >
+            {subtitle}
           </Typography>
         )}
       </Box>
       {/* TODO: maybe need to combine link and action to one prop */}
       {link}
       {action && (
-        <Box sx={{ position: "absolute", right: "-6px", top: "-6px" }}>
+        <Box className="BasePlateHeader__action" sx={{ position: 'absolute', right: '-6px', top: '-6px' }}>
           {action}
         </Box>
       )}

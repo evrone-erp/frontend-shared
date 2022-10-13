@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, alpha, ButtonBase } from "@mui/material";
+import React from 'react';
+import { Box, alpha, ButtonBase } from '@mui/material';
 
 type ExpandButtonProps = { onClick: () => void };
 
@@ -7,30 +7,28 @@ export function ExpandButton({ onClick }: ExpandButtonProps) {
   return (
     <Box
       sx={{
-        position: "absolute",
-        right: "0",
-        bottom: "0",
+        position: 'absolute',
+        right: '0',
+        bottom: '0',
         pl: 1,
-        display: "flex",
+        display: 'flex',
       }}
     >
       <Box
         sx={{
           width: 20,
           background: (theme) =>
-            `linear-gradient(90deg, ${alpha(theme.palette["3"], 0)} 0%, ${
-              theme.palette["3"]
-            } 100%)`,
+            `linear-gradient(90deg, ${alpha(theme.palette['bg-1'], 0)} 0%, ${theme.palette['bg-1']} 100%)`,
         }}
       />
       <ButtonBase
         onClick={onClick}
         sx={{
-          typography: "text",
-          color: "6",
+          typography: 'text',
+          color: 'element-2',
           py: 0,
           pl: 2,
-          backgroundColor: "3",
+          backgroundColor: 'bg-1',
         }}
       >
         Развернуть

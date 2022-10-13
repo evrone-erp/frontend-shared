@@ -1,6 +1,6 @@
-import { MenuItem, styled } from "@mui/material";
+import { MenuItem, styled } from '@mui/material';
 
 export const StyledMuiMenuItem = styled(MenuItem)(({ theme }) => ({
-  color: theme.palette["6"],
+  color: theme.palette['element-2'],
   ...theme.typography.text,
 }));

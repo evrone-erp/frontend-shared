@@ -1,21 +1,21 @@
-import React from "react";
-import { ComponentMeta, Story } from "@storybook/react";
-import { BaseButton } from "../base-button";
-import { BaseLink } from "../base-link";
-import { BasePlate, BasePlateProps } from "./BasePlate";
-import { BasePlateHeader } from "./BasePlateHeader";
-import { BasePlateFooter } from "./BasePlateFooter";
-import { BaseTextButton } from "components/base-text-button";
-import { BaseCheckBox } from "components/base-check-box";
-import { Box } from "@mui/material";
+import React from 'react';
+import { ComponentMeta, Story } from '@storybook/react';
+import { Box } from '@mui/material';
+import { BaseTextButton } from 'components/base-text-button';
+import { BaseCheckBox } from 'components/base-check-box';
+import { BaseButton } from 'components/base-button';
+import { BaseLink } from 'components/base-link';
+import { BasePlate, BasePlateProps } from './BasePlate';
+import { BasePlateHeader } from './BasePlateHeader';
+import { BasePlateFooter } from './BasePlateFooter';
 
 export default {
-  title: "UI/BasePlate",
+  title: 'UI/BasePlate',
   component: BasePlate,
   subcomponents: { BasePlateHeader },
   parameters: {
     controls: {
-      exclude: ["className", "sx"],
+      exclude: ['className', 'sx'],
     },
   },
 } as ComponentMeta<typeof BasePlate>;
@@ -27,8 +27,8 @@ function Template(props: Partial<BasePlateProps>) {
 export const Main: Story = Template.bind({});
 Main.args = {
   sx: {
-    with: "100px",
-    height: "100px",
+    with: '100px',
+    height: '100px',
   },
 };
 
@@ -36,8 +36,8 @@ export const Pressable: Story = Template.bind({});
 Pressable.args = {
   pressable: true,
   sx: {
-    with: "100px",
-    height: "100px",
+    with: '100px',
+    height: '100px',
   },
 };
 
@@ -46,7 +46,7 @@ WithHeader1.args = {
   children: (
     <BasePlateHeader
       title="Payout"
-      subTitle="2022 August"
+      subtitle="2022 August"
       inlineSubtitle
       action={<BaseButton icon="plus">Add expense</BaseButton>}
     />
@@ -56,11 +56,7 @@ WithHeader1.args = {
 export const WithHeader2: Story = Template.bind({});
 WithHeader2.args = {
   children: (
-    <BasePlateHeader
-      title="Account manager"
-      subTitle="Middle+"
-      link={<BaseLink href="#">How to lvlup</BaseLink>}
-    />
+    <BasePlateHeader title="Account manager" subtitle="Middle+" link={<BaseLink href="#">How to lvlup</BaseLink>} />
   ),
 };
 
@@ -68,17 +64,13 @@ export const WithHeaderAndFooter: Story = Template.bind({});
 WithHeaderAndFooter.args = {
   children: (
     <>
-      <BasePlateHeader
-        title="Account manager"
-        subTitle="Middle+"
-        link={<BaseLink href="#">How to lvlup</BaseLink>}
-      />
-      <Box component="p" typography="title-2">Important information. Absolutly.</Box>
+      <BasePlateHeader title="Account manager" subtitle="Middle+" link={<BaseLink href="#">How to lvlup</BaseLink>} />
+      <Box component="p" typography="title-2">
+        Important information. Absolutly.
+      </Box>
       <BasePlateFooter
-        primaryAction={<BaseTextButton onClick={() => alert('Krasavchik.')}>Click here!</BaseTextButton>}
-        secondaryAction={
-          <BaseCheckBox label="Is true?" sx={{ marginRight: 0 }} />
-        }
+        primaryAction={<BaseTextButton>Click here!</BaseTextButton>}
+        secondaryAction={<BaseCheckBox label="Is true?" sx={{ marginRight: 0 }} />}
       />
     </>
   ),
