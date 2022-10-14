@@ -7,8 +7,6 @@ on:
 jobs:
   push:
     runs-on: ubuntu-latest
-    env: 
-      NODE_READ_TOKEN: ${{ secrets.GA_NPM_READ_WRITE }}
     steps:
       - uses: actions/checkout@v2
       - name: Install node
@@ -23,13 +21,12 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
-          npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}"
-          npm config set registry https://npm.pkg.github.com
-      - name: Install
-        run: |
           npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GA_NPM_READ_WRITE }}"
           npm config set registry https://npm.pkg.github.com
-          yarn install --frozen-lockfile
+        env:
+          NODE_READ_TOKEN: ${{ secrets.GA_NPM_READ_WRITE }}
+      - name: Install
+        run: yarn install --frozen-lockfile
       - name: "Version and publish"
         run: |
           npx lerna version --conventional-commits --yes
