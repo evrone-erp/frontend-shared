@@ -8,7 +8,7 @@ jobs:
   push:
     runs-on: ubuntu-latest
     env: 
-      NODE_READ_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      NODE_READ_TOKEN: ${{ secrets.GA_PACKAGES_TOKEN_READ }}
     steps:
       - uses: actions/checkout@v2
       - name: Install node
@@ -27,7 +27,7 @@ jobs:
           npm config set registry https://npm.pkg.github.com
       - name: Install
         run: |
-          npm set "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}"
+          npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GA_PACKAGES_TOKEN_READ }}"
           npm config set registry https://npm.pkg.github.com
           yarn install --frozen-lockfile
       - name: "Version and publish"
