@@ -7,6 +7,8 @@ on:
 jobs:
   push:
     runs-on: ubuntu-latest
+    env:
+      NODE_READ_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Install node
@@ -27,8 +29,6 @@ jobs:
         run: |
           npm config set //npm.pkg.github.com/:_authToken=${NODE_READ_TOKEN}
           yarn install --frozen-lockfile
-        env:
-          NODE_READ_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "Version and publish"
         run: |
           npx lerna version --conventional-commits --yes
