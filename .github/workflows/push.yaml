@@ -7,6 +7,8 @@ on:
 jobs:
   push:
     runs-on: ubuntu-latest
+    env: 
+      NODE_READ_TOKEN: ${{ secrets.GA_NPM_READ_WRITE }}
     steps:
       - uses: actions/checkout@v2
       - name: Install node
@@ -24,8 +26,6 @@ jobs:
           npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}"
           npm config set registry https://npm.pkg.github.com
       - name: Install
-        env:
-          NODE_READ_TOKEN: ${{ secrets.GA_NPM_READ_WRITE }}
         run: |
           npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GA_NPM_READ_WRITE }}"
           npm config set registry https://npm.pkg.github.com
