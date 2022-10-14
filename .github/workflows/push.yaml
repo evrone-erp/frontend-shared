@@ -25,6 +25,8 @@ jobs:
           npm config set registry https://npm.pkg.github.com
       - name: Install
         run: yarn install --frozen-lockfile
+        env:
+          NODE_READ_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "Version and publish"
         run: |
           npx lerna version --conventional-commits --yes
