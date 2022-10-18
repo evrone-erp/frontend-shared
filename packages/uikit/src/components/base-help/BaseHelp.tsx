@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
-
-import { Sx, mergeSx } from 'design-system';
 import { Box } from '@mui/material';
 
-import { CloseButton } from './view/CloseButton';
+import { Sx, mergeSx } from 'design-system';
+import { BaseCloseButton } from 'components/base-close-button';
+
 import { HelpContainer } from './view/HelpContainer';
 import { TextContent } from './view/TextContent';
 import { TitleContent } from './view/TitleContent';
@@ -28,7 +28,7 @@ export function BaseHelp({ sx, className, title, onClose, text, withClose, maxLi
     <HelpContainer sx={mergeSx(rootSx, sx)} className={classNames('BaseHelp__root', className)}>
       <Box className="BaseHelp__titleWrapper" sx={titleWrapperSx}>
         <TitleContent withClose={withClose}>{title}</TitleContent>
-        {withClose && <CloseButton className="BaseHelp__close" onClick={onClose} size={16} />}
+        {withClose && <BaseCloseButton className="BaseHelp__close" onClick={onClose} size={16} />}
       </Box>
       <TextContent maxLines={maxLines}>{text}</TextContent>
     </HelpContainer>

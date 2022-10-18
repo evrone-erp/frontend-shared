@@ -17,3 +17,5 @@ export * from './base-progress-bar';
 export * from './base-tabs';
 export * from './base-text-button';
 export * from './base-text-field';
+export * from './base-dialog';
+export * from './base-close-button';
