@@ -1,6 +1,7 @@
 const copy = require('rollup-plugin-copy');
 const ttypescript = require('ttypescript');
 const typescript = require('rollup-plugin-typescript2');
+const path = require('path');
 
 module.exports = {
   // This function will run for each entry/format/env combination
@@ -11,12 +12,12 @@ module.exports = {
       copy({
         targets: [
           {
-            src: 'src/design-system/design-tokens/design-tokens.json',
-            dest: 'dist/design-system/design-tokens',
+            src: path.resolve(__dirname, 'src/design-system/design-tokens/design-tokens.json'),
+            dest: path.resolve(__dirname, 'dist/design-system/design-tokens'),
           },
           {
-            src: 'src/assets/fonts/**/*',
-            dest: 'dist/assets/fonts',
+            src: path.resolve(__dirname, 'src/assets/fonts/**/*'),
+            dest: path.resolve(__dirname, 'dist/assets/fonts'),
           },
         ],
       }),
