@@ -7,7 +7,7 @@ import { Transition } from './ui/Transition';
 import { Close } from './ui/Close';
 import { Header } from './ui/Header';
 
-interface BaseDialogProps extends DialogProps {
+export interface BaseDialogProps extends DialogProps {
   children: ReactNode;
   header?: ReactNode;
 }
