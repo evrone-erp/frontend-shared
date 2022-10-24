@@ -1,4 +1,4 @@
-export * from './base-avatar-upload';
+export * from './base-avatar';
 export * from './base-button';
 export * from './base-check-box';
 export * from './base-date-picker';
@@ -19,3 +19,4 @@ export * from './base-text-button';
 export * from './base-text-field';
 export * from './base-dialog';
 export * from './base-close-button';
+export * from './avatar-upload-dialog';

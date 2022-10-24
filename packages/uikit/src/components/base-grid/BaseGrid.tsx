@@ -9,12 +9,14 @@ export type BaseGridProps = Omit<GridProps, 'xs' | 'sm' | 'md' | 'lg' | 'xl'> &
 export const BaseGrid: React.FC<BaseGridProps> = ({ container, ...props }) => (
   <Grid
     columns={COLUMNS_COUNT}
-    spacing={{
-      ...(container && {
-        mob: 2.5,
-        desk: 3.5,
-      }),
-    }}
+    spacing={
+      container
+        ? {
+            mob: 2.5,
+            desk: 3.5,
+          }
+        : undefined
+    }
     container={container}
     {...props}
   />

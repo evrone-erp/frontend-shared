@@ -22,9 +22,9 @@ Payout.args = {
     <BaseProgressBar
       totalValue={888}
       valueSegments={[
-        { value: 483, color: 'element-2' },
-        { value: 202, color: 'good-1' },
-        { value: 204, color: 'good-2' },
+        { value: 483, color: 'element-2', name: 'name' },
+        { value: 202, color: 'good-1', name: 'name' },
+        { value: 204, color: 'good-2', name: 'name' },
       ]}
       gap={0.5}
     />
@@ -35,7 +35,7 @@ Benefit.args = {
   title: '42 000 ₽',
   startBarText: '0',
   endBarText: '70 000',
-  progressBar: <BaseProgressBar totalValue={1360} valueSegments={[{ value: 716, color: 'element-2' }]} />,
+  progressBar: <BaseProgressBar totalValue={1360} valueSegments={[{ value: 716, color: 'element-2', name: 'name' }]} />,
 };
 export const ActiveTitle: Story = Template.bind({});
 ActiveTitle.args = {
@@ -43,5 +43,5 @@ ActiveTitle.args = {
   startBarText: '0',
   endBarText: '70 000',
   activeTitle: true,
-  progressBar: <BaseProgressBar totalValue={1360} valueSegments={[{ value: 716, color: 'element-2' }]} />,
+  progressBar: <BaseProgressBar totalValue={1360} valueSegments={[{ value: 716, color: 'element-2', name: 'name' }]} />,
 };
