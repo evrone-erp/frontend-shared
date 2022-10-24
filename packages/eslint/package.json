@@ -1,6 +1,6 @@
 {
   "name": "@evrone-erp/eslint-config",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "",
   "scripts": {
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'"
