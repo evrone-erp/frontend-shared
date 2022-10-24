@@ -4,7 +4,9 @@ import { ThemeKey } from 'design-system/types';
 import { createTheme } from './create-theme';
 import { getSystemColorScheme } from './get-system-color-scheme';
 
-export type ThemeProviderSetThemeHandler = (themeType: ThemeKey) => void;
+type ThemeProviderSetThemeHandlerArgs = ThemeKey | ((state: ThemeKey) => ThemeKey);
+
+export type ThemeProviderSetThemeHandler = (arg: ThemeProviderSetThemeHandlerArgs) => void;
 
 type ThemeProviderProps = {
   children: ReactNode;

@@ -1,27 +1,64 @@
-import React from 'react';
-import { Box } from '@mui/material';
+import React, { forwardRef } from 'react';
+import classNames from 'classnames';
+import { AppBar, AppBarProps, Box } from '@mui/material';
 import { mergeSx } from 'design-system';
-import { BaseComponentProps } from 'design-system/types';
 
-type RootProps = Pick<React.HTMLAttributes<HTMLDivElement>, 'onMouseLeave'> & BaseComponentProps;
+type RootProps = {
+  open: boolean;
+} & AppBarProps;
 
-export const Root: React.FC<RootProps> = ({ sx, className, onMouseLeave, children }) => (
-  <Box
+const headerSx = { p: 0 };
+
+const rootSx = {
+  py: 3,
+  px: {
+    mob: 1,
+    tab: 4,
+  },
+  display: 'grid',
+  alignItems: 'center',
+  gap: {
+    mob: 0,
+    tab: 21,
+  },
+  bgcolor: 'bg-0',
+  gridTemplateColumns: 'auto 1fr auto',
+  gridTemplateRows: 'auto',
+  gridTemplateAreas: {
+    mob: `
+      "logo avatar"
+    `,
+    tab: `
+      "logo menu avatar"
+    `,
+  },
+};
+
+const openSx = {
+  gridTemplateRows: {
+    mob: 'auto auto',
+    tab: 'auto',
+  },
+  gridTemplateAreas: {
+    mob: `
+      "logo avatar"
+      "menu menu"
+    `,
+    tab: `
+      "logo menu avatar"
+    `,
+  },
+};
+
+export const Root = forwardRef<HTMLDivElement, RootProps>(({ sx, className, position, children, open }, ref) => (
+  <AppBar
+    ref={ref}
+    position={position}
     component="header"
-    sx={mergeSx(
-      {
-        p: {
-          mob: 1,
-          tab: 4,
-        },
-        display: 'flex',
-        justifyContent: 'space-between',
-      },
-      sx,
-    )}
-    onMouseLeave={onMouseLeave}
-    className={className}
+    elevation={0}
+    sx={headerSx}
+    className={classNames('BaseNavHeader__root', className)}
   >
-    {children}
-  </Box>
-);
+    <Box sx={mergeSx(rootSx, open && openSx, sx)}>{children}</Box>
+  </AppBar>
+));

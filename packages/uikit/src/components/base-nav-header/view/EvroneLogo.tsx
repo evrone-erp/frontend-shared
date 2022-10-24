@@ -1,4 +1,18 @@
-import { Box } from '@mui/material';
-import React from 'react';
+import React, { memo, FC, ReactNode } from 'react';
+import Link from '@mui/material/Link';
 
-export const EvroneLogo: React.FC = () => <Box sx={{ typography: 'subtitle', color: 'element-2' }}>evrone</Box>;
+import { mergeSx, Sx } from 'design-system';
+
+export type EvroneLogoProps = {
+  href?: string;
+  sx?: Sx;
+  children?: ReactNode;
+};
+
+const rootSx = { typography: 'subtitle', color: 'element-2', gridArea: 'logo' };
+
+export const EvroneLogo: FC<EvroneLogoProps> = memo(({ href, sx, children }) => (
+  <Link className="BaseNavHeader__logo" href={href} sx={mergeSx(rootSx, sx)}>
+    {children || 'evrone'}
+  </Link>
+));

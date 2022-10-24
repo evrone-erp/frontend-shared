@@ -1411,18 +1411,6 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@evrone-erp/eslint-config@^1.0.16":
-  version "1.0.12"
-  resolved "https://npm.pkg.github.com/download/@evrone-erp/eslint-config/1.0.12/3d0dba879a45bfe31007d43605330231ea036464#3d0dba879a45bfe31007d43605330231ea036464"
-  integrity sha512-ytd3vgstlaKQMPoi7gcKOoPI+WAnVZVpKiWQhBu8gxKokkAJe9CYqrASyrwJm2tIlSaptYNbZymzAJOAnptJ0g==
-
-"@evrone-erp/react-std@^0.2.44":
-  version "0.2.40"
-  resolved "https://npm.pkg.github.com/download/@evrone-erp/react-std/0.2.40/71967ad80ed3699873c2915925d22d917a8e52fe#71967ad80ed3699873c2915925d22d917a8e52fe"
-  integrity sha512-3h7TN40ofko7J1FvQs06VduR8Y5JPLGGV6hEI0U0cMoVTN4WqCZw66v8t73N7ndj2TceRTzZ+/cgxIQ4sz2hYQ==
-  dependencies:
-    classnames "^2.3.1"
-
 "@gar/promisify@^1.0.1":
   version "1.1.3"
   resolved "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.3.tgz"

@@ -1,16 +1,35 @@
-import { Box } from '@mui/material';
 import React from 'react';
+import { Box } from '@mui/material';
+import { mergeSx } from 'design-system';
 
-export const Menu: React.FC<{ isOpened: boolean }> = ({ children, isOpened }) => (
-  <Box
-    sx={{
-      display: 'flex',
-      alignItems: 'center',
-      mr: 15,
-      opacity: isOpened ? 1 : 0,
-      transition: 'opacity 200ms ease',
-    }}
-  >
+const rootSx = {
+  display: {
+    mob: 'none',
+    tab: 'flex',
+  },
+  mt: {
+    mob: 3,
+    tab: 0,
+  },
+  alignItems: 'center',
+  justifyContent: 'flex-end',
+  opacity: 0,
+  transition: 'opacity 200ms ease',
+  pointerEvents: 'none',
+  flex: 1,
+  gridArea: 'menu',
+};
+
+const openSx = {
+  display: {
+    mob: 'flex',
+  },
+  opacity: 1,
+  pointerEvents: 'auto',
+};
+
+export const Menu: React.FC<{ open: boolean }> = ({ children, open }) => (
+  <Box className="BaseNavHeader__menu" sx={mergeSx(rootSx, open && openSx)}>
     {children}
   </Box>
 );
