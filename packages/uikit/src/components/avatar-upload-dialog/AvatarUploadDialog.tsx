@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { BaseButton } from 'components/base-button';
 import { Sx } from 'design-system/types';
 import { BaseDialog } from 'components/base-dialog';
-import { styled, Typography } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 import { BaseAvatar } from 'components/base-avatar';
 import { mergeSx } from 'design-system/lib/merge-sx';
 import { useDropzone } from 'react-dropzone';
@@ -24,6 +24,7 @@ const InnerContainer = styled('div')`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 20px;
 `;
 
 export function AvatarUploadDialog({
@@ -43,7 +44,9 @@ export function AvatarUploadDialog({
 
   return (
     <BaseDialog
-      sx={mergeSx(sx, { '& .BaseDialog__transition': { justifyContent: 'flex-start' } })}
+      sx={mergeSx(sx, {
+        '& .BaseDialog__transition': { justifyContent: 'flex-start' },
+      })}
       className={className}
       open={isOpen}
       onClose={onClose}
@@ -51,12 +54,20 @@ export function AvatarUploadDialog({
     >
       <InnerContainer>
         <AvatarEditor src={src || value} size={size} setPreview={setPreview} />
-        <BaseAvatar sx={{ margin: '20px 0' }} value={preview} size={65} />
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '8px',
+            pl: '6px',
+          }}
+        >
+          <Typography variant="text">Preview avatar</Typography>
+          <BaseAvatar placeholder=" " value={preview} size={65} />
+        </Box>
         <div {...getRootProps()}>
           <input accept="image/*" {...getInputProps()} />
-          <BaseButton sx={{ marginTop: '20px' }} variant="text">
-            Update...
-          </BaseButton>
+          <BaseButton variant="text">Update...</BaseButton>
         </div>
         <BaseButton sx={{ marginTop: 'auto' }} variant="text" icon="plus" onClick={() => onSave(preview)}>
           Save
