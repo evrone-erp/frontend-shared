@@ -1,7 +1,6 @@
 const copy = require('rollup-plugin-copy');
 const ttypescript = require('ttypescript');
 const typescript = require('rollup-plugin-typescript2');
-const path = require('path');
 
 // helper to convert alias imports to relative imports (why it needs: aliases aren't recognized after install lib in an external app)
 // comes with @zerollup/ts-transform-paths in tsconfig.json
@@ -62,12 +61,12 @@ module.exports = {
       copy({
         targets: [
           {
-            src: path.resolve('src', '/design-system/design-tokens/design-tokens.json'),
-            dest: path.resolve('dist', '/design-system/design-tokens'),
+            src: 'src/design-system/design-tokens/design-tokens.json',
+            dest: 'dist/design-system/design-tokens',
           },
           {
-            src: path.resolve('src', '/assets/fonts/**/*'),
-            dest: path.resolve('dist', '/assets/fonts'),
+            src: 'src/assets/fonts/**/*',
+            dest: 'dist/assets/fonts',
           },
         ],
       }),
