@@ -3,30 +3,6 @@ const ttypescript = require('ttypescript');
 const typescript = require('rollup-plugin-typescript2');
 const path = require('path');
 
-module.exports = {
-  // This function will run for each entry/format/env combination
-  rollup(config, options) {
-    // eslint-disable-next-line no-use-before-define
-    addSettingsToConvertTsAliasPathsToRelativePathsAfterBuild(config, options);
-    config.plugins.push(
-      copy({
-        targets: [
-          {
-            src: path.resolve(__dirname, './src/design-system/design-tokens/design-tokens.json'),
-            dest: path.resolve(__dirname, './dist/design-system/design-tokens'),
-          },
-          {
-            src: path.resolve(__dirname, './src/assets/fonts/**/*'),
-            dest: path.resolve(__dirname, './dist/assets/fonts'),
-          },
-        ],
-      }),
-    );
-
-    return config;
-  },
-};
-
 // helper to convert alias imports to relative imports (why it needs: aliases aren't recognized after install lib in an external app)
 // comes with @zerollup/ts-transform-paths in tsconfig.json
 // Solution was got from this PR: https://github.com/jaredpalmer/tsdx/issues/91#issuecomment-770021810
@@ -76,4 +52,27 @@ const addSettingsToConvertTsAliasPathsToRelativePathsAfterBuild = (config, optio
   });
 
   config.plugins.splice(rpt2PluginIndex, 1, customRPT2Plugin);
+};
+
+module.exports = {
+  // This function will run for each entry/format/env combination
+  rollup(config, options) {
+    addSettingsToConvertTsAliasPathsToRelativePathsAfterBuild(config, options);
+    config.plugins.push(
+      copy({
+        targets: [
+          {
+            src: path.resolve('src', '/design-system/design-tokens/design-tokens.json'),
+            dest: path.resolve('dist', '/design-system/design-tokens'),
+          },
+          {
+            src: path.resolve('src', '/assets/fonts/**/*'),
+            dest: path.resolve('dist', '/assets/fonts'),
+          },
+        ],
+      }),
+    );
+
+    return config;
+  },
 };
