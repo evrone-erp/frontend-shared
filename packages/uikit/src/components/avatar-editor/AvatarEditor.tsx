@@ -30,7 +30,10 @@ export const AvatarEditor = ({ size, setPreview, src }: TAvatarEditorProps) => {
   const onRotate = useCallback(() => setRotateDegree((currentDegree) => currentDegree + 90), []);
 
   const [scale, setScale] = useState(1);
-  const onScale = useCallback((evt) => setScale(() => evt.target.value), []);
+  const onScale = useCallback(
+    (evt: React.ChangeEvent<HTMLInputElement>) => setScale(() => Number(evt.target.value)),
+    [],
+  );
 
   return (
     <StyledContainer>

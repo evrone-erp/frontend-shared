@@ -12,12 +12,12 @@ module.exports = {
       copy({
         targets: [
           {
-            src: path.resolve(__dirname, 'src/design-system/design-tokens/design-tokens.json'),
-            dest: path.resolve(__dirname, 'dist/design-system/design-tokens'),
+            src: path.resolve(__dirname, '/src/design-system/design-tokens/design-tokens.json'),
+            dest: path.resolve(__dirname, '/dist/design-system/design-tokens'),
           },
           {
-            src: path.resolve(__dirname, 'src/assets/fonts/**/*'),
-            dest: path.resolve(__dirname, 'dist/assets/fonts'),
+            src: path.resolve(__dirname, '/src/assets/fonts/**/*'),
+            dest: path.resolve(__dirname, '/dist/assets/fonts'),
           },
         ],
       }),

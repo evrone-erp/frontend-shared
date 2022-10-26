@@ -5,6 +5,11 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "build": "lerna run build --stream --parallel",
+    "start": "lerna run start --stream --parallel",
+    "clean": "lerna clean && rm -r node_modules && rm yarn.lock"
+  },
   "devDependencies": {
     "lerna": "^4.0.0",
     "eslint-plugin-prettier": "3.4.1",
