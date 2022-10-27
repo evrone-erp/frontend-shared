@@ -7,7 +7,7 @@ type RootProps = {
   open: boolean;
 } & AppBarProps;
 
-const headerSx = { p: 0 };
+const headerSx = { p: 0, bgcolor: 'bg-0' };
 
 const rootSx = {
   py: 3,

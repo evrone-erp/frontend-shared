@@ -1,72 +1,57 @@
-import React, { ReactNode, memo } from 'react';
-import { Dialog, DialogProps, Box } from '@mui/material';
+import React, { memo, useMemo } from 'react';
+import { Dialog, Box } from '@mui/material';
 
-import { BasePlate } from 'components/base-plate';
+import { mergeSx } from 'design-system';
+import { BaseModalHeader } from 'components/base-modal-header';
 
+import { BaseDialogPosition, BaseDialogProps } from './types';
 import { Transition } from './ui/Transition';
-import { Close } from './ui/Close';
-import { Header } from './ui/Header';
-
-export interface BaseDialogProps extends DialogProps {
-  children: ReactNode;
-  header?: ReactNode;
-}
-
-const headerSx = {
-  bgcolor: 'transparent',
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  height: 64,
-  gap: 16,
-};
-
-const cardSx = {
-  bgcolor: 'bg-1',
-  p: 5,
-};
+import { styles } from './BaseDialog.styles';
 
 const paperProps = {
   className: 'BaseDialog__paper',
-  sx: {
-    bgcolor: 'transparent',
-    backgroundImage: 'none',
-    boxShadow: 'none',
-    width: 460,
-    maxWidth: 460,
-    p: 0,
-    m: 2.5,
-  },
+  sx: styles.paper,
 };
 
 const backdropProps = {
   className: 'BaseDialog__backdrop',
-  sx: {
-    bgcolor: 'bg-0',
-    // To show header
-    top: {
-      mob: 32,
-      tab: 56,
-    },
+  sx: styles.backdrop,
+};
+
+const positionSx = {
+  [BaseDialogPosition.left]: {
+    justifyContent: 'flex-start',
+  },
+  [BaseDialogPosition.right]: {
+    justifyContent: 'flex-end',
+  },
+  [BaseDialogPosition.center]: {
+    justifyContent: 'center',
   },
 };
 
-export const BaseDialog = memo(({ children, open, sx, onClose, header }: BaseDialogProps) => (
-  <Dialog
-    className="BaseDialog__root"
-    sx={sx}
-    open={open}
-    TransitionComponent={Transition}
-    PaperProps={paperProps}
-    BackdropProps={backdropProps}
-    maxWidth="mob"
-  >
-    <Box className="BaseDialog__header-wrapper" sx={headerSx}>
-      <Header header={header} />
-      <Close onClose={onClose} />
-    </Box>
-    <BasePlate sx={cardSx} className="BaseDialog__plate">
-      {children}
-    </BasePlate>
-  </Dialog>
-));
+export const BaseDialog = memo(({ children, open, sx, onClose, header, position }: BaseDialogProps) => {
+  const transitionSx = useMemo(() => {
+    const positionIsValid = position && position in BaseDialogPosition;
+    return {
+      '& .BaseDialog__transition': positionIsValid ? positionSx[position] : positionSx.center,
+    };
+  }, [position]);
+
+  return (
+    <Dialog
+      className="BaseDialog__root"
+      sx={mergeSx(transitionSx, sx)}
+      open={open}
+      TransitionComponent={Transition}
+      PaperProps={paperProps}
+      BackdropProps={backdropProps}
+      maxWidth="mob"
+    >
+      <BaseModalHeader header={header} onClose={onClose} />
+      <Box sx={styles.content} className="BaseDialog__content">
+        {children}
+      </Box>
+    </Dialog>
+  );
+});

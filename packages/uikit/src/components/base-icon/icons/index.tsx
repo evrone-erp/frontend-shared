@@ -15,6 +15,7 @@ import { VacationIcon } from './VacationIcon';
 import { OpenedEyeIcon } from './OpenedEyeIcon';
 import { ClosedEyeIcon } from './ClosedEyeIcon';
 import { LockIcon } from './LockIcon';
+import { ChevronIcon } from './ChevronIcon';
 
 export const icons = {
   plus: PlusIcon,
@@ -22,6 +23,7 @@ export const icons = {
   date: DateIcon,
   file: FileIcon,
   delete: DeleteIcon,
+  chevron: ChevronIcon,
   close: CloseIcon,
   'close-sm': CloseSmIcon,
   theme: ThemeIcon,
