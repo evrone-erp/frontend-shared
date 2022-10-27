@@ -1,0 +1,1 @@
+export { BaseModalTab } from './BaseModalTab';

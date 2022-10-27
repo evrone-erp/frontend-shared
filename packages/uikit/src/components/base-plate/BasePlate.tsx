@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, ElementType } from 'react';
 import classNames from 'classnames';
 
 import { Box } from '@mui/material';
@@ -30,14 +30,16 @@ export type BasePlateProps = {
   children?: ReactNode;
   pressable?: boolean;
   onClick?: () => void;
+  component?: ElementType;
 };
 
-export function BasePlate({ sx, className, children, pressable, onClick }: BasePlateProps) {
+export function BasePlate({ sx, className, children, pressable, onClick, component }: BasePlateProps) {
   return (
     <Box
       onClick={onClick}
       sx={mergeSx(commonSx, sx, pressable && pressableSx)}
       className={classNames('BasePlate__root', className)}
+      component={component}
     >
       {children}
     </Box>

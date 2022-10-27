@@ -1,0 +1,1 @@
+export { BaseTabPanel } from './BaseTabPanel';
