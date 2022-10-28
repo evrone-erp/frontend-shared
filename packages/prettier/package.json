@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'"
+  },
+  "name": "@evrone-erp/prettier-config",
+  "repository": "https://github.com/evrone-erp/frontend-shared",
+  "publishConfig": {
+    "@evrone-erp:registry": "https://npm.pkg.github.com/evrone-erp"
+  },
+  "author": "Evrone",
+  "dependencies": {
+    "prettier": "^2.6.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
+}
