@@ -1,6 +1,6 @@
 import { Button, ButtonProps, styled } from '@mui/material';
 
-type StyledButtonProps = ButtonProps & { isRound?: boolean };
+export type StyledButtonProps = ButtonProps & { isRound?: boolean };
 
 export const StyledButton = styled(Button, {
   shouldForwardProp: (p) => p !== 'isRound',

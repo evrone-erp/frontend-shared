@@ -1,20 +1,15 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 import { BaseIcon, IconType } from 'components/base-icon';
-import { SxProps, Theme, ButtonProps } from '@mui/material';
+import { StyledIconContainer } from 'components/base-text-button/view/StyledIconContainer';
+import { CircularProgress, SxProps, Theme } from '@mui/material';
 
-import { StyledButton } from './view/StyledButton';
+import { StyledButton, StyledButtonProps } from './view/StyledButton';
 
-export type BaseButtonProps = {
-  onClick?: () => void;
-  children?: ReactNode;
-  disabled?: boolean;
-  variant?: 'contained' | 'outlined' | 'text';
+export type BaseButtonProps = StyledButtonProps & {
   icon?: IconType;
-  className?: string;
   sx?: SxProps<Theme>;
-  isRound?: boolean;
-  size?: ButtonProps['size'];
+  isLoading?: boolean;
 };
 
 const iconSizes = {
@@ -26,29 +21,33 @@ const iconSizes = {
 export function BaseButton({
   children,
   icon,
-  className,
-  sx,
+  onClick,
   disabled = false,
   variant = 'contained',
   isRound = false,
-  onClick,
   size = 'medium',
+  isLoading = false,
+  ...restButtonProps
 }: BaseButtonProps): JSX.Element {
   const iconSize = iconSizes[size];
 
   return (
     <StyledButton
-      className={className}
       variant={variant}
       disabled={disabled}
       onClick={onClick}
       isRound={isRound}
       disableElevation
-      sx={sx}
       size={size}
+      {...restButtonProps}
     >
       {!isRound && children}
       {icon && <BaseIcon type={icon} size={iconSize} />}
+      {isLoading && (
+        <StyledIconContainer>
+          <CircularProgress size="20px" />
+        </StyledIconContainer>
+      )}
     </StyledButton>
   );
 }
