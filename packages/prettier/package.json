@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'"
   },
   "name": "@evrone-erp/prettier-config",
   "repository": "https://github.com/evrone-erp/frontend-shared",
