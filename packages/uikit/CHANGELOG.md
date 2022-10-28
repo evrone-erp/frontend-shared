@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.53 (2022-10-28)
+
+**Note:** Version bump only for package @evrone-erp/uikit
+
+
+
+
+
 ## 0.2.52 (2022-10-26)
 
 **Note:** Version bump only for package @evrone-erp/uikit
