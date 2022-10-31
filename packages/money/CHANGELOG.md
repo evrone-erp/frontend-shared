@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.59 (2022-10-31)
+
+**Note:** Version bump only for package @evrone-erp/money
+
+
+
+
+
 ## 0.2.58 (2022-10-31)
 
 **Note:** Version bump only for package @evrone-erp/money
