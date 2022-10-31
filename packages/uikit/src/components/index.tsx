@@ -22,3 +22,7 @@ export * from './base-close-button';
 export * from './avatar-upload-dialog';
 export * from './base-theme-toggle';
 export * from './base-backdrop';
+export * from './base-modal-tabs';
+export * from './base-modal-tab';
+export * from './base-tab-panel';
+export * from './base-table';

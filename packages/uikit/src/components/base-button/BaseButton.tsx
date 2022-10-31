@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 
 import { BaseIcon, IconType } from 'components/base-icon';
 import { StyledIconContainer } from 'components/base-text-button/view/StyledIconContainer';
@@ -7,6 +7,7 @@ import { CircularProgress, SxProps, Theme } from '@mui/material';
 import { StyledButton, StyledButtonProps } from './view/StyledButton';
 
 export type BaseButtonProps = StyledButtonProps & {
+  onClick?: (event?: MouseEvent<HTMLElement>) => void;
   icon?: IconType;
   sx?: SxProps<Theme>;
   isLoading?: boolean;

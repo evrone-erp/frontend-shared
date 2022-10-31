@@ -4,20 +4,20 @@ import { ThemeKey } from 'design-system/types';
 import { createTheme } from './create-theme';
 import { getSystemColorScheme } from './get-system-color-scheme';
 
-type ThemeProviderSetThemeHandlerArgs = ThemeKey | ((state: ThemeKey) => ThemeKey);
+type SetThemeStateArgs = ThemeKey | ((state: ThemeKey) => ThemeKey);
 
-export type ThemeProviderSetThemeHandler = (arg: ThemeProviderSetThemeHandlerArgs) => void;
+export type ThemeProviderSetThemeHandler<Args = ThemeKey> = (arg: Args) => void;
 
 type ThemeProviderProps = {
   children: ReactNode;
   // For control storing own way
   themeType?: ThemeKey;
-  onSetThemeType?: ThemeProviderSetThemeHandler;
+  onSetThemeType?: (theme: ThemeKey) => void;
 };
 
 type ThemeContextValue = {
   themeType: ThemeKey;
-  setTheme: ThemeProviderSetThemeHandler;
+  setTheme: ThemeProviderSetThemeHandler<SetThemeStateArgs>;
 };
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
@@ -28,13 +28,13 @@ export function ThemeProvider({ themeType: initialThemeType, children, onSetThem
   const [themeType, setThemeType] = useState(initialThemeType || getSystemColorScheme(DEFAULT_THEME_TYPE));
   const theme = useMemo(() => createTheme(themeType), [themeType]);
 
-  const updateThemeType: ThemeProviderSetThemeHandler = useCallback(
+  const updateThemeType: ThemeProviderSetThemeHandler<SetThemeStateArgs> = useCallback(
     (_themeType) => {
       setThemeType(_themeType);
-      onSetThemeType?.(_themeType);
     },
-    [onSetThemeType],
+    [setThemeType],
   );
+
   const contextValue = useMemo(
     () => ({
       themeType,
@@ -46,6 +46,10 @@ export function ThemeProvider({ themeType: initialThemeType, children, onSetThem
   useEffect(() => {
     updateThemeType(initialThemeType || getSystemColorScheme(DEFAULT_THEME_TYPE));
   }, [updateThemeType, initialThemeType]);
+
+  useEffect(() => {
+    onSetThemeType?.(themeType);
+  }, [themeType, onSetThemeType]);
 
   return (
     <ThemeContext.Provider value={contextValue}>

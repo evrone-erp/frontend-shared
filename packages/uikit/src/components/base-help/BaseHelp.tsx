@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import classNames from 'classnames';
 import { Box } from '@mui/material';
 
@@ -16,7 +16,7 @@ export type BaseHelpProps = {
   text?: string;
   maxLines?: number;
   withClose?: boolean;
-  onClose?: () => void;
+  onClose?: (event?: MouseEvent<HTMLElement>) => void;
 };
 
 const rootSx = { bgcolor: 'bg-0' };
