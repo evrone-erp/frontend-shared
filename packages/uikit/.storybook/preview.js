@@ -3,7 +3,7 @@ import AdapterLuxon from "@mui/lab/AdapterLuxon";
 import { LocalizationProvider } from "@mui/lab";
 import { ThemeProvider } from "emotion-theming";
 import { withThemes } from "@react-theming/storybook-addon";
-import { createTheme } from "../src/design-system";
+import { createTheme } from "../src";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -23,7 +23,7 @@ export const parameters = {
 const providerFn = ({ theme, children }) => {
   const muTheme = createTheme(theme.type);
   return (
-    <LocalizationProvider dateAdapter={AdapterLuxon} locale={"ru"}>
+    <LocalizationProvider dateAdapter={AdapterLuxon} adapterLocale="ru">
       <MuiThemeProvider theme={muTheme}>
         <CssBaseline />
         <ThemeProvider theme={muTheme}>{children}</ThemeProvider>
