@@ -6,6 +6,7 @@ import { noop } from 'lodash';
 import { Sx, bindPropsSxMerge } from 'design-system';
 import { StyledMuiTextField } from 'components/base-text-field';
 import { BaseIcon } from 'components/base-icon';
+import { TextFieldProps } from '@mui/material/TextField/TextField';
 
 const DateIcon = bindPropsSxMerge(BaseIcon, { type: 'date', size: 24 });
 
@@ -27,7 +28,7 @@ export function BaseDatePicker({ label, onChange, value, className, sx }: BaseDa
         OpenPickerIcon: DateIcon,
       }}
       mask="__.__.____"
-      renderInput={(props) => <StyledMuiTextField sx={sx} variant="standard" {...props} />}
+      renderInput={(props: TextFieldProps) => <StyledMuiTextField sx={sx} variant="standard" {...props} />}
     />
   );
 }

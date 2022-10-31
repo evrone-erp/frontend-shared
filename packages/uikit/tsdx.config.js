@@ -69,6 +69,7 @@ module.exports = {
             dest: 'dist/assets/fonts',
           },
         ],
+        verbose: true,
       }),
     );
 
