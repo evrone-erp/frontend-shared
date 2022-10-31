@@ -31,7 +31,7 @@ type BaseNavHeaderCompose = {
 };
 
 const BaseNavHeader: FC<BaseNavHeaderProps> = ({
-  open = false,
+  open = true,
   sx,
   className,
   logo,

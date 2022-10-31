@@ -22,8 +22,8 @@ jobs:
           npm config set registry https://npm.pkg.github.com
       - name: Install
         run: yarn install --frozen-lockfile
-      - name: "prepublish"
-        run: lerna run prepare
+      - name: "prepare"
+        run: npx lerna run prepare
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
