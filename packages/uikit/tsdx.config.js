@@ -47,6 +47,7 @@ const addSettingsToConvertTsAliasPathsToRelativePathsAfterBuild = (config, optio
       },
     },
     check: !options.transpileOnly && options.writeMeta,
+    clean: true,
     useTsconfigDeclarationDir: Boolean(tsCompilerOptions && tsCompilerOptions.declarationDir),
   });
 
@@ -69,6 +70,7 @@ module.exports = {
             dest: 'dist/assets/fonts',
           },
         ],
+        hook: 'writeBundle',
         verbose: true,
       }),
     );
