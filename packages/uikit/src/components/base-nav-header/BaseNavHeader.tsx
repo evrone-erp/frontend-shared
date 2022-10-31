@@ -17,7 +17,7 @@ export type BaseNavHeaderProps = {
   children?: ReactNode;
   accountButton?: ReactNode;
   position?: AppBarProps['position'];
-  open: boolean;
+  open?: boolean;
   onOpen?: () => void;
   onClose?: () => void;
   logoProps?: EvroneLogoProps;
@@ -31,7 +31,7 @@ type BaseNavHeaderCompose = {
 };
 
 const BaseNavHeader: FC<BaseNavHeaderProps> = ({
-  open,
+  open = false,
   sx,
   className,
   logo,

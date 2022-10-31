@@ -20,7 +20,7 @@ So, manual publishing and next steps usefull ONLY for unusual cases.
 
 - if you did't create/verify your user in the registry early - do it.  
 `npm adduser` 
-- `npx lerna publish`
+- `lerna publish`
 
 ### Integration
 
@@ -41,7 +41,7 @@ Reason: thus solution give unified stack of libraries, predefined design-system 
 It is recommended to use [tsdx](https://tsdx.io/) to create new libraries
 
 - `cd packages`
-- `npx tsdx create lib-name`
+- `tsdx create lib-name`
 - Edit package.json: 
   - remove prettier block.
   - update `name` field. `lib-name -> @evrone-erp/lib-name`.

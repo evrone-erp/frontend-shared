@@ -16,7 +16,7 @@ function Template({ children, ...props }: PropsWithChildren<BaseMainLayoutProps>
 
 export const Main: Story<PropsWithChildren<BaseMainLayoutProps>> = Template.bind({});
 Main.args = {
-  header: <BaseNavHeader hideThemeToggle />,
+  header: <BaseNavHeader position="sticky" />,
   children: (
     <BaseGrid container>
       <BaseGrid item tab={6}>

@@ -41,7 +41,7 @@ export const createTheme = (type: ThemeKey) => {
   addTypographyToTheme(theme);
   addColorsToTheme(theme, type);
   theme.palette.primary.main = theme.palette['element-2'];
-  theme.palette.error.main = theme.palette['good-1'];
+  theme.palette.error.main = theme.palette.bad;
   theme.palette.background.default = theme.palette['bg-0'];
 
   return theme;

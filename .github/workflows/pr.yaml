@@ -23,7 +23,7 @@ jobs:
       - name: Install
         run: yarn install --frozen-lockfile
       - name: "prepublish"
-        run: npx lerna run prepare
+        run: lerna run prepare
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
