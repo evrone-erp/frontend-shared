@@ -27,8 +27,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: "Version and publish"
         run: |
-          lerna version --conventional-commits --yes
-          lerna publish from-git --yes
+          npx lerna version --conventional-commits --yes
+          npx lerna publish from-git --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
