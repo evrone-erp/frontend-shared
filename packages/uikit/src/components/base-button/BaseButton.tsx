@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, forwardRef, Ref } from 'react';
 
 import { BaseIcon, IconType } from 'components/base-icon';
 import { StyledIconContainer } from 'components/base-text-button/view/StyledIconContainer';
@@ -19,36 +19,42 @@ const iconSizes = {
   large: 30,
 };
 
-export function BaseButton({
-  children,
-  icon,
-  onClick,
-  disabled = false,
-  variant = 'contained',
-  isRound = false,
-  size = 'medium',
-  isLoading = false,
-  ...restButtonProps
-}: BaseButtonProps): JSX.Element {
-  const iconSize = iconSizes[size];
+export const BaseButton = forwardRef(
+  (
+    {
+      children,
+      icon,
+      onClick,
+      disabled = false,
+      variant = 'contained',
+      isRound = false,
+      size = 'medium',
+      isLoading = false,
+      ...restButtonProps
+    }: BaseButtonProps,
+    ref: Ref<HTMLButtonElement> | null,
+  ): JSX.Element => {
+    const iconSize = iconSizes[size];
 
-  return (
-    <StyledButton
-      variant={variant}
-      disabled={disabled}
-      onClick={onClick}
-      isRound={isRound}
-      disableElevation
-      size={size}
-      {...restButtonProps}
-    >
-      {!isRound && children}
-      {icon && <BaseIcon type={icon} size={iconSize} />}
-      {isLoading && (
-        <StyledIconContainer>
-          <CircularProgress size="20px" />
-        </StyledIconContainer>
-      )}
-    </StyledButton>
-  );
-}
+    return (
+      <StyledButton
+        ref={ref}
+        variant={variant}
+        disabled={disabled}
+        onClick={onClick}
+        isRound={isRound}
+        disableElevation
+        size={size}
+        {...restButtonProps}
+      >
+        {!isRound && children}
+        {icon && <BaseIcon type={icon} size={iconSize} />}
+        {isLoading && (
+          <StyledIconContainer>
+            <CircularProgress size="20px" />
+          </StyledIconContainer>
+        )}
+      </StyledButton>
+    );
+  },
+);

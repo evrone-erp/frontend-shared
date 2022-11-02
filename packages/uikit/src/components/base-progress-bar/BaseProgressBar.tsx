@@ -26,8 +26,8 @@ export function BaseProgressBar({
 }: BaseProgressBarProps) {
   const valuesSum = valueSegments.reduce(sumSegments, 0);
   const restSegmentValue = totalValue - valuesSum;
-
   const segmentValues = valueSegments.map((v) => v.value);
+
   if (restSegmentValue > 0) {
     segmentValues.push(restSegmentValue);
   }
@@ -35,7 +35,7 @@ export function BaseProgressBar({
   return (
     <ProgressWrapper background={background} gap={gap} sx={sx} className={className} values={segmentValues}>
       {valueSegments.map((segment) => (
-        <ProgressSegmentComponent key={segment.name} color={segment.color} />
+        <ProgressSegmentComponent key={segment.name} color={segment.color} tooltip={segment.tooltip} />
       ))}
       {restSegmentValue > 0 && <ProgressSegmentComponent color="transparent" />}
     </ProgressWrapper>

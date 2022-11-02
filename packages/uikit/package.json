@@ -58,6 +58,7 @@
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@evrone-erp/eslint-config": "^1.0.35",
+    "@evrone-erp/prettier-config": "^1.0.10",
     "@mui/lab": "^5.0.0-alpha.75",
     "@mui/material": "^5.5.3",
     "@react-theming/storybook-addon": "^1.1.5",

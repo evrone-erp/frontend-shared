@@ -26,3 +26,5 @@ export * from './base-modal-tabs';
 export * from './base-modal-tab';
 export * from './base-tab-panel';
 export * from './base-table';
+export * from './base-menu';
+export * from './base-tooltip';
