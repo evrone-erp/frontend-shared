@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Box, keyframes } from '@mui/material';
 import { ColorName } from 'design-system';
+import { BaseTooltip } from 'components/base-tooltip';
 
 const growAnimation = keyframes({
   '0%': {
@@ -14,17 +15,26 @@ const growAnimation = keyframes({
 
 type ProgressSegmentComponentProps = {
   color: ColorName | 'transparent';
+  tooltip?: ReactNode;
 };
 
-export function ProgressSegmentComponent({ color }: ProgressSegmentComponentProps) {
-  return (
+export function ProgressSegmentComponent({ color, tooltip }: ProgressSegmentComponentProps) {
+  const renderSegment = (
     <Box
       className="BaseProgressBar-segment"
       sx={{
         backgroundColor: color,
         transformOrigin: 'left',
         animation: `${growAnimation} 600ms`,
+        transition: 'transform 200ms ease',
+        '&:hover': {
+          transform: 'scaleY(1.5)',
+        },
       }}
     />
   );
+
+  if (tooltip) return <BaseTooltip title={tooltip}>{renderSegment}</BaseTooltip>;
+
+  return renderSegment;
 }
