@@ -97,6 +97,7 @@
   },
   "dependencies": {
     "@evrone-erp/react-std": "^0.2.65",
+    "@mui/x-date-pickers": "^5.0.7",
     "browser-image-compression": "^1.0.17",
     "classnames": "^2.3.1",
     "eslint-plugin-react-hooks": "^4.6.0",

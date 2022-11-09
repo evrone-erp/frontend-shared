@@ -47,7 +47,9 @@ export const AvatarEditor = ({ size, setPreview, src }: TAvatarEditorProps) => {
         image={src}
         width={size}
         height={size}
+        backgroundColor="transparent"
         disableHiDPIScaling
+        disableBoundaryChecks
       />
       <BaseButton sx={{ marginTop: '10px' }} variant="text" icon="arrow-right" onClick={onRotate}>
         Rotate
