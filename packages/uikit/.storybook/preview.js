@@ -1,7 +1,7 @@
 import { ThemeProvider as MuiThemeProvider, CssBaseline } from "@mui/material";
-import AdapterLuxon from "@mui/lab/AdapterLuxon";
-import { LocalizationProvider } from "@mui/lab";
-import { ThemeProvider } from "emotion-theming";
+import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { ThemeProvider } from "@emotion/react";
 import { withThemes } from "@react-theming/storybook-addon";
 import { createTheme } from "../src";
 
