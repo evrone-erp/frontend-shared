@@ -1,3 +1,10 @@
+export enum ECurrency {
+  rub = 'rub',
+  usd = 'usd',
+  eur = 'eur',
+  cu = 'cu',
+}
+
 export const CURRENCY_UI_PROPS = {
   rub: {
     label: 'Russian Rouble',
@@ -14,12 +21,15 @@ export const CURRENCY_UI_PROPS = {
     sign: "€",
     color: '#4339F2',
   },
+  cu: {
+    label: 'CU',
+    sign: "CU",
+    color: '#6c757d',
+  },
 };
 
-export type TCurrency = keyof typeof CURRENCY_UI_PROPS;
+export type TCurrencyValue = typeof CURRENCY_UI_PROPS[ECurrency];
 
-export type TCurrencyValue = typeof CURRENCY_UI_PROPS[TCurrency];
-
-export const CURRENCIES_LIST = Object.keys(CURRENCY_UI_PROPS) as TCurrency[];
+export const CURRENCIES_LIST = Object.keys(CURRENCY_UI_PROPS) as ECurrency[];
 
 export const CURRENCY_UI_PROPS_VALUES = Object.values(CURRENCY_UI_PROPS) as TCurrencyValue[];
