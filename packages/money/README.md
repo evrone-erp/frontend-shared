@@ -4,29 +4,30 @@ is library to work with money
 
 *Built using [tsdx](https://tsdx.io/)*
 
-## Money type
+## Money class
 
-```ts
-export type Money = {
-  sign: string; // Currency sign example ₽
-  precision: number
-  amount: number; // integer number of currency units with object precision
-};
-```
-
-## createMoneyFromRubles
-
-create `Money` object from rubles amount.
-Adds `sing` ₽, and set `precision` to 2 
-
-## formatMoney
-returns a string representation of the money object
+Base class for work with money. Contains methods for mathematical operations with money and formatting.
+All methods can be chained except format (do all operations before use format)
+All methods calculate amount without rounding for greater accuracy.
+Amount rounds only when use format
 
 examples
 ```tsx
-formatMoney({ amount: 100000, precision: 2, sing:'₽' }) // 1 000 ₽
-formatMoney({ amount: 10000000, precision: 2, sing:'₽' }) // 1 000 000 ₽
-formatMoney({ amount: 10000000, precision: 2, sing:'₽' }, { endSign: false }) // 1 000 000
-formatMoney({ amount: 10000000, precision: 2, sing:'₽' }, { endSign: false, group: false }) // 1000000
+const money = createMoney(10000.50, 'rub')
+money
+  .sum(2000.1) // {currency: 'rub', amount: 12000.6}
+  .subtract(100) // {currency: 'rub', amount: 11900.6}
+  .multiply(2) // {currency: 'rub', amount: 23801.2}
+  .divide(3) // {currency: 'rub', amount: 7933.733333333334} 
+  .format() // 7 933.73 ₽
+```
+
+## groupNumberString
+returns string with number groups separated by spaces 
+
+examples
+```tsx
+groupNumberString(100000) // 100 000
+groupNumberString(12345678.56) // 12 345 678.56
 ```
 
