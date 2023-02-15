@@ -31,9 +31,10 @@ export class Money {
     return this;
   }
 
-  format() {
+  format(discardZeroFractal?: boolean) {
     const currencySign = this.currency ? ` ${CURRENCY_UI_PROPS[this.currency]?.sign}` : '';
-    const parsedAmount = parseFloat(String(this.amount.toFixed(2)));
+    const amount = String(this.amount.toFixed(2));
+    const parsedAmount = discardZeroFractal ? parseFloat(amount) : amount;
     return `${groupNumberString(parsedAmount)}${currencySign}`;
   }
 
