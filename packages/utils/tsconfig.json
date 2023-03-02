@@ -1,0 +1,8 @@
+{
+  "extends": "@evrone-erp/eslint-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
