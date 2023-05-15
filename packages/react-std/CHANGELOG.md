@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.72 (2023-05-15)
+
+**Note:** Version bump only for package @evrone-erp/react-std
+
+
+
+
+
 ## 0.2.71 (2023-03-02)
 
 **Note:** Version bump only for package @evrone-erp/react-std
