@@ -12,7 +12,7 @@ import { TitleContent } from './view/TitleContent';
 export type BaseHelpProps = {
   sx?: Sx;
   className?: string;
-  title?: JSX.Element;
+  title?: React.ReactNode;
   text?: string;
   maxLines?: number;
   withClose?: boolean;

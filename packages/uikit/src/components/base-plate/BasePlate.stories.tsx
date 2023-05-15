@@ -70,6 +70,7 @@ WithHeaderAndFooter.args = {
       </Box>
       <BasePlateFooter
         primaryAction={<BaseTextButton>Click here!</BaseTextButton>}
+        primaryActionComment="Comment for action"
         secondaryAction={<BaseCheckBox label="Is true?" sx={{ marginRight: 0 }} />}
       />
     </>
