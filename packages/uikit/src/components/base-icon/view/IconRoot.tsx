@@ -3,7 +3,7 @@ import { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-prop
 
 export const IconRoot = styled('svg')<ConcreteIconProps>(({ color, size, theme }) => ({
   display: 'inline-block',
-  verticalAlign: 'text-bottom',
+  verticalAlign: 'middle',
   color: color ? theme.palette[color] : 'currentColor',
   height: size ?? '1.125em',
   width: size ?? '1.125em',

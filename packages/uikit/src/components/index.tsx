@@ -28,3 +28,4 @@ export * from './base-tab-panel';
 export * from './base-table';
 export * from './base-menu';
 export * from './base-tooltip';
+export * from './base-loader';

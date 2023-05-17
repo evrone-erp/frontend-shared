@@ -76,3 +76,11 @@ WithHeaderAndFooter.args = {
     </>
   ),
 };
+
+export const WithLoading: Story = Template.bind({});
+WithLoading.args = {
+  children: (
+    <BasePlateHeader title="Account manager" subtitle="Middle+" link={<BaseLink href="#">How to lvlup</BaseLink>} />
+  ),
+  loading: true,
+};
