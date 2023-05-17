@@ -1,8 +1,9 @@
 import React, { MouseEvent, forwardRef, Ref } from 'react';
+import { CircularProgress, SxProps, Theme } from '@mui/material';
 
 import { BaseIcon, IconType } from 'components/base-icon';
 import { StyledIconContainer } from 'components/base-text-button/view/StyledIconContainer';
-import { CircularProgress, SxProps, Theme } from '@mui/material';
+import { mergeSx } from 'design-system';
 
 import { StyledButton, StyledButtonProps } from './view/StyledButton';
 
@@ -19,12 +20,19 @@ const iconSizes = {
   large: 30,
 };
 
+const buttonSx = {
+  '& .BaseIcon': {
+    ml: 1,
+  },
+};
+
 export const BaseButton = forwardRef(
   (
     {
       children,
       icon,
       onClick,
+      sx,
       disabled = false,
       variant = 'contained',
       isRound = false,
@@ -45,6 +53,7 @@ export const BaseButton = forwardRef(
         isRound={isRound}
         disableElevation
         size={size}
+        sx={mergeSx(sx, buttonSx)}
         {...restButtonProps}
       >
         {!isRound && children}

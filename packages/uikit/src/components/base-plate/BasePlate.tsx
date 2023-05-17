@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import { Box } from '@mui/material';
 import { mergeSx, Sx } from 'design-system';
+import { BaseLoader } from 'components/base-loader';
 
 const commonSx = {
   borderRadius: 5,
@@ -14,6 +15,7 @@ const commonSx = {
   flexDirection: 'column',
   position: 'relative',
 };
+
 const pressableSx = {
   cursor: 'pointer',
   '&:hover': {
@@ -24,6 +26,16 @@ const pressableSx = {
   },
 };
 
+const loaderWrapperSx = {
+  position: 'absolute',
+  inset: 0,
+  backgroundColor: 'inherit',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: 'inherit',
+};
+
 export type BasePlateProps = {
   sx?: Sx;
   className?: string;
@@ -31,9 +43,10 @@ export type BasePlateProps = {
   pressable?: boolean;
   onClick?: () => void;
   component?: ElementType;
+  loading?: boolean;
 };
 
-export function BasePlate({ sx, className, children, pressable, onClick, component }: BasePlateProps) {
+export function BasePlate({ sx, className, children, pressable, onClick, component, loading }: BasePlateProps) {
   return (
     <Box
       onClick={onClick}
@@ -42,6 +55,11 @@ export function BasePlate({ sx, className, children, pressable, onClick, compone
       component={component}
     >
       {children}
+      {loading && (
+        <Box className="BasePlate__loading" sx={loaderWrapperSx}>
+          <BaseLoader />
+        </Box>
+      )}
     </Box>
   );
 }

@@ -16,6 +16,8 @@ import { OpenedEyeIcon } from './OpenedEyeIcon';
 import { ClosedEyeIcon } from './ClosedEyeIcon';
 import { LockIcon } from './LockIcon';
 import { ChevronIcon } from './ChevronIcon';
+import { EditIcon } from './EditIcon';
+import { HintIcon } from './HintIcon';
 
 export const icons = {
   plus: PlusIcon,
@@ -36,6 +38,8 @@ export const icons = {
   'opened-eye': OpenedEyeIcon,
   'closed-eye': ClosedEyeIcon,
   lock: LockIcon,
+  edit: EditIcon,
+  hint: HintIcon,
 };
 export type IconType = keyof typeof icons;
 export const iconTypes = Object.keys(icons) as IconType[];
