@@ -41,7 +41,7 @@ export const BaseDialog = memo(({ children, open, sx, onClose, header, position 
   return (
     <Dialog
       className="BaseDialog__root"
-      sx={mergeSx(transitionSx, sx)}
+      sx={mergeSx(transitionSx, styles.root, sx)}
       open={open}
       TransitionComponent={Transition}
       PaperProps={paperProps}

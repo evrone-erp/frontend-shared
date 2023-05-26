@@ -32,4 +32,7 @@ export const styles = {
     bgcolor: 'bg-0',
     top: HEADER_HEIGHT,
   },
+  root: {
+    top: HEADER_HEIGHT,
+  },
 };
