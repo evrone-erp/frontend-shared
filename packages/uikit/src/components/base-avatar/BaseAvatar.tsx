@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Sx, mergeSx } from 'design-system';
 
 import { Box, Typography } from '@mui/material';
+import { ImageLoaderProps } from 'next/dist/client/image';
 import { AvatarSkeleton } from './view/AvatarSkeleton';
 
 export type BaseAvatarProps = {
@@ -13,6 +14,7 @@ export type BaseAvatarProps = {
   size?: number;
   placeholder?: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
+  imageLoader?: (props: ImageLoaderProps) => string;
 };
 
 export function BaseAvatar({
@@ -23,6 +25,7 @@ export function BaseAvatar({
   size = 120,
   placeholder = 'Change cover',
   onClick,
+  imageLoader,
 }: BaseAvatarProps) {
   return (
     <Box
@@ -38,7 +41,6 @@ export function BaseAvatar({
           cursor: 'pointer',
           overflow: 'hidden',
           position: 'relative',
-          padding: '20px',
         },
         sx,
       )}
@@ -50,7 +52,7 @@ export function BaseAvatar({
           {placeholder}
         </Typography>
       )}
-      {value && <Image layout="fill" src={value} alt="avatar" />}
+      {value && <Image objectFit="cover" loader={imageLoader} src={value} alt="" width={size} height={size} />}
       {isLoading && <AvatarSkeleton />}
     </Box>
   );
