@@ -1,6 +1,6 @@
 import React from 'react';
 import { DateTime } from 'luxon';
-import { DatePicker } from '@mui/lab';
+import { DatePicker } from '@mui/x-date-pickers';
 import { noop } from 'lodash';
 
 import { Sx, bindPropsSxMerge } from 'design-system';
