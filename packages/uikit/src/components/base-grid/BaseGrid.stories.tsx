@@ -1,14 +1,14 @@
-import { ComponentMeta, Story } from '@storybook/react';
-import React, { PropsWithChildren } from 'react';
+import { Meta, StoryFn } from '@storybook/react';
+import React from 'react';
 import { BasePlate, BasePlateHeader } from 'components/base-plate';
 import { BaseGrid, BaseGridProps } from './BaseGrid';
 
 export default {
   title: 'UI/BaseGrid',
   component: BaseGrid,
-} as ComponentMeta<typeof BaseGrid>;
+} as Meta<typeof BaseGrid>;
 
-function Template({ children, ...props }: PropsWithChildren<BaseGridProps>): JSX.Element {
+function Template({ children, ...props }: BaseGridProps): JSX.Element {
   return (
     <BaseGrid container {...props}>
       {children}
@@ -16,7 +16,7 @@ function Template({ children, ...props }: PropsWithChildren<BaseGridProps>): JSX
   );
 }
 
-export const Main: Story<PropsWithChildren<BaseGridProps>> = Template.bind({});
+export const Main: StoryFn<BaseGridProps> = Template.bind({});
 Main.args = {
   children: (
     <>

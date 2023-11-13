@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
 import { BaseTextField } from './BaseTextField';
 import { BaseTextFieldProps } from './types';
@@ -6,7 +6,7 @@ import { BaseTextFieldProps } from './types';
 export default {
   title: 'UI/BaseTextField',
   component: BaseTextField,
-} as ComponentMeta<typeof BaseTextField>;
+} as Meta<typeof BaseTextField>;
 
 function Template({ onChange, ...props }: BaseTextFieldProps): JSX.Element {
   const [value, setValue] = useState<string>('');
@@ -22,7 +22,7 @@ function Template({ onChange, ...props }: BaseTextFieldProps): JSX.Element {
   );
 }
 
-type TextFieldStory = Story<BaseTextFieldProps>;
+type TextFieldStory = StoryFn<BaseTextFieldProps>;
 
 export const Base: TextFieldStory = Template.bind({});
 Base.args = {

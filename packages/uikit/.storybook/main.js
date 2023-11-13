@@ -1,21 +1,25 @@
+import { dirname, join } from "path";
 const path = require("path");
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "storybook-addon-next",
-    "@react-theming/storybook-addon",
+    getAbsolutePath("@storybook/addon-links"),
+    getAbsolutePath("@storybook/addon-essentials"),
   ],
+
   typescript: {
     check: true, // type-check stories during Storybook build
   },
-  framework: "@storybook/react",
-  core: {
-    builder: "webpack5",
+
+  "framework": {
+    name: getAbsolutePath("@storybook/nextjs"),
+    options: {}
   },
+
   staticDirs: [{ from: "../src/assets/fonts", to: "/fonts" }],
+
   webpackFinal: async (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
@@ -25,4 +29,12 @@ module.exports = {
 
     return config;
   },
+
+  docs: {
+    autodocs: true
+  }
 };
+
+function getAbsolutePath(value) {
+  return dirname(require.resolve(join(value, "package.json")));
+}

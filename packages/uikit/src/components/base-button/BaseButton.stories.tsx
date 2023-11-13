@@ -1,48 +1,48 @@
-import React, { PropsWithChildren } from 'react';
-import { ComponentMeta, Story } from '@storybook/react';
+import React from 'react';
+import { Meta, StoryFn } from '@storybook/react';
 import { BaseButton, BaseButtonProps } from './BaseButton';
 
 export default {
   title: 'UI/BaseButton',
   component: BaseButton,
-} as ComponentMeta<typeof BaseButton>;
+} as Meta<typeof BaseButton>;
 
-function Template(props: PropsWithChildren<BaseButtonProps>): JSX.Element {
+function Template(props: BaseButtonProps) {
   return <BaseButton {...props} />;
 }
 
-export const Primary: Story = Template.bind({});
-Primary.args = {
+export const Text: StoryFn<BaseButtonProps> = Template.bind({});
+Text.args = {
   children: 'Hello!',
-  variant: 'primary',
+  variant: 'text',
 };
-export const PrimaryDisabled: Story = Template.bind({});
-PrimaryDisabled.args = {
+export const TextDisabled: StoryFn<BaseButtonProps> = Template.bind({});
+TextDisabled.args = {
   children: 'Hello!',
-  variant: 'primary',
+  variant: 'text',
   disabled: true,
 };
 
-export const Secondary: Story = Template.bind({});
-Secondary.args = {
+export const Outlined: StoryFn<BaseButtonProps> = Template.bind({});
+Outlined.args = {
   children: 'Hello!',
-  variant: 'secondary',
+  variant: 'outlined',
 };
 
-export const SecondaryDisabled: Story = Template.bind({});
-SecondaryDisabled.args = {
+export const OutlinedDisabled: StoryFn<BaseButtonProps> = Template.bind({});
+OutlinedDisabled.args = {
   children: 'Hello!',
-  variant: 'secondary',
+  variant: 'outlined',
   disabled: true,
 };
 
-export const WithIcon: Story = Template.bind({});
+export const WithIcon: StoryFn<BaseButtonProps> = Template.bind({});
 WithIcon.args = {
   children: 'Join',
   icon: 'choice',
 };
 
-export const RoundButton: Story = Template.bind({});
+export const RoundButton: StoryFn<BaseButtonProps> = Template.bind({});
 RoundButton.args = {
   icon: 'plus',
   isRound: true,

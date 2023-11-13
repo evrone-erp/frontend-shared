@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { BaseIconButton, BaseIconButtonProps } from './BaseIconButton';
 
 export default {
@@ -13,28 +13,26 @@ export default {
       </Box>
     ),
   ],
-} as ComponentMeta<typeof BaseIconButton>;
+} as Meta<typeof BaseIconButton>;
 
 function Template(props: Partial<BaseIconButtonProps>) {
   return <BaseIconButton {...props} />;
 }
 
-export const Primary: Story = Template.bind({});
+export const Primary: StoryFn<BaseIconButtonProps> = Template.bind({});
 Primary.args = {
   type: 'delete',
   size: 60,
-  color: 'orange-l',
 };
 
-export const WithVisibleIndent: Story = Template.bind({});
+export const WithVisibleIndent: StoryFn<BaseIconButtonProps> = Template.bind({});
 WithVisibleIndent.args = {
   type: 'delete',
   size: 60,
-  color: 'orange-l',
   visibleIndent: 20,
 };
 
-export const CustomContent: Story = Template.bind({});
+export const CustomContent: StoryFn<BaseIconButtonProps> = Template.bind({});
 CustomContent.args = {
   children: (
     <Box

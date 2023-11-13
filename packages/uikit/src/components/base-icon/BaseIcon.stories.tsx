@@ -1,21 +1,22 @@
-import React, { PropsWithChildren } from 'react';
-import { ComponentMeta, Story } from '@storybook/react';
+import React from 'react';
+import { Meta, StoryFn } from '@storybook/react';
 import { icons, IconType } from 'components/base-icon/icons';
 import { BaseIcon, BaseIconProps } from './BaseIcon';
 
 export default {
   title: 'UI/BaseIcon',
   component: BaseIcon,
-} as ComponentMeta<typeof BaseIcon>;
+} as Meta<typeof BaseIcon>;
 
-function Template(props: PropsWithChildren<Partial<BaseIconProps>>) {
-  return <BaseIcon type="plus" {...props} />;
+function Template(props: BaseIconProps) {
+  return <BaseIcon {...props} type="plus" />;
 }
 
-export const InText: Story = Template.bind({});
+export const InText: StoryFn<BaseIconProps> = Template.bind({});
 InText.args = {
   type: 'plus',
 };
+
 InText.decorators = [
   (StoryComponent) => (
     <div style={{ color: 'lightskyblue', fontSize: '24px' }}>
@@ -24,38 +25,38 @@ InText.decorators = [
   ),
 ];
 
-export const Plus: Story = Template.bind({});
+export const Plus: StoryFn<BaseIconProps> = Template.bind({});
 Plus.args = {
   type: 'plus',
   size: 60,
   color: 'element-2',
 };
 
-export const Choice: Story = Template.bind({});
+export const Choice: StoryFn<BaseIconProps> = Template.bind({});
 Choice.args = {
   type: 'choice',
   size: 60,
   color: 'element-2',
 };
-export const Date: Story = Template.bind({});
+export const Date: StoryFn<BaseIconProps> = Template.bind({});
 Date.args = {
   type: 'date',
   size: 60,
   color: 'element-2',
 };
 
-function AllIconsTemplate(props: PropsWithChildren<Partial<BaseIconProps>>) {
+function AllIconsTemplate(props: BaseIconProps) {
   return (
     <div>
       {Object.keys(icons).map((type) => (
-        <span style={{ padding: '10px', border: '1px solid' }}>
-          <BaseIcon type={type as IconType} {...props} />
+        <span key={type} style={{ padding: '10px', border: '1px solid' }}>
+          <BaseIcon {...props} type={type as IconType} />
         </span>
       ))}
     </div>
   );
 }
-export const Icons: Story = AllIconsTemplate.bind({});
+export const Icons: StoryFn<BaseIconProps> = AllIconsTemplate.bind({});
 Icons.args = {
   color: 'element-2',
 };

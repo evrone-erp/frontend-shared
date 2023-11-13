@@ -1,4 +1,4 @@
-import React, { ReactNode, ElementType } from 'react';
+import React, { ElementType, PropsWithChildren } from 'react';
 import classNames from 'classnames';
 
 import { Box } from '@mui/material';
@@ -39,14 +39,21 @@ const loaderWrapperSx = {
 export type BasePlateProps = {
   sx?: Sx;
   className?: string;
-  children?: ReactNode;
   pressable?: boolean;
   onClick?: () => void;
   component?: ElementType;
   loading?: boolean;
 };
 
-export function BasePlate({ sx, className, children, pressable, onClick, component, loading }: BasePlateProps) {
+export function BasePlate({
+  sx,
+  className,
+  children,
+  pressable,
+  onClick,
+  component,
+  loading,
+}: PropsWithChildren<BasePlateProps>) {
   return (
     <Box
       onClick={onClick}

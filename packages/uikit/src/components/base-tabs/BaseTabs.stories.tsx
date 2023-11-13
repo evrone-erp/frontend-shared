@@ -1,19 +1,19 @@
 import { Theme } from '@mui/material';
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
 import { BaseTabs, BaseTabsProps } from './BaseTabs';
 
 export default {
   title: 'UI/BaseTabs',
   component: BaseTabs,
-} as ComponentMeta<typeof BaseTabs>;
+} as Meta<typeof BaseTabs>;
 
-function Template({ activeTabId, ...props }: Partial<BaseTabsProps>) {
+function Template({ activeTabId, ...props }: BaseTabsProps) {
   const [activeTabState, setActiveTabState] = useState(activeTabId);
-  return <BaseTabs tabs={[]} {...props} onChangeActiveTabId={setActiveTabState} activeTabId={activeTabState} />;
+  return <BaseTabs {...props} onChangeActiveTabId={setActiveTabState} activeTabId={activeTabState} />;
 }
 
-export const Main: Story = Template.bind({});
+export const Main: StoryFn<BaseTabsProps> = Template.bind({});
 Main.args = {
   tabs: [
     { id: '1', label: 'Tab1' },
@@ -25,7 +25,7 @@ Main.args = {
   ],
 };
 
-export const Customization: Story = Template.bind({});
+export const Customization: StoryFn<BaseTabsProps> = Template.bind({});
 Customization.args = {
   tabs: [
     { id: '2020', label: '2020' },

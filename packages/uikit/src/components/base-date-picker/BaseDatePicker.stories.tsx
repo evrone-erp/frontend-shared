@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { DateTime } from 'luxon';
 import { BaseDatePicker, BaseDatePickerProps } from './BaseDatePicker';
 
 export default {
   title: 'UI/BaseDatePicker',
   component: BaseDatePicker,
-} as ComponentMeta<typeof BaseDatePicker>;
+} as Meta<typeof BaseDatePicker>;
 
 function Template({ onChange, ...props }: BaseDatePickerProps): JSX.Element {
   const [state, setState] = useState<DateTime | null>(null);
@@ -22,7 +22,7 @@ function Template({ onChange, ...props }: BaseDatePickerProps): JSX.Element {
   );
 }
 
-export const Base: Story = Template.bind({});
+export const Base: StoryFn = Template.bind({});
 Base.args = {
   label: 'Label',
 };

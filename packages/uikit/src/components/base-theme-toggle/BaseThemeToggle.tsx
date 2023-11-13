@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { PropsWithChildren, useCallback } from 'react';
 import { BaseIconButton } from 'components/base-icon-button';
 import { BaseComponentProps } from 'design-system/types';
 import { useTheme, mergeSx, ThemeKey } from 'design-system';
@@ -10,7 +10,7 @@ const rootSx = {
   },
 };
 
-export const BaseThemeToggle: React.FC<BaseComponentProps> = ({ sx, ...props }) => {
+export const BaseThemeToggle = ({ sx, ...props }: PropsWithChildren<BaseComponentProps>) => {
   const [, setTheme] = useTheme();
 
   const handleClick = useCallback(() => {

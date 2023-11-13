@@ -1,7 +1,7 @@
 import React from 'react';
 import { fill } from 'lodash';
 import { Button, Typography } from '@mui/material';
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { useBooleanState } from '@evrone-erp/react-std';
 
@@ -10,16 +10,16 @@ import { BaseDrawer, BaseDrawerProps } from './BaseDrawer';
 export default {
   title: 'UI/BaseDrawer',
   component: BaseDrawer,
-} as ComponentMeta<typeof BaseDrawer>;
+} as Meta<typeof BaseDrawer>;
 
-function Template({ open, ...props }: Partial<BaseDrawerProps>) {
+function Template({ open, ...props }: BaseDrawerProps) {
   const drawerOpen = useBooleanState(open ?? false);
   return (
     <>
       <Button onClick={drawerOpen.setTrue}>Open</Button>
       <BaseDrawer
-        title="Title"
         {...props}
+        title="Title"
         open={drawerOpen.is}
         onClose={drawerOpen.setFalse}
         onOpen={drawerOpen.setTrue}
@@ -40,17 +40,17 @@ function Template({ open, ...props }: Partial<BaseDrawerProps>) {
   );
 }
 
-export const Main: Story = Template.bind({});
+export const Main: StoryFn<BaseDrawerProps> = Template.bind({});
 Main.args = {
   open: true,
 };
 
-export const WithFooter: Story = Template.bind({});
+export const WithFooter: StoryFn<BaseDrawerProps> = Template.bind({});
 WithFooter.args = {
   footer: <Button>Footer Button</Button>,
 };
 
-export const CustomizeInnerComponents: Story = Template.bind({});
+export const CustomizeInnerComponents: StoryFn<BaseDrawerProps> = Template.bind({});
 CustomizeInnerComponents.args = {
   footer: <Button>Footer Button</Button>,
   sx: {
@@ -66,7 +66,7 @@ CustomizeInnerComponents.args = {
   },
 };
 
-export const HideScrollShadows: Story = Template.bind({});
+export const HideScrollShadows: StoryFn<BaseDrawerProps> = Template.bind({});
 HideScrollShadows.args = {
   footer: <Button>Footer Button</Button>,
   hideTopShadow: true,

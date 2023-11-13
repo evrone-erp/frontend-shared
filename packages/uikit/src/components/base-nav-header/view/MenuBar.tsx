@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 const rootSx = {
   display: 'flex',
@@ -19,7 +19,7 @@ const rootSx = {
   },
 };
 
-export const MenuBar: React.FC = ({ children }) => (
+export const MenuBar = ({ children }: { children?: ReactNode | undefined }) => (
   <Box className="BaseNavHeader__menu-bar" sx={rootSx}>
     {children}
   </Box>

@@ -1,9 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { ImageLoaderProps } from 'next/image';
 import { Sx, mergeSx } from 'design-system';
 
 import { Box, Typography } from '@mui/material';
-import { ImageLoaderProps } from 'next/dist/client/image';
 import { AvatarSkeleton } from './view/AvatarSkeleton';
 
 export type BaseAvatarProps = {
