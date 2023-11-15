@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { BaseTextButton } from 'components/base-text-button';
 import React, { useState } from 'react';
 import { Typography } from '@mui/material';
@@ -8,13 +8,13 @@ import { AccountButton } from './view/AccountButton';
 export default {
   title: 'UI/BaseNavHeader',
   component: BaseNavHeader,
-} as ComponentMeta<typeof BaseNavHeader>;
+} as Meta<typeof BaseNavHeader>;
 
-const Template = (props: BaseNavHeaderProps): JSX.Element => <BaseNavHeader {...props} />;
+const Template = (props: BaseNavHeaderProps) => <BaseNavHeader {...props} />;
 
-export const UnauthorizedMode: Story<BaseNavHeaderProps> = Template.bind({});
+export const UnauthorizedMode: StoryFn<BaseNavHeaderProps> = Template.bind({});
 
-export const AuthorizedMode: Story<BaseNavHeaderProps> = () => {
+export const AuthorizedMode: StoryFn<BaseNavHeaderProps> = () => {
   const [open, setOpen] = useState(false);
 
   return (

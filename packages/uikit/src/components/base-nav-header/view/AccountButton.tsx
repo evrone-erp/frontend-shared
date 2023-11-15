@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import { mergeSx, Sx } from 'design-system';
 import { BaseTextButton } from 'components/base-text-button';
@@ -12,7 +12,7 @@ type AccountButtonProps = {
 const rootSx = { typography: 'subtitle', color: 'element-1', gridArea: 'avatar', justifyContent: 'flex-end' };
 
 // TODO: add avatar
-export const AccountButton: React.FC<AccountButtonProps> = ({ name, onClick, sx }) => {
+export const AccountButton = ({ name, onClick, sx }: PropsWithChildren<AccountButtonProps>) => {
   if (!name) return null;
 
   return (

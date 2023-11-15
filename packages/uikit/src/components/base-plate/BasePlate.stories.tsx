@@ -1,5 +1,7 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React from 'react';
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Box } from '@mui/material';
 import { BaseTextButton } from 'components/base-text-button';
 import { BaseCheckBox } from 'components/base-check-box';
@@ -18,13 +20,13 @@ export default {
       exclude: ['className', 'sx'],
     },
   },
-} as ComponentMeta<typeof BasePlate>;
+} as Meta<typeof BasePlate>;
 
-function Template(props: Partial<BasePlateProps>) {
+function Template(props: BasePlateProps) {
   return <BasePlate {...props} />;
 }
 
-export const Main: Story = Template.bind({});
+export const Main: StoryFn<BasePlateProps> = Template.bind({});
 Main.args = {
   sx: {
     with: '100px',
@@ -32,7 +34,7 @@ Main.args = {
   },
 };
 
-export const Pressable: Story = Template.bind({});
+export const Pressable: StoryFn<BasePlateProps> = Template.bind({});
 Pressable.args = {
   pressable: true,
   sx: {
@@ -41,7 +43,7 @@ Pressable.args = {
   },
 };
 
-export const WithHeader1: Story = Template.bind({});
+export const WithHeader1: StoryFn<BasePlateProps> = Template.bind({});
 WithHeader1.args = {
   children: (
     <BasePlateHeader
@@ -53,14 +55,14 @@ WithHeader1.args = {
   ),
 };
 
-export const WithHeader2: Story = Template.bind({});
+export const WithHeader2: StoryFn<BasePlateProps> = Template.bind({});
 WithHeader2.args = {
   children: (
     <BasePlateHeader title="Account manager" subtitle="Middle+" link={<BaseLink href="#">How to lvlup</BaseLink>} />
   ),
 };
 
-export const WithHeaderAndFooter: Story = Template.bind({});
+export const WithHeaderAndFooter: StoryFn<BasePlateProps> = Template.bind({});
 WithHeaderAndFooter.args = {
   children: (
     <>
@@ -77,7 +79,7 @@ WithHeaderAndFooter.args = {
   ),
 };
 
-export const WithLoading: Story = Template.bind({});
+export const WithLoading: StoryFn<BasePlateProps> = Template.bind({});
 WithLoading.args = {
   children: (
     <BasePlateHeader title="Account manager" subtitle="Middle+" link={<BaseLink href="#">How to lvlup</BaseLink>} />

@@ -1,18 +1,18 @@
 import React from 'react';
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { BaseProgressBar } from 'components/base-progress-bar';
 import { BaseProgress, BaseProgressProps } from './BaseProgress';
 
 export default {
   title: 'UI/BaseProgress',
   component: BaseProgress,
-} as ComponentMeta<typeof BaseProgress>;
+} as Meta<typeof BaseProgress>;
 
-function Template(props: Partial<BaseProgressProps>) {
-  return <BaseProgress title="Title" progressBar={<div />} {...props} />;
+function Template(props: BaseProgressProps) {
+  return <BaseProgress {...props} />;
 }
 
-export const Payout: Story = Template.bind({});
+export const Payout: StoryFn<BaseProgressProps> = Template.bind({});
 Payout.args = {
   title: '142 000 ₽',
   subtitle: 'preliminary calculation',
@@ -30,14 +30,14 @@ Payout.args = {
     />
   ),
 };
-export const Benefit: Story = Template.bind({});
+export const Benefit: StoryFn<BaseProgressProps> = Template.bind({});
 Benefit.args = {
   title: '42 000 ₽',
   startBarText: '0',
   endBarText: '70 000',
   progressBar: <BaseProgressBar totalValue={1360} valueSegments={[{ value: 716, color: 'element-2', name: 'name' }]} />,
 };
-export const ActiveTitle: Story = Template.bind({});
+export const ActiveTitle: StoryFn<BaseProgressProps> = Template.bind({});
 ActiveTitle.args = {
   title: '42 000 ₽',
   startBarText: '0',

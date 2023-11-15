@@ -1,14 +1,15 @@
 import { Box } from '@mui/material';
 import { mergeSx } from 'design-system';
 import { BaseComponentProps } from 'design-system/types';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { LayoutContent } from './view/LayoutContent';
 
 export type BaseMainLayoutProps = BaseComponentProps & {
-  header?: JSX.Element;
+  header?: React.ReactElement;
+  children?: ReactNode | undefined;
 };
 
-export const BaseMainLayout: React.FC<BaseMainLayoutProps> = ({ header, children, sx }) => (
+export const BaseMainLayout = ({ header, children, sx }: BaseMainLayoutProps) => (
   <Box
     sx={mergeSx(sx, {
       display: 'flex',

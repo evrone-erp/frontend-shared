@@ -1,4 +1,4 @@
-import React, { memo, FC, ReactNode } from 'react';
+import React, { memo, PropsWithChildren, ReactNode } from 'react';
 import Link from '@mui/material/Link';
 
 import { mergeSx, Sx } from 'design-system';
@@ -11,7 +11,7 @@ export type EvroneLogoProps = {
 
 const rootSx = { typography: 'subtitle', color: 'element-2', gridArea: 'logo' };
 
-export const EvroneLogo: FC<EvroneLogoProps> = memo(({ href, sx, children }) => (
+export const EvroneLogo = memo(({ href, sx, children }: PropsWithChildren<EvroneLogoProps>) => (
   <Link className="BaseNavHeader__logo" href={href} sx={mergeSx(rootSx, sx)}>
     {children || 'evrone'}
   </Link>

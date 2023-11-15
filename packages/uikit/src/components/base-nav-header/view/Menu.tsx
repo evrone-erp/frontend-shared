@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Box } from '@mui/material';
 import { mergeSx } from 'design-system';
 
@@ -28,7 +28,7 @@ const openSx = {
   pointerEvents: 'auto',
 };
 
-export const Menu: React.FC<{ open: boolean }> = ({ children, open }) => (
+export const Menu = ({ children, open }: PropsWithChildren<{ open: boolean }>) => (
   <Box className="BaseNavHeader__menu" sx={mergeSx(rootSx, open && openSx)}>
     {children}
   </Box>

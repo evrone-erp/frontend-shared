@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { repeat } from 'lodash';
 import { BaseLink } from 'components/base-link/BaseLink';
 import { BaseHelp, BaseHelpProps } from './BaseHelp';
@@ -7,20 +7,20 @@ import { BaseHelp, BaseHelpProps } from './BaseHelp';
 export default {
   title: 'UI/BaseHelp',
   component: BaseHelp,
-} as ComponentMeta<typeof BaseHelp>;
+} as Meta<typeof BaseHelp>;
 
 function Template(props: Partial<BaseHelpProps>) {
   return <BaseHelp {...props} />;
 }
 
-export const Main: Story = Template.bind({});
+export const Main: StoryFn<BaseHelpProps> = Template.bind({});
 Main.args = {
   title: 'Benefits formula',
   withClose: true,
   text: 'Start sum + 10 000 ₽ × Years at Evrone',
 };
 
-export const WithLink: Story = Template.bind({});
+export const WithLink: StoryFn<BaseHelpProps> = Template.bind({});
 WithLink.args = {
   title: (
     <>
@@ -32,7 +32,7 @@ WithLink.args = {
   ),
 };
 
-export const LongText: Story = Template.bind({});
+export const LongText: StoryFn<BaseHelpProps> = Template.bind({});
 LongText.args = {
   text: repeat('Start sum + 10 000 ₽ × Years at Evrone ', 20),
 };

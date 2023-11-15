@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Box, Typography } from '@mui/material';
 import classNames from 'classnames';
 
@@ -11,13 +11,13 @@ export type BasePlateFooterProps = {
   primaryActionComment?: string;
 } & BaseComponentProps;
 
-export const BasePlateFooter: React.FC<BasePlateFooterProps> = ({
+export const BasePlateFooter = ({
   primaryAction,
   secondaryAction,
   className,
   primaryActionComment,
   ...restProps
-}) => (
+}: PropsWithChildren<BasePlateFooterProps>) => (
   <Box
     display="flex"
     justifyContent="space-between"
