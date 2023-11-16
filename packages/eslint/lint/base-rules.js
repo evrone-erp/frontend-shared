@@ -68,4 +68,6 @@ module.exports = {
     },
   ],
   'no-restricted-imports': ['error', { patterns: ['../*'] }],
+  'no-param-reassign': 'off',
+  'react/no-danger': 'off',
 };
