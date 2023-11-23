@@ -1,6 +1,6 @@
 {
   "name": "@evrone-erp/utils",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -26,6 +26,6 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@evrone-erp/eslint-config": "^1.0.55"
+    "@evrone-erp/eslint-config": "^1.0.56"
   }
 }
