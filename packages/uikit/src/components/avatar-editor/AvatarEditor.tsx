@@ -38,6 +38,7 @@ export const AvatarEditor = ({ size, setPreview, src }: TAvatarEditorProps) => {
   return (
     <StyledContainer>
       <AvatarEdit
+        onImageReady={setAvatarPreview}
         onImageChange={setAvatarPreview}
         onLoadSuccess={setAvatarPreview}
         borderRadius={200}
