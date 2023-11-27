@@ -51,7 +51,7 @@ export function BaseAvatar({
           {placeholder}
         </Typography>
       )}
-      {value && <Image objectFit="cover" loader={imageLoader} src={value} alt="" width={size} height={size} />}
+      {value && <Image loader={imageLoader} src={value} alt="" width={size} height={size} />}
       {isLoading && <AvatarSkeleton />}
     </Box>
   );
