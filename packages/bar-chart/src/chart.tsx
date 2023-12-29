@@ -265,14 +265,13 @@ export const ChartComponent: React.FC<ChartProps> = ({
             return (
               <Group left={xScale(label)} key={`bar-group-${label}`}>
                 {values.map(({ value }, index, array) => {
-                  const isUnknownValue = value === null;
-                  const barHeight = isUnknownValue
+                  const barHeight = value === null
                     ? chartHeight - yScale(maxValue)
                     : (chartHeight - yScale(value)) || ZERO_BAR_HEIGHT;
-                  const barColor = isUnknownValue ? '#FFFFFF' : barColorScale(value);
-                  const labelColor = isUnknownValue ? UNKNWON_COLOR : barColor;
-                  const barLabel = isUnknownValue ? 'Unknown' : barLabelScale(value);
-                  const barStyle = isUnknownValue ? { strokeWidth: 1, stroke: UNKNWON_COLOR } : undefined;
+                  const barColor = value === null ? '#FFFFFF' : barColorScale(value);
+                  const labelColor = value === null ? UNKNWON_COLOR : barColor;
+                  const barLabel = value === null ? 'Unknown' : barLabelScale(value);
+                  const barStyle = value === null ? { strokeWidth: 1, stroke: UNKNWON_COLOR } : undefined;
 
                   return (
                     <Fragment key={`bar-${label}-${index}`} >
@@ -299,7 +298,7 @@ export const ChartComponent: React.FC<ChartProps> = ({
                           {barLabel}
                         </Text>
                       )}
-                      {isUnknownValue && (
+                      {value === null && (
                         <rect
                           x={xSubScale(index)}
                           y={chartHeight - 12}
