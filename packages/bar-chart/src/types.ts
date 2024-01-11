@@ -22,8 +22,6 @@ export type DataParameter = {
   label: string;
 };
 
-
-
 export type Margin = {
   top: number;
   bottom: number;
@@ -32,10 +30,10 @@ export type Margin = {
 };
 
 export type NavPoint = {
-  dataIndex: number,
-  label: string,
-  header: string,
-  x: number,
+  dataIndex: number;
+  label: string;
+  header: string;
+  x: number;
 };
 
 export type ChartProps = {

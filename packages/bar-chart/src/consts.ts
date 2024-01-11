@@ -1,4 +1,4 @@
-import { Margin } from "./types";
+import { Margin } from './types';
 
 export const MIN_WIDTH = 720;
 
@@ -21,4 +21,4 @@ export const DEFAULT_MARGIN: Margin = {
   bottom: 40,
   right: 0,
   left: 0,
-}
+};
