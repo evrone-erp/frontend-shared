@@ -1,3 +1,5 @@
+import { Margin } from "./types";
+
 export const MIN_WIDTH = 720;
 
 export const MIN_HEIGHT = 350;
@@ -13,3 +15,10 @@ export const NAV_HEIGHT = 10;
 export const X_AXIS_HEIGHT = 40;
 
 export const MAX_BAR_WIDTH = 180;
+
+export const DEFAULT_MARGIN: Margin = {
+  top: 40,
+  bottom: 40,
+  right: 0,
+  left: 0,
+}

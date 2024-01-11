@@ -2,26 +2,26 @@ import React, { Fragment, useCallback, useEffect, useMemo, useState } from 'reac
 import { scaleBand, scaleLinear, scaleThreshold } from '@visx/scale';
 import { Group } from '@visx/group';
 import { AxisBottom } from '@visx/axis';
-import { Bar, Circle, Line } from '@visx/shape';
+import { Bar, Line } from '@visx/shape';
 import { Text } from '@visx/text';
 import { Category, ChartProps, DataElement, NavPoint } from './types';
-import { CATEGORY_LABEL_WIDTH, MAX_BAR_WIDTH, NAV_HEIGHT, UNKNWON_COLOR, X_AXIS_HEIGHT, ZERO_BAR_HEIGHT } from './consts';
+import {
+  CATEGORY_LABEL_WIDTH,
+  MAX_BAR_WIDTH,
+  NAV_HEIGHT,
+  UNKNWON_COLOR,
+  X_AXIS_HEIGHT,
+  ZERO_BAR_HEIGHT,
+  DEFAULT_MARGIN
+} from './consts';
+import { Navigation } from './navigation';
 
 
-type Margin = {
-  top: number;
-  bottom: number;
-  right: number;
-  left: number;
-};
-
-const margin: Margin = {
-  top: 40,
-  bottom: 40,
-  right: 0,
-  left: 0,
-}
-
+//getters
+const getDataLabel = ((dataElement: DataElement) => dataElement.label);
+const getCategoryColor = ((category: Category) => category.color);
+const getCategoryLineColor = ((category: Category) => category.lineColor);
+const getCategoryMaxValue = ((category: Category) => category.maxValue);
 
 export const ChartComponent: React.FC<ChartProps> = ({
   width,
@@ -29,22 +29,19 @@ export const ChartComponent: React.FC<ChartProps> = ({
   categories,
   data,
   dataParams,
+  margin = {},
 }) => {
   const maxValue = useMemo(() => {
     return categories[categories.length - 1].maxValue;
   }, [categories])
-  
-  
-  //getters
-  const getDataLabel = ((dataElement: DataElement) => dataElement.label);
-  const getCategoryColor = ((category: Category) => category.color);
-  const getCategoryLineColor = ((category: Category) => category.lineColor);
-  const getCategoryMaxValue = ((category: Category) => category.maxValue);
-  
+  const chartMargin = useMemo(() => ({
+    ...DEFAULT_MARGIN,
+    ...margin
+  }), [margin]);
   
   // bounds
-  const chartWidth = width - (margin.left + margin.right);
-  const chartHeight = height - (margin.top + margin.bottom) - NAV_HEIGHT - X_AXIS_HEIGHT;
+  const chartWidth = width - (chartMargin.left + chartMargin.right);
+  const chartHeight = height - (chartMargin.top + chartMargin.bottom) - NAV_HEIGHT - X_AXIS_HEIGHT;
   
   const categoriesLabelsColors = useMemo(() => (
     categories.map(getCategoryColor)
@@ -87,44 +84,30 @@ export const ChartComponent: React.FC<ChartProps> = ({
           domain: Array.from(Array(values.length).keys()),
           range: [0, navScale.bandwidth()],
         });
-  
-        const nextNavPoints = values.map(({ header }, index) => {
-          if (typeof header === 'undefined') {
-            return false;
+
+        values.forEach(({ header }, index) => {
+          if (typeof header !== 'undefined') {
+            navPoints.push({
+              dataIndex,
+              header,
+              label,
+              x: navScale(label)! + navSubScale(index)! + navSubScale.bandwidth() / 2,
+            })
           }
-          
-          return {
-            dataIndex,
-            header,
-            label,
-            x: navScale(label)! + navSubScale(index)! + navSubScale.bandwidth() / 2,
-          };
-        }).filter((navPoint) => navPoint) as NavPoint[];
-  
-        return [...navPoints, ...nextNavPoints];
+        });
+
+        return navPoints;
       }
 
-      if (typeof values[0].header !== 'undefined') {
+      if ((dataIndex === data.length - 1) || (typeof values[0].header !== 'undefined')) {
         return [
           ...navPoints,
           {
             dataIndex,
             label,
-            header: values[0].header,
+            header: values[0].header || label,
             x: navScale(label)! + navScale.bandwidth() / 2,
           }
-        ];
-      }
-
-      if (dataIndex === data.length - 1) {
-        return [
-          ...navPoints,
-          {
-            dataIndex,
-            label,
-            header: label,
-            x: navScale(label)! + navScale.bandwidth() / 2,
-          },
         ];
       }
 
@@ -206,7 +189,7 @@ export const ChartComponent: React.FC<ChartProps> = ({
   return (
     <svg width={width} height={height}>
       <rect x={0} y={0} width={width} height={height} fill='#FFFFFF' rx={14} />
-      <Group top={margin.top} left={margin.left}>
+      <Group top={chartMargin.top} left={chartMargin.left}>
         {categories.map((category, index, array) => {
           const previousMaxValue = array[index - 1] ? array[index - 1].maxValue : 0;
           const lineYPositions = [0, ...categories.map(getCategoryMaxValue)];
@@ -315,67 +298,17 @@ export const ChartComponent: React.FC<ChartProps> = ({
           })}
         </Group>
       </Group>
-      {needNav && (
-        <Group left={margin.left} top={margin.top + chartHeight + X_AXIS_HEIGHT}>
-          <svg x={CATEGORY_LABEL_WIDTH/2 - 21} width={42} height={19} viewBox="0 0 412.289 186.109" xmlns="http://www.w3.org/2000/svg">
-          <Group transform="matrix(-1, 0, 0, 1, 106.411006, 0.223)" onClick={handleMoveBack}>
-              <rect y="-0.223" width="106.411" height="185.663" style={{ fill: "rgba(0, 0, 0, 0)", cursor: "pointer" }} />
-              <path style={{ cursor: "pointer" }} d="M 11.565 185.345 C 8.703 185.348 5.958 184.217 3.94 182.203 C -0.273 178.024 -0.273 171.243 3.94 167.065 L 78.612 92.896 L 3.94 18.723 C -0.273 14.539 -0.273 7.762 3.94 3.584 C 8.152 -0.6 14.974 -0.6 19.185 3.584 L 101.472 85.321 C 105.684 89.505 105.684 96.282 101.472 100.46 L 19.185 182.202 C 17.168 184.216 14.424 185.347 11.565 185.345 Z" fill="#333333"/>
-            </Group>
-            <Group transform="matrix(1, 0, 0, 1, 305.878, 0.223)" onClick={handleMoveForward}>
-              <rect y="-0.223" width="106.411" height="185.663" style={{ fill: "rgba(0, 0, 0, 0)", cursor: "pointer" }} />
-              <path style={{ cursor: "pointer" }} d="M 11.565 185.345 C 8.703 185.348 5.958 184.217 3.94 182.203 C -0.273 178.024 -0.273 171.243 3.94 167.065 L 78.612 92.896 L 3.94 18.723 C -0.273 14.539 -0.273 7.762 3.94 3.584 C 8.152 -0.6 14.974 -0.6 19.185 3.584 L 101.472 85.321 C 105.684 89.505 105.684 96.282 101.472 100.46 L 19.185 182.202 C 17.168 184.216 14.424 185.347 11.565 185.345 Z" fill="#333333"/>
-            </Group>
-          </svg>
-          <Group left={CATEGORY_LABEL_WIDTH} top={5.5}>
-            <Line
-              from={{
-                x: navPoints[0].x,
-                y: 5,
-              }}
-              to={{
-                x: navPoints[navPoints.length - 1].x,
-                y: 5,
-              }}
-              style={{ stroke: '#EDEDED', strokeWidth: 6 }}
-            />
-            {navPoints.map(({ header, x }, index) => {
-                return (
-                  <Group
-                    key={`nav-point-${header}`}
-                    left={x}
-                    top={5}
-                    onClick={() => setActiveNavPointIndex(index)}
-                    style={{ cursor: 'pointer', userSelect: 'none' }}
-                  >
-                    <Circle r={6} fill="#FFFFFF" style={{ stroke: "#999999", strokeWidth: 1 }} />
-                    {index === activeNavPointIndex && (
-                      <>
-                        <Circle
-                          x={1}
-                          y={1}
-                          r={5}
-                          fill='#4287f5'
-                        />
-                        <Text
-                          fontSize={11}
-                          y={20}
-                          width={60}
-                          fontFamily='Roboto'
-                          fill="#333333"
-                          textAnchor="middle"
-                          verticalAnchor="middle"
-                        >
-                          {header}
-                        </Text>
-                      </>
-                    )}
-                  </Group>
-                );
-            })}
-          </Group>
-        </Group>
-      )}
+
+      <Navigation
+        show={needNav}
+        margin={chartMargin}
+        chartHeight={chartHeight}
+        navPoints={navPoints}
+        activePoint={activeNavPointIndex}
+        setActivePoint={setActiveNavPointIndex}
+        onForward={handleMoveForward}
+        onBack={handleMoveBack}
+      />
     </svg>
   );
 }

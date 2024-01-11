@@ -22,15 +22,14 @@ export type DataParameter = {
   label: string;
 };
 
-export type ChartProps = {
-  width: number;
-  height: number;
-  categories: Category[];
-  data: DataElement[];
-  dataParams: DataParameter[];
-};
 
-export type BarChartProps = Omit<ChartProps, 'width' | 'height'>;
+
+export type Margin = {
+  top: number;
+  bottom: number;
+  right: number;
+  left: number;
+};
 
 export type NavPoint = {
   dataIndex: number,
@@ -38,3 +37,25 @@ export type NavPoint = {
   header: string,
   x: number,
 };
+
+export type ChartProps = {
+  width: number;
+  height: number;
+  categories: Category[];
+  data: DataElement[];
+  dataParams: DataParameter[];
+  margin?: Partial<Margin>;
+};
+
+export type NavigationProps = {
+  show?: boolean;
+  margin: Margin;
+  navPoints: NavPoint[];
+  activePoint: number;
+  chartHeight: number;
+  setActivePoint: (point: number) => void;
+  onForward: () => void;
+  onBack: () => void;
+};
+
+export type BarChartProps = Omit<ChartProps, 'width' | 'height'>;
