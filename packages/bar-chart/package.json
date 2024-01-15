@@ -1,0 +1,67 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "dependencies": {
+    "@visx/axis": "^3.5.0",
+    "@visx/group": "^3.3.0",
+    "@visx/responsive": "^3.3.0",
+    "@visx/scale": "^3.5.0",
+    "@visx/shape": "^3.5.0",
+    "@visx/text": "^3.3.0",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@evrone-erp/eslint-config": "^1.0.57",
+    "@evrone-erp/prettier-config": "^1.0.32",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "name": "@evrone-erp/bar-chart",
+  "repository": "https://github.com/evrone-erp/frontend-shared",
+  "publishConfig": {
+    "@evrone-erp:registry": "https://npm.pkg.github.com/evrone-erp"
+  },
+  "author": "Roman Suturin",
+  "module": "dist/bar-chart.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/bar-chart.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/bar-chart.esm.js",
+      "limit": "10 KB"
+    }
+  ]
+}
