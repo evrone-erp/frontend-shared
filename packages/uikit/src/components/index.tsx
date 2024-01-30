@@ -19,6 +19,7 @@ export * from './base-text-button';
 export * from './base-text-field';
 export * from './base-dialog';
 export * from './base-close-button';
+export * from './avatar-upload';
 export * from './avatar-upload-dialog';
 export * from './base-theme-toggle';
 export * from './base-backdrop';
