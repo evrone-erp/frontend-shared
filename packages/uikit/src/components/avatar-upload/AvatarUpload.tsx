@@ -13,9 +13,22 @@ export type AvatarUploadProps = {
   value?: string;
   size?: number;
   onSave: (url: string) => void;
+  locales?: Record<string, string> &
+    Partial<{
+      preview: string;
+      update: string;
+      save: string;
+    }>;
 };
 
-export function AvatarUpload({ size = 370, value = '', onSave, sx }: AvatarUploadProps) {
+const DEFAULT_TEXTS = {
+  preview: 'Preview avatar',
+  update: 'Update...',
+  save: 'Save',
+};
+
+export function AvatarUpload({ size = 370, value = '', onSave, sx, locales }: AvatarUploadProps) {
+  const texts = locales ? { ...DEFAULT_TEXTS, ...locales } : DEFAULT_TEXTS;
   const [preview, setPreview] = useState(value);
   const [file, setFile] = useState<File>();
   const onDrop = useCallback((files: File[]) => setFile(files[0]), [setFile]);
@@ -24,7 +37,7 @@ export function AvatarUpload({ size = 370, value = '', onSave, sx }: AvatarUploa
 
   return (
     <BasePlate sx={{ width: 'fit-content', ...sx }}>
-      <AvatarEditor src={src || value} size={size} setPreview={setPreview} />
+      <AvatarEditor src={src || value} size={size} setPreview={setPreview} locales={texts} />
       <Box
         sx={{
           display: 'flex',
@@ -34,13 +47,13 @@ export function AvatarUpload({ size = 370, value = '', onSave, sx }: AvatarUploa
         }}
       >
         <Typography sx={{ marginTop: '10px' }} variant="text">
-          Preview avatar
+          {texts.preview}
         </Typography>
         <BaseAvatar sx={{ marginBottom: '10px' }} placeholder=" " value={preview} size={65} />
       </Box>
       <div {...getRootProps()}>
         <input accept="image/*" {...getInputProps()} />
-        <BaseButton variant="text">Update...</BaseButton>
+        <BaseButton variant="text">{texts.update}</BaseButton>
       </div>
       <BaseButton
         sx={{ marginTop: 'auto', alignSelf: 'flex-start' }}
@@ -48,7 +61,7 @@ export function AvatarUpload({ size = 370, value = '', onSave, sx }: AvatarUploa
         icon="plus"
         onClick={() => onSave(preview)}
       >
-        Save
+        {texts.save}
       </BaseButton>
     </BasePlate>
   );
