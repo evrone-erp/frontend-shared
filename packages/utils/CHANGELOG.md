@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.18 (2024-07-15)
+
+**Note:** Version bump only for package @evrone-erp/utils
+
+
+
+
+
 ## 0.1.17 (2024-01-30)
 
 **Note:** Version bump only for package @evrone-erp/utils
