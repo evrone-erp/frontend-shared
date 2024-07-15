@@ -7,6 +7,11 @@ export type TAvatarEditorProps = {
   size: number;
   setPreview: (src: string) => void;
   src: string;
+  locales?: Record<string, string> &
+    Partial<{
+      rotate: string;
+      scale: string;
+    }>;
 };
 
 const StyledContainer = styled('div')`
@@ -22,7 +27,13 @@ const StyledLabel = styled('label')`
   padding-left: 7px;
 `;
 
-export const AvatarEditor = ({ size, setPreview, src }: TAvatarEditorProps) => {
+const DEFAULT_TEXTS = {
+  rotate: 'Rotate',
+  scale: 'Scale',
+};
+
+export const AvatarEditor = ({ size, setPreview, src, locales }: TAvatarEditorProps) => {
+  const texts = locales ? { ...DEFAULT_TEXTS, ...locales } : DEFAULT_TEXTS;
   const editor = useRef<AvatarEdit | null>(null);
   const setAvatarPreview = () => setPreview(editor.current?.getImageScaledToCanvas()?.toDataURL() || '');
 
@@ -53,10 +64,10 @@ export const AvatarEditor = ({ size, setPreview, src }: TAvatarEditorProps) => {
         disableBoundaryChecks
       />
       <BaseButton sx={{ marginTop: '10px' }} variant="text" icon="arrow-right" onClick={onRotate}>
-        Rotate
+        {texts.rotate}
       </BaseButton>
       <StyledLabel>
-        Scale
+        {texts.scale}
         <input type="range" id="scale" name="scale" min="0.1" max="1.5" step={0.1} value={scale} onChange={onScale} />
       </StyledLabel>
     </StyledContainer>

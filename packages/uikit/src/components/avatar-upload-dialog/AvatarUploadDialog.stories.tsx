@@ -31,3 +31,15 @@ export const Loader: StoryFn = Template.bind({});
 Loader.args = {
   isLoading: true,
 };
+
+export const WithLocales: StoryFn = Template.bind({});
+WithLocales.args = {
+  locales: {
+    header: 'Заголовок',
+    rotate: 'Повернуть',
+    scale: 'Масштаб',
+    preview: 'Предпросмотр',
+    update: 'Обновить',
+    save: 'Сохранить',
+  },
+};

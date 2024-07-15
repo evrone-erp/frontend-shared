@@ -1,3 +1,5 @@
+import { TAvatarEditorProps } from 'components/avatar-editor/AvatarEditor';
+import { AvatarUploadProps } from 'components/avatar-upload/AvatarUpload';
 import React from 'react';
 import { Sx } from 'design-system/types';
 import { BaseDialog, BaseDialogPosition } from 'components/base-dialog';
@@ -12,6 +14,11 @@ export type AvatarUploadDialogProps = {
   onSave: (url: string) => void;
   onClose: () => void;
   isOpen?: boolean;
+  locales?: Partial<{ header: string }> & TAvatarEditorProps['locales'] & AvatarUploadProps['locales'];
+};
+
+const DEFAULT_TEXTS = {
+  header: 'Header',
 };
 
 export function AvatarUploadDialog({
@@ -22,7 +29,10 @@ export function AvatarUploadDialog({
   isOpen = false,
   onClose,
   onSave,
+  locales,
 }: AvatarUploadDialogProps) {
+  const texts = locales ? { ...DEFAULT_TEXTS, ...locales } : DEFAULT_TEXTS;
+
   return (
     <BaseDialog
       sx={sx}
@@ -30,9 +40,9 @@ export function AvatarUploadDialog({
       className={className}
       open={isOpen}
       onClose={onClose}
-      header={<Typography>Header</Typography>}
+      header={<Typography>{texts.header}</Typography>}
     >
-      <AvatarUpload sx={{ width: 'auto' }} onSave={onSave} size={size} value={value} />
+      <AvatarUpload sx={{ width: 'auto' }} onSave={onSave} size={size} value={value} locales={texts} />
     </BaseDialog>
   );
 }
