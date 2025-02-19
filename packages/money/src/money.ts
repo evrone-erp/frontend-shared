@@ -31,11 +31,17 @@ export class Money {
     return this;
   }
 
-  format(discardZeroFractal?: boolean) {
-    const currencySign = this.currency ? `\u00A0${CURRENCY_UI_PROPS[this.currency]?.sign}` : '';
+  format(discardZeroFractal?: boolean, currencySignInFront?: boolean) {
+    const currencySign = this.currency ? CURRENCY_UI_PROPS[this.currency]?.sign : '';
     const amount = String(this.amount.toFixed(2));
     const parsedAmount = discardZeroFractal ? parseFloat(amount) : amount;
-    return `${groupNumberString(parsedAmount)}${currencySign}`;
+    const formattedAmount = groupNumberString(parsedAmount);
+
+    if (currencySignInFront) {
+      return currencySign ? `${currencySign}\u00A0${formattedAmount}` : formattedAmount;
+    }
+
+    return currencySign ? `${formattedAmount}\u00A0${currencySign}` : formattedAmount
   }
 
   private action(arg: number, action: string) {
