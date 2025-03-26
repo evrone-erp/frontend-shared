@@ -41,7 +41,7 @@
   "publishConfig": {
     "@evrone-erp:registry": "https://npm.pkg.github.com/evrone-erp"
   },
-  "author": "Evgeny Paromov",
+  "author": "Evrone-ERP",
   "module": "dist/uikit.esm.js",
   "size-limit": [
     {

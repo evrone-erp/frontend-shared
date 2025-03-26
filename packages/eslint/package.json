@@ -28,6 +28,6 @@
   "publishConfig": {
     "@evrone-erp:registry": "https://npm.pkg.github.com/evrone-erp"
   },
-  "author": "Evrone",
-  "license": "ISC"
+  "author": "Evrone-ERP",
+  "license": "MIT"
 }

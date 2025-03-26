@@ -32,7 +32,7 @@
   "publishConfig": {
     "@evrone-erp:registry": "https://npm.pkg.github.com/evrone-erp"
   },
-  "author": "Evgeny Paromov",
+  "author": "Evrone-ERP",
   "module": "dist/react-std.esm.js",
   "size-limit": [
     {

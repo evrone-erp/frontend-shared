@@ -52,7 +52,7 @@
   "publishConfig": {
     "@evrone-erp:registry": "https://npm.pkg.github.com/evrone-erp"
   },
-  "author": "Roman Suturin",
+  "author": "Evrone-ERP",
   "module": "dist/bar-chart.esm.js",
   "size-limit": [
     {
