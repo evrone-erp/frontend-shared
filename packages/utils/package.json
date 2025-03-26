@@ -14,7 +14,7 @@
     "types": "tsc",
     "prepare": "tsdx build"
   },
-  "author": "Evrone",
+  "author": "Evrone-ERP",
   "repository": "https://github.com/evrone-erp/frontend-shared",
   "publishConfig": {
     "@evrone-erp:registry": "https://npm.pkg.github.com/evrone-erp"
