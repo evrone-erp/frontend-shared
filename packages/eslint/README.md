@@ -1,4 +1,4 @@
-# Common eslint/prettier config for frontend projects
+# Common eslint config for frontend projects
 
 ## Usage
 
@@ -17,8 +17,10 @@ module.exports = {
 ```
 
 3. Once ready you may use built in script `next lint` (https://nextjs.org/docs/basic-features/eslint) for Next.js or write your own script:
-```javascript
+```json
 "scripts": {
   "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'"
-},
+}
 ```
+
+[<img src="https://evrone.com/logo/evrone-sponsored-logo.png" width=231>](https://evrone.com/?utm_source=github&utm_medium=evrone-erp-eslint-config)
