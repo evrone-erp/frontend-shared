@@ -1,5 +1,5 @@
 {
-  "version": "0.1.6",
+  "version": "0.1.7",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -29,8 +29,8 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@evrone-erp/eslint-config": "^1.0.63",
-    "@evrone-erp/prettier-config": "^1.0.38",
+    "@evrone-erp/eslint-config": "^1.0.64",
+    "@evrone-erp/prettier-config": "^1.0.39",
     "@types/react": "^18.2.37",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
