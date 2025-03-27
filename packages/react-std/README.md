@@ -1,14 +1,15 @@
-# React std 
+# @evrone-erp/react-std
+Библиотека часто используемых в `react`-коде функций
 
-react-std is library of commonly used components in react code
 
-*Built using [tsdx](https://tsdx.io/)*
+## Использование
 
-## bindProps 
+1. Установите пакет `yarn add @evrone-erp/react-std`.
+2. Импортируйте нужные компоненты в коде. `import { CookiesProvider } from '@evrone-erp/react-std';`
 
-it Returns new component and saves passed props in closure, it helps to create components with simple interface
+## bindProps
+Возвращает новый компонент и сохраняет переданные свойства в замыкании, помогает создавать компоненты с простым интерфейсом.
 
-Excemple
 ```tsx
 type ButtonProps = {
   color: string;
@@ -32,15 +33,13 @@ const PrimaryButton = bindProps(Button, {
 <DangerButton>Delete</DangerButton>
 ```
 
-You can't override bound props, except `sx` and `className`. 
+Вы не можете переопределить привязанные свойства, за исключением `sx` и `className`. 
 
-bindProps merge `sx` props using `mergeSx` helper, and
-`className` props using `classnames` package
-
+`bindProps` объединяет `sx` используя `mergeSx` и `className` используя пакет `classnames`
 
 ## ComposeProviders
+Функция объединения контекстов
 
-This Component helps to flat code with Context providers 
 ```tsx
 <ComposeProviders
   providers={[
@@ -54,8 +53,8 @@ This Component helps to flat code with Context providers
 ```
 
 ## useBooleanState
+Помогает избежать шаблонного кода
 
-This hook helps to reduce boilerplate when you are working with boolean state
 ```tsx
 const openModal = useBooleanState(false)
 
@@ -67,11 +66,11 @@ const openModal = useBooleanState(false)
 ```
 
 ## useDebounceValue
+Хук для отложенного изменения переданного значения
 
-This hook delays value change
 ```tsx
 const [input, setInput] = useState('')
-// debouncedInput changes when input has not changed for 500ms
+// debouncedInput изменится когда инпут не будет изменяться в течение 500ms
 const debouncedInput = useDebounceValue(input, 500)
 
 useEffect(() => {
@@ -80,8 +79,6 @@ useEffect(() => {
 ```
 
 ## useGetRef
-
-This hook helps to work with refs map. 
 
 ```tsx
 const getRef = useGetRef<string>();
@@ -94,7 +91,7 @@ ref1 === ref2 // true
 ref3 !== ref2 // false
 ```
 
-It's often using for refs list processing
+Обычно используется для обработки списка ссылок.
 ```tsx
 const keys = ['key1', 'key2', 'key3'];
 const getRef = useGetRef<HTMLDivElement>();
@@ -108,17 +105,13 @@ return keys.map(key => <div ref={getRef(key)}>{key}</div>);
 ```
 
 ## useLocalStorage
-
-This hook helps to work with localStorage. `useLocalStorage` result interface is the same as `useState`, 
-but initialState sets from localStorage.
+Этот хук помогает работать с localStorage.
+Интерфейс результата `useLocalStorage` такой же, как `useState`, но initialState устанавливается из localStorage.
 
 ## useCookie
+Унифицирует работу с куками
 
-Since localStorage is only available on the client. If you want you global value on SSR you only can use cookie.
-
-`useCookie` - it helps to unify the work with cookies.
-
-if you want you use useCookie on server, you should provide server cookies from  App.getInitialProps. (it breaks SSG)
+При использовании useCookie на сервере, следует передать куки из App.getInitialProps. (ломает SSG)
 ```tsx
 export function App({
   Component,
@@ -138,11 +131,10 @@ export function App({
 }
 ```
 
-useCookie example
-
 ```ts
   const [themeType, setThemeType] = useCookie<ThemeKey>("themeType");
 ```
 
-**You can not set cookie on server side**
+**Возможность установки куки на стороне сервера отсутствует**
 
+[<img src="https://evrone.com/logo/evrone-sponsored-logo.png" width=231>](https://evrone.com/?utm_source=github&utm_medium=evrone-erp-react-std)
