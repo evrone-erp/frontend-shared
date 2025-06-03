@@ -3,7 +3,6 @@ import { CircularProgress, SxProps, Theme } from '@mui/material';
 
 import { BaseIcon, IconType } from 'components/base-icon';
 import { StyledIconContainer } from 'components/base-text-button/view/StyledIconContainer';
-import { mergeSx } from 'design-system';
 
 import { StyledButton, StyledButtonProps } from './view/StyledButton';
 
@@ -18,12 +17,6 @@ const iconSizes = {
   small: 20,
   medium: 24,
   large: 30,
-};
-
-const buttonSx = {
-  '& .BaseIcon': {
-    ml: 1,
-  },
 };
 
 export const BaseButton = forwardRef(
@@ -53,7 +46,7 @@ export const BaseButton = forwardRef(
         isRound={isRound}
         disableElevation
         size={size}
-        sx={mergeSx(sx, buttonSx)}
+        sx={sx}
         {...restButtonProps}
       >
         {!isRound && children}
