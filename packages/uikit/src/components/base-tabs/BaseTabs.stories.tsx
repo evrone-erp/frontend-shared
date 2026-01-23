@@ -1,7 +1,8 @@
-import { Theme } from '@mui/material';
-import { Meta, StoryFn } from '@storybook/react';
+import type { Theme } from '@mui/material';
+import type { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
-import { BaseTabs, BaseTabsProps } from './BaseTabs';
+import type { BaseTabsProps } from './BaseTabs';
+import { BaseTabs } from './BaseTabs';
 
 export default {
   title: 'UI/BaseTabs',

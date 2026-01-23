@@ -1,8 +1,9 @@
 import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import { repeat } from 'lodash';
 import { BaseLink } from 'components/base-link/BaseLink';
-import { BaseHelp, BaseHelpProps } from './BaseHelp';
+import type { BaseHelpProps } from './BaseHelp';
+import { BaseHelp } from './BaseHelp';
 
 export default {
   title: 'UI/BaseHelp',

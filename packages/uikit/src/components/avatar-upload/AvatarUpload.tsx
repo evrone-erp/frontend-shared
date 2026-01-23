@@ -5,7 +5,7 @@ import { BaseAvatar } from 'components/base-avatar';
 import { useDropzone } from 'react-dropzone';
 import { AvatarEditor } from 'components/avatar-editor';
 import { BasePlate } from 'components/base-plate';
-import { Sx } from 'design-system/types';
+import type { Sx } from 'design-system/types';
 import { useFileUrl } from './lib/use-file-url';
 
 export type AvatarUploadProps = {

@@ -1,11 +1,12 @@
 import React from 'react';
 import { fill } from 'lodash';
 import { Button, Typography } from '@mui/material';
-import { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 
 import { useBooleanState } from '@evrone-erp/react-std';
 
-import { BaseDrawer, BaseDrawerProps } from './BaseDrawer';
+import type { BaseDrawerProps } from './BaseDrawer';
+import { BaseDrawer } from './BaseDrawer';
 
 export default {
   title: 'UI/BaseDrawer',

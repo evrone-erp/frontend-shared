@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { IconRoot } from 'components/base-icon/view/IconRoot';
-import { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
+import type { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
 import { useTheme } from '@mui/material';
 
 export function OpenedEyeIcon({ bgColor = 'bg-0', ...props }: ConcreteIconProps) {

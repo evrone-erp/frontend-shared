@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useTheme } from '@mui/material';
-import { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
+import type { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
 import { IconRoot } from 'components/base-icon/view/IconRoot';
 
 export function EvroneIcon({ bgColor = 'bg-0', ...props }: ConcreteIconProps) {

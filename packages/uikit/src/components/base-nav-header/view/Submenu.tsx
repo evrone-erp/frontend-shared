@@ -1,5 +1,7 @@
-import React, { ReactNode, useContext, useCallback, useMemo, useState, useEffect } from 'react';
-import Popover, { PopoverOrigin } from '@mui/material/Popover';
+import type { ReactNode } from 'react';
+import React, { useContext, useCallback, useMemo, useState, useEffect } from 'react';
+import type { PopoverOrigin } from '@mui/material/Popover';
+import Popover from '@mui/material/Popover';
 import Box from '@mui/material/Box';
 import { BaseIconButton } from 'components/base-icon-button';
 import { SubmenuContext } from 'components/base-nav-header/model';

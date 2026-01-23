@@ -1,4 +1,5 @@
-import React, { createContext, ReactNode, useState, useMemo } from 'react';
+import type { ReactNode } from 'react';
+import React, { createContext, useState, useMemo } from 'react';
 
 type SubmenuId = symbol | undefined;
 

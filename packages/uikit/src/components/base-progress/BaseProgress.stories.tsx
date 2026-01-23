@@ -1,7 +1,8 @@
 import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import { BaseProgressBar } from 'components/base-progress-bar';
-import { BaseProgress, BaseProgressProps } from './BaseProgress';
+import type { BaseProgressProps } from './BaseProgress';
+import { BaseProgress } from './BaseProgress';
 
 export default {
   title: 'UI/BaseProgress',

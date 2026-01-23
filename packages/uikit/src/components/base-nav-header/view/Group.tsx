@@ -1,7 +1,8 @@
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import { Box } from '@mui/material';
 
-import { BaseComponentProps } from 'design-system/types';
+import type { BaseComponentProps } from 'design-system/types';
 import { mergeSx } from 'design-system';
 
 export type GroupProps = {

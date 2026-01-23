@@ -1,5 +1,7 @@
-import { memo, FC, NamedExoticComponent, MemoExoticComponent } from 'react';
-import Table, { TableProps } from '@mui/material/Table';
+import type { FC, NamedExoticComponent, MemoExoticComponent } from 'react';
+import { memo } from 'react';
+import type { TableProps } from '@mui/material/Table';
+import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';

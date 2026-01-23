@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Meta, StoryFn } from '@storybook/react';
-import { DateTime } from 'luxon';
-import { BaseDatePicker, BaseDatePickerProps } from './BaseDatePicker';
+import type { Meta, StoryFn } from '@storybook/react';
+import type { DateTime } from 'luxon';
+import type { BaseDatePickerProps } from './BaseDatePicker';
+import { BaseDatePicker } from './BaseDatePicker';
 
 export default {
   title: 'UI/BaseDatePicker',

@@ -1,6 +1,7 @@
-import { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
-import { BaseDialog, BaseDialogProps } from 'components/base-dialog';
+import type { BaseDialogProps } from 'components/base-dialog';
+import { BaseDialog } from 'components/base-dialog';
 import { useBooleanState } from '@evrone-erp/react-std';
 import { BaseButton } from 'components/base-button';
 import { Typography } from '@mui/material';

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
-import { BaseProgressBar, BaseProgressBarProps } from './BaseProgressBar';
+import type { Meta, StoryFn } from '@storybook/react';
+import type { BaseProgressBarProps } from './BaseProgressBar';
+import { BaseProgressBar } from './BaseProgressBar';
 
 export default {
   title: 'UI/BaseProgressBar',

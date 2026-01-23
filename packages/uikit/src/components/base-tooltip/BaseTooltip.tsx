@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
-import { Tooltip, TooltipProps } from '@mui/material';
+import type { TooltipProps } from '@mui/material';
+import { Tooltip } from '@mui/material';
 
 export type BaseTooltipProps = TooltipProps;
 

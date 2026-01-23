@@ -1,5 +1,6 @@
 import { Typography } from '@mui/material';
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 
 type TitleContentProps = {
   children?: ReactNode;

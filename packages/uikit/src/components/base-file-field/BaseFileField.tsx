@@ -1,7 +1,8 @@
-import React, { Dispatch, SetStateAction, useCallback } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
+import React, { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 
-import { Sx } from 'design-system';
+import type { Sx } from 'design-system';
 
 import { FieldLabel } from './view/FieldLabel';
 import { DropZone } from './view/DropZone';

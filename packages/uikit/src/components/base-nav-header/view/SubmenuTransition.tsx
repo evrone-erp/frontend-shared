@@ -1,5 +1,6 @@
-import React, { forwardRef, Ref, ReactElement } from 'react';
-import { TransitionProps as MuiTransitionProps } from '@mui/material/transitions';
+import type { Ref, ReactElement } from 'react';
+import React, { forwardRef } from 'react';
+import type { TransitionProps as MuiTransitionProps } from '@mui/material/transitions';
 import Fade from '@mui/material/Fade';
 
 type SubmenuTransitionProps = MuiTransitionProps & { children: ReactElement };

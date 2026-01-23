@@ -1,7 +1,8 @@
 import { Box } from '@mui/material';
 import { mergeSx } from 'design-system';
-import { BaseComponentProps } from 'design-system/types';
-import React, { ReactNode } from 'react';
+import type { BaseComponentProps } from 'design-system/types';
+import type { ReactNode } from 'react';
+import React from 'react';
 import { LayoutContent } from './view/LayoutContent';
 
 export type BaseMainLayoutProps = BaseComponentProps & {

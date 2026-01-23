@@ -1,7 +1,7 @@
 import React from 'react';
-import { ColorName, Sx } from 'design-system';
+import type { ColorName, Sx } from 'design-system';
 
-import { ProgressSegment } from './types';
+import type { ProgressSegment } from './types';
 import { ProgressSegmentComponent } from './view/ProgressSegment';
 import { ProgressWrapper } from './view/ProgressWrapper';
 

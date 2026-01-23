@@ -1,4 +1,5 @@
-import { styled, Checkbox, CheckboxProps } from '@mui/material';
+import type { CheckboxProps } from '@mui/material';
+import { styled, Checkbox } from '@mui/material';
 
 export type StyledMuiCheckboxProps = CheckboxProps;
 

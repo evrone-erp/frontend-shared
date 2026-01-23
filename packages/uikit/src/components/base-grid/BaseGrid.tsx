@@ -1,5 +1,7 @@
-import { Grid, GridProps, Theme } from '@mui/material';
-import React, { PropsWithChildren } from 'react';
+import type { GridProps, Theme } from '@mui/material';
+import { Grid } from '@mui/material';
+import type { PropsWithChildren } from 'react';
+import React from 'react';
 
 const COLUMNS_COUNT = 12;
 

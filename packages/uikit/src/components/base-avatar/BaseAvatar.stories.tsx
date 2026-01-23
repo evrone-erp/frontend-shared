@@ -1,7 +1,8 @@
-import { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 import { BasePlate } from 'components/base-plate';
-import { BaseAvatar, BaseAvatarProps } from './BaseAvatar';
+import type { BaseAvatarProps } from './BaseAvatar';
+import { BaseAvatar } from './BaseAvatar';
 
 export default {
   title: 'UI/BaseAvatar',

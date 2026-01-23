@@ -1,6 +1,7 @@
 import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
-import { BaseCheckBox, BaseCheckBoxProps } from './BaseCheckBox';
+import type { Meta, StoryFn } from '@storybook/react';
+import type { BaseCheckBoxProps } from './BaseCheckBox';
+import { BaseCheckBox } from './BaseCheckBox';
 
 export default {
   title: 'UI/BaseCheckBox',

@@ -2,7 +2,8 @@ import React, { memo } from 'react';
 import cn from 'classnames';
 
 import { mergeSx } from 'design-system';
-import { BaseIcon, BaseIconProps } from 'components/base-icon';
+import type { BaseIconProps } from 'components/base-icon';
+import { BaseIcon } from 'components/base-icon';
 
 type IconProps = Omit<BaseIconProps, 'type'>;
 

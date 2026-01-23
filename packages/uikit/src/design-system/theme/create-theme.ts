@@ -1,7 +1,7 @@
 import { createTheme as createMuiTheme } from '@mui/material';
 import { addTypographyToTheme, addColorsToTheme } from 'design-system/design-tokens';
 import { fontFaces } from 'design-system/font-faces';
-import { ThemeKey } from 'design-system/types';
+import type { ThemeKey } from 'design-system/types';
 
 export const createTheme = (type: ThemeKey) => {
   const theme = createMuiTheme({

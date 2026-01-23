@@ -1,5 +1,5 @@
 import React from 'react';
-import { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
+import type { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
 import { IconRoot } from 'components/base-icon/view/IconRoot';
 
 export function ArrowRightIcon(props: ConcreteIconProps) {

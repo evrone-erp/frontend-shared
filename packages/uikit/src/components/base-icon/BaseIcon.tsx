@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { ColorName, Sx } from 'design-system';
+import type { ColorName, Sx } from 'design-system';
 import cn from 'classnames';
 
-import { icons, IconType } from './icons';
+import type { IconType } from './icons';
+import { icons } from './icons';
 
 export type BaseIconProps = {
   type: IconType;

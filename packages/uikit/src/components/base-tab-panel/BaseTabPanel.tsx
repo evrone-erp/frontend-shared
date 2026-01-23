@@ -1,7 +1,9 @@
-import React, { memo, ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React, { memo } from 'react';
 import Box from '@mui/material/Box';
 
-import { Sx, mergeSx } from 'design-system';
+import type { Sx } from 'design-system';
+import { mergeSx } from 'design-system';
 
 interface BaseTabPanelProps {
   children?: ReactNode;

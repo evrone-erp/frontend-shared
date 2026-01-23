@@ -1,5 +1,12 @@
 module.exports = {
   '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+  '@typescript-eslint/consistent-type-imports': [
+    'error',
+    {
+      prefer: 'type-imports',
+      disallowTypeAnnotations: false,
+    },
+  ],
   '@typescript-eslint/ban-types': [
     'error',
     {

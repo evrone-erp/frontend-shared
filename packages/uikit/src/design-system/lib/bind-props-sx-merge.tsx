@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { createBindProps } from '@evrone-erp/react-std';
-import { Sx } from 'design-system/types';
+import type { Sx } from 'design-system/types';
 import { mergeSx } from './merge-sx';
 
 export const bindPropsSxMerge = createBindProps<{

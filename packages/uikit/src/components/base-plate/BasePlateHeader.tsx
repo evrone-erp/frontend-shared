@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import classNames from 'classnames';
 
 import { mergeSx } from 'design-system';
-import { BaseComponentProps } from 'design-system/types';
+import type { BaseComponentProps } from 'design-system/types';
 
 export type BasePlateHeaderProps = {
   title: string;

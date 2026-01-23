@@ -1,7 +1,8 @@
 import React from 'react';
-import { Sx } from 'design-system';
+import type { Sx } from 'design-system';
 
-import { StyledMuiCheckbox, StyledMuiCheckboxProps } from './view/StyledMuiCheckbox';
+import type { StyledMuiCheckboxProps } from './view/StyledMuiCheckbox';
+import { StyledMuiCheckbox } from './view/StyledMuiCheckbox';
 import { StyledMuiFormControlLabel } from './view/StyledMuiFormControlLabel';
 
 export type BaseCheckBoxProps = Pick<StyledMuiCheckboxProps, 'name' | 'className' | 'onChange' | 'disabled'> & {

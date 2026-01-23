@@ -1,5 +1,5 @@
-import { Theme } from '@mui/material';
-import { ThemeKey, ColorName } from 'design-system/types';
+import type { Theme } from '@mui/material';
+import type { ThemeKey, ColorName } from 'design-system/types';
 import { flattenDesignTokensObject } from 'design-system/lib/flatten-design-tokens-object';
 import tokens from './design-tokens.json';
 

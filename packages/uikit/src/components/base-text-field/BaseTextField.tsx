@@ -1,6 +1,7 @@
-import React, { forwardRef, PropsWithChildren, Ref } from 'react';
+import type { PropsWithChildren, Ref } from 'react';
+import React, { forwardRef } from 'react';
 
-import { BaseTextFieldProps } from './types';
+import type { BaseTextFieldProps } from './types';
 import { PasswordField } from './fields-by-type/PasswordField';
 import { SelectField } from './fields-by-type/SelectField';
 import { CommonTextField } from './fields-by-type/CommonTextField';

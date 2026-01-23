@@ -1,10 +1,14 @@
-import React, { MouseEvent, forwardRef, Ref } from 'react';
-import { CircularProgress, SxProps, Theme } from '@mui/material';
+import type { MouseEvent, Ref } from 'react';
+import React, { forwardRef } from 'react';
+import type { SxProps, Theme } from '@mui/material';
+import { CircularProgress } from '@mui/material';
 
-import { BaseIcon, IconType } from 'components/base-icon';
+import type { IconType } from 'components/base-icon';
+import { BaseIcon } from 'components/base-icon';
 import { StyledIconContainer } from 'components/base-text-button/view/StyledIconContainer';
 
-import { StyledButton, StyledButtonProps } from './view/StyledButton';
+import type { StyledButtonProps } from './view/StyledButton';
+import { StyledButton } from './view/StyledButton';
 
 export type BaseButtonProps = StyledButtonProps & {
   onClick?: (event?: MouseEvent<HTMLElement>) => void;

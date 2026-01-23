@@ -1,7 +1,8 @@
 import { Button } from '@mui/material';
 import cn from 'classnames';
-import React, { RefObject } from 'react';
-import { Tab } from 'components/base-tabs/types';
+import type { RefObject } from 'react';
+import React from 'react';
+import type { Tab } from 'components/base-tabs/types';
 
 type TabItemProps = {
   tabRef: RefObject<HTMLButtonElement | null>;

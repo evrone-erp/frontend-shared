@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
-import Tabs, { TabsProps } from '@mui/material/Tabs';
+import type { TabsProps } from '@mui/material/Tabs';
+import Tabs from '@mui/material/Tabs';
 
 import { mergeSx } from 'design-system';
 

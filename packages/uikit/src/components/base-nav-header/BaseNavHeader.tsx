@@ -1,10 +1,12 @@
-import React, { ReactNode, memo, NamedExoticComponent, FC, useRef } from 'react';
-import { AppBarProps } from '@mui/material';
-import { BaseComponentProps } from 'design-system/types';
+import type { ReactNode, NamedExoticComponent, FC } from 'react';
+import React, { memo, useRef } from 'react';
+import type { AppBarProps } from '@mui/material';
+import type { BaseComponentProps } from 'design-system/types';
 
 import { SubmenuProvider } from './model/submenuContext';
 import { MenuBar } from './view/MenuBar';
-import { EvroneLogo, EvroneLogoProps } from './view/EvroneLogo';
+import type { EvroneLogoProps } from './view/EvroneLogo';
+import { EvroneLogo } from './view/EvroneLogo';
 import { AccountButton } from './view/AccountButton';
 import { Root } from './view/Root';
 import { Menu } from './view/Menu';
