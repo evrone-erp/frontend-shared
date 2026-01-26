@@ -7,7 +7,6 @@ import MenuItem from '@mui/material/MenuItem';
 import { mergeSx } from 'design-system';
 
 import { Icon } from './ui/Icon';
-
 import { styles } from './BaseMenu.styles';
 
 type BaseMenuCompose = {

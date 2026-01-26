@@ -1,4 +1,5 @@
 import type { ChangeEvent } from 'react';
+
 import type { BaseTextFieldProps, LocalTextFieldProps } from 'components/base-text-field/types';
 
 export const convertCustomPropsToLibProps = <P extends BaseTextFieldProps, R extends LocalTextFieldProps>(

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import type { Sx } from 'design-system/types';
+
 import { mergeSx } from './merge-sx';
 
 export const addSxProp = (elem: JSX.Element, sx: Sx): JSX.Element => {

@@ -1,7 +1,9 @@
 import type { ReactNode } from 'react';
 import React from 'react';
 import { Box, keyframes } from '@mui/material';
+
 import type { ColorName } from 'design-system';
+
 import { BaseTooltip } from 'components/base-tooltip';
 
 const growAnimation = keyframes({

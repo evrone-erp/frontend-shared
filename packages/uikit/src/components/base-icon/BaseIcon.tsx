@@ -1,7 +1,7 @@
 import React from 'react';
+import cn from 'classnames';
 
 import type { ColorName, Sx } from 'design-system';
-import cn from 'classnames';
 
 import type { IconType } from './icons';
 import { icons } from './icons';

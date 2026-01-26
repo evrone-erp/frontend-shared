@@ -1,11 +1,14 @@
 import React, { useCallback, useState } from 'react';
-import { BaseButton } from 'components/base-button';
 import { Box, Typography } from '@mui/material';
-import { BaseAvatar } from 'components/base-avatar';
 import { useDropzone } from 'react-dropzone';
+
+import type { Sx } from 'design-system/types';
+
+import { BaseButton } from 'components/base-button';
+import { BaseAvatar } from 'components/base-avatar';
 import { AvatarEditor } from 'components/avatar-editor';
 import { BasePlate } from 'components/base-plate';
-import type { Sx } from 'design-system/types';
+
 import { useFileUrl } from './lib/use-file-url';
 
 export type AvatarUploadProps = {

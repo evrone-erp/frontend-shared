@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+
 import type { ColorName } from 'design-system';
 
 export type ProgressSegment = {

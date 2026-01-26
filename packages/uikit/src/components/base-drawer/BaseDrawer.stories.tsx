@@ -2,7 +2,6 @@ import React from 'react';
 import { fill } from 'lodash';
 import { Button, Typography } from '@mui/material';
 import type { Meta, StoryFn } from '@storybook/react';
-
 import { useBooleanState } from '@evrone-erp/react-std';
 
 import type { BaseDrawerProps } from './BaseDrawer';

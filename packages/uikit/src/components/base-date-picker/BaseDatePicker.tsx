@@ -2,12 +2,13 @@ import React from 'react';
 import type { DateTime } from 'luxon';
 import { DatePicker } from '@mui/x-date-pickers';
 import { noop } from 'lodash';
+import type { TextFieldProps } from '@mui/material/TextField/TextField';
 
 import type { Sx } from 'design-system';
 import { bindPropsSxMerge } from 'design-system';
+
 import { StyledMuiTextField } from 'components/base-text-field';
 import { BaseIcon } from 'components/base-icon';
-import type { TextFieldProps } from '@mui/material/TextField/TextField';
 
 const DateIcon = bindPropsSxMerge(BaseIcon, { type: 'date', size: 24 });
 

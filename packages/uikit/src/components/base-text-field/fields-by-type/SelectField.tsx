@@ -1,5 +1,6 @@
 import type { PropsWithChildren } from 'react';
 import React from 'react';
+
 import type { SelectFieldProps } from 'components/base-text-field/types';
 import { StyledMuiTextField } from 'components/base-text-field/view/StyledMuiTextField';
 import { StyledMuiMenuItem } from 'components/base-text-field/view/StyledMuiMenuItem';

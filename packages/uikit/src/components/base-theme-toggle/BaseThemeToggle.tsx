@@ -1,9 +1,12 @@
 import type { PropsWithChildren } from 'react';
 import React, { useCallback } from 'react';
-import { BaseIconButton } from 'components/base-icon-button';
-import type { BaseComponentProps } from 'design-system/types';
+
 import type { ThemeKey } from 'design-system';
 import { useTheme, mergeSx } from 'design-system';
+
+import type { BaseComponentProps } from 'design-system/types';
+
+import { BaseIconButton } from 'components/base-icon-button';
 
 const rootSx = {
   color: 'element-1',

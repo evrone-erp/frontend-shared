@@ -1,7 +1,9 @@
 import React from 'react';
 import type { Meta, StoryFn } from '@storybook/react';
+
 import type { IconType } from 'components/base-icon/icons';
 import { icons } from 'components/base-icon/icons';
+
 import type { BaseIconProps } from './BaseIcon';
 import { BaseIcon } from './BaseIcon';
 

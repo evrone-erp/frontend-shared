@@ -1,6 +1,7 @@
 import type { TextFieldProps } from '@mui/material';
-import type { BaseComponentProps } from 'design-system/types';
 import type { PatternFormatProps } from 'react-number-format';
+
+import type { BaseComponentProps } from 'design-system/types';
 
 export type BaseTextFieldProps =
   | CustomizedPasswordFieldProps

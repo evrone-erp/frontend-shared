@@ -1,4 +1,5 @@
 import React from 'react';
+
 import type { Sx } from 'design-system';
 
 import type { StyledMuiCheckboxProps } from './view/StyledMuiCheckbox';

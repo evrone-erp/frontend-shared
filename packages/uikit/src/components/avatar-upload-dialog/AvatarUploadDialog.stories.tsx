@@ -1,8 +1,9 @@
 import type { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
+import { useBooleanState } from '@evrone-erp/react-std';
+
 import type { AvatarUploadDialogProps } from 'components/avatar-upload-dialog/AvatarUploadDialog';
 import { AvatarUploadDialog } from 'components/avatar-upload-dialog/AvatarUploadDialog';
-import { useBooleanState } from '@evrone-erp/react-std';
 import { BaseButton } from 'components/base-button';
 
 export default {

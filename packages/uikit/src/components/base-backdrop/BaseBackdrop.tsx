@@ -1,5 +1,6 @@
 import React from 'react';
 import Backdrop, { BackdropProps } from '@mui/material/Backdrop';
+
 import { mergeSx } from 'design-system';
 
 const rootSx = {

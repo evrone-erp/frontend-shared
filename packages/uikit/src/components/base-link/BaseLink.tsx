@@ -2,7 +2,9 @@ import type { LinkProps as NextLinkProps } from 'next/link';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import React from 'react';
+
 import type { Sx } from 'design-system';
+
 import { StyledLink } from './view/StyledLink';
 
 export interface BaseLinkProps extends Omit<NextLinkProps, 'passHref' | 'onMouseEnter' | 'onClick' | 'onTouchStart'> {

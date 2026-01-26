@@ -3,8 +3,10 @@ import React, { forwardRef } from 'react';
 import { CircularProgress } from '@mui/material';
 
 import type { BaseComponentProps } from 'design-system/types';
+
 import type { IconType } from 'components/base-icon';
 import { BaseIcon } from 'components/base-icon';
+
 import type { StyledTextButtonProps } from './view/StyledTextButton';
 import { StyledTextButton } from './view/StyledTextButton';
 import { StyledIconContainer } from './view/StyledIconContainer';

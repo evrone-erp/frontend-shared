@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { useTheme } from '@mui/material';
+
 import type { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
 import { IconRoot } from 'components/base-icon/view/IconRoot';
 

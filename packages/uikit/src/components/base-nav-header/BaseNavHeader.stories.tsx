@@ -1,7 +1,9 @@
 import type { Meta, StoryFn } from '@storybook/react';
-import { BaseTextButton } from 'components/base-text-button';
 import React, { useState } from 'react';
 import { Typography } from '@mui/material';
+
+import { BaseTextButton } from 'components/base-text-button';
+
 import type { BaseNavHeaderProps } from './BaseNavHeader';
 import { BaseNavHeader } from './BaseNavHeader';
 import { AccountButton } from './view/AccountButton';

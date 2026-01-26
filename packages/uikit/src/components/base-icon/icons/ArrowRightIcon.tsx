@@ -1,4 +1,5 @@
 import React from 'react';
+
 import type { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
 import { IconRoot } from 'components/base-icon/view/IconRoot';
 

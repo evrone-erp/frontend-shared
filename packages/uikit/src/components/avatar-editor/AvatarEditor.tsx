@@ -1,7 +1,8 @@
 import AvatarEdit from 'react-avatar-editor';
 import React, { useCallback, useRef, useState } from 'react';
-import { BaseButton } from 'components/base-button';
 import { styled } from '@mui/material';
+
+import { BaseButton } from 'components/base-button';
 
 export type TAvatarEditorProps = {
   size: number;

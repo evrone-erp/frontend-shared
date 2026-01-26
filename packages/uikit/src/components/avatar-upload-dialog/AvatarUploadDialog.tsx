@@ -1,9 +1,11 @@
+import React from 'react';
+import { Typography } from '@mui/material';
+
+import type { Sx } from 'design-system/types';
+
 import type { TAvatarEditorProps } from 'components/avatar-editor/AvatarEditor';
 import type { AvatarUploadProps } from 'components/avatar-upload/AvatarUpload';
-import React from 'react';
-import type { Sx } from 'design-system/types';
 import { BaseDialog, BaseDialogPosition } from 'components/base-dialog';
-import { Typography } from '@mui/material';
 import { AvatarUpload } from 'components/avatar-upload';
 
 export type AvatarUploadDialogProps = {

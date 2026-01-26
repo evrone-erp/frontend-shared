@@ -3,6 +3,7 @@ import React from 'react';
 
 import type { Sx } from 'design-system';
 import { mergeSx } from 'design-system';
+
 import { BaseTextButton } from 'components/base-text-button';
 
 type AccountButtonProps = {

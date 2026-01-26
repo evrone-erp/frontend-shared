@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Meta, StoryFn } from '@storybook/react';
+
 import type { BaseProgressBarProps } from './BaseProgressBar';
 import { BaseProgressBar } from './BaseProgressBar';
 

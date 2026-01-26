@@ -1,10 +1,10 @@
 import type { ReactNode } from 'react';
 import React from 'react';
 import { Box } from '@mui/material';
+import classNames from 'classnames';
 
 import type { ColorName, Sx } from 'design-system';
 import { mergeSx } from 'design-system';
-import classNames from 'classnames';
 
 type ProgressWrapperProps = {
   sx?: Sx;

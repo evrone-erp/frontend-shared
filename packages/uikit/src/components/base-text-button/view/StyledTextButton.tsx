@@ -1,5 +1,6 @@
 import type { ButtonProps } from '@mui/material';
 import { ButtonBase, styled } from '@mui/material';
+
 import type { ColorName } from 'design-system';
 
 export type StyledTextButtonProps = Partial<Omit<ButtonProps, 'nonce'>> & {

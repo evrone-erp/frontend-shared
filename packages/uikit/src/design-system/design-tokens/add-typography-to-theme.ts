@@ -1,5 +1,7 @@
 import type { Theme } from '@mui/material';
+
 import type { TypographyName } from 'design-system/types';
+
 import tokens from './design-tokens.json';
 
 type TokenFont = {

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import type { ColorName, Sx } from 'design-system';
 
 import type { ProgressSegment } from './types';

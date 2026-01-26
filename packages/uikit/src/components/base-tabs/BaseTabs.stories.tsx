@@ -1,6 +1,7 @@
 import type { Theme } from '@mui/material';
 import type { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
+
 import type { BaseTabsProps } from './BaseTabs';
 import { BaseTabs } from './BaseTabs';
 

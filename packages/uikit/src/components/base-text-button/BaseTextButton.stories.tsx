@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Meta, StoryFn } from '@storybook/react';
+
 import type { BaseTextButtonProps } from './BaseTextButton';
 import { BaseTextButton } from './BaseTextButton';
 

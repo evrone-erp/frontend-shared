@@ -1,8 +1,8 @@
 import React from 'react';
+import { useTheme } from '@mui/material';
 
 import { IconRoot } from 'components/base-icon/view/IconRoot';
 import type { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
-import { useTheme } from '@mui/material';
 
 export function OpenedEyeIcon({ bgColor = 'bg-0', ...props }: ConcreteIconProps) {
   const theme = useTheme();

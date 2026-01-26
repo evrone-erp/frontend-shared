@@ -4,6 +4,7 @@ import { IconButton } from '@mui/material';
 
 import type { ColorName, Sx } from 'design-system';
 import { mergeSx } from 'design-system';
+
 import type { IconType } from 'components/base-icon';
 import { BaseIcon } from 'components/base-icon';
 

@@ -1,4 +1,5 @@
 import { bindPropsSxMerge } from 'design-system';
+
 import { BaseIconButton } from 'components/base-icon-button';
 
 export const BaseCloseButton = bindPropsSxMerge(BaseIconButton, {

@@ -1,4 +1,5 @@
 import type { Theme, SxProps } from '@mui/material';
+
 import type tokens from './design-tokens/design-tokens.json';
 
 export type Sx = SxProps<Theme>;

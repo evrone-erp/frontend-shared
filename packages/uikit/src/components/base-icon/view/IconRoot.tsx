@@ -1,4 +1,5 @@
 import { styled } from '@mui/material';
+
 import type { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
 
 export const IconRoot = styled('svg')<ConcreteIconProps>(({ color, size, theme }) => ({

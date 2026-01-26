@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 
 import type { Sx } from 'design-system';
 import { mergeSx } from 'design-system';
+
 import { BaseCloseButton } from 'components/base-close-button';
 
 import { HelpContainer } from './view/HelpContainer';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import type { Meta, StoryFn } from '@storybook/react';
+
 import type { BaseIconButtonProps } from './BaseIconButton';
 import { BaseIconButton } from './BaseIconButton';
 
