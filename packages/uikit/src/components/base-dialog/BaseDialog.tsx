@@ -2,9 +2,11 @@ import React, { memo, useMemo } from 'react';
 import { Dialog, Box } from '@mui/material';
 
 import { mergeSx } from 'design-system';
+
 import { BaseModalHeader } from 'components/base-modal-header';
 
-import { BaseDialogPosition, BaseDialogProps } from './types';
+import type { BaseDialogProps } from './types';
+import { BaseDialogPosition } from './types';
 import { Transition } from './ui/Transition';
 import { styles } from './BaseDialog.styles';
 

@@ -1,5 +1,6 @@
-import React, { forwardRef, Ref, ReactElement } from 'react';
-import { TransitionProps as MuiTransitionProps } from '@mui/material/transitions';
+import type { Ref, ReactElement } from 'react';
+import React, { forwardRef } from 'react';
+import type { TransitionProps as MuiTransitionProps } from '@mui/material/transitions';
 import Slide from '@mui/material/Slide';
 import { styled } from '@mui/material/styles';
 

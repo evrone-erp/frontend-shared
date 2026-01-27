@@ -1,4 +1,4 @@
-import { MutableRefObject } from 'react';
+import type { MutableRefObject } from 'react';
 import { useBooleanState, useIsomorphicLayoutEffect } from '@evrone-erp/react-std';
 
 export function useOverflow(ref: MutableRefObject<HTMLParagraphElement | null>) {

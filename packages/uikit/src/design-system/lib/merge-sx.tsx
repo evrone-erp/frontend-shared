@@ -1,4 +1,4 @@
-import { Sx } from 'design-system/types';
+import type { Sx } from 'design-system/types';
 
 export function mergeSx(...sxList: (Sx | undefined | false)[]) {
   return sxList.reduce((sx1 = [], sx2 = []) => [

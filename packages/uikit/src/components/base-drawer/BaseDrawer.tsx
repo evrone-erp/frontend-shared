@@ -1,7 +1,8 @@
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import { noop } from 'lodash';
 
-import { Sx } from 'design-system';
+import type { Sx } from 'design-system';
 
 import { StyledMuiDrawer } from './view/StyledMuiDrawer';
 import { DrawerHeader } from './view/DrawerHeader';

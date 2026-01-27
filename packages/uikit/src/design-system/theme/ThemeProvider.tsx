@@ -1,6 +1,9 @@
-import React, { createContext, ReactNode, useContext, useCallback, useEffect, useState, useMemo } from 'react';
+import type { ReactNode } from 'react';
+import React, { createContext, useContext, useCallback, useEffect, useState, useMemo } from 'react';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material';
-import { ThemeKey } from 'design-system/types';
+
+import type { ThemeKey } from 'design-system/types';
+
 import { createTheme } from './create-theme';
 import { getSystemColorScheme } from './get-system-color-scheme';
 

@@ -1,8 +1,11 @@
 import { Typography } from '@mui/material';
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import { useBooleanState } from '@evrone-erp/react-std';
+
 import { useElementLineHeight } from 'components/base-help/lib/use-element-line-height';
 import { useOverflow } from 'components/base-help/lib/use-overflow';
+
 import { ExpandButton } from './ExpandButton';
 
 type TextContentProps = { children?: ReactNode; maxLines: number };

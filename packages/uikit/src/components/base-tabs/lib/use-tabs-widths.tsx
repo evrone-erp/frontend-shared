@@ -1,5 +1,4 @@
 import { useLayoutEffect, useState } from 'react';
-
 import { useGetRef } from '@evrone-erp/react-std';
 
 import type { TabId, Tab } from 'components/base-tabs/types';

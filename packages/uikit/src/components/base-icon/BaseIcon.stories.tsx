@@ -1,7 +1,11 @@
 import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
-import { icons, IconType } from 'components/base-icon/icons';
-import { BaseIcon, BaseIconProps } from './BaseIcon';
+import type { Meta, StoryFn } from '@storybook/react';
+
+import type { IconType } from 'components/base-icon/icons';
+import { icons } from 'components/base-icon/icons';
+
+import type { BaseIconProps } from './BaseIcon';
+import { BaseIcon } from './BaseIcon';
 
 export default {
   title: 'UI/BaseIcon',

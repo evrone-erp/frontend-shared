@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Sx } from 'design-system';
+import type { Sx } from 'design-system';
 
-import { Tab, TabId } from './types';
+import type { Tab, TabId } from './types';
 import { useTabCenterOffset } from './lib/use-tab-center-offset';
 import { TabItem } from './view/TabItem';
 import { TabsContainer } from './view/TabsContainer';

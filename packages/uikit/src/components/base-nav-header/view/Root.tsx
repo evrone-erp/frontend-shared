@@ -1,6 +1,8 @@
 import React, { forwardRef } from 'react';
 import classNames from 'classnames';
-import { AppBar, AppBarProps, Box } from '@mui/material';
+import type { AppBarProps } from '@mui/material';
+import { AppBar, Box } from '@mui/material';
+
 import { mergeSx } from 'design-system';
 
 type RootProps = {

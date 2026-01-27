@@ -1,7 +1,11 @@
-import React, { memo, ReactNode, useCallback } from 'react';
-import { Typography, Box, DialogProps } from '@mui/material';
+import type { ReactNode } from 'react';
+import React, { memo, useCallback } from 'react';
+import type { DialogProps } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 
-import { Sx, mergeSx } from 'design-system';
+import type { Sx } from 'design-system';
+import { mergeSx } from 'design-system';
+
 import { BaseCloseButton } from 'components/base-close-button';
 
 import { styles } from './BaseModalHeader.styles';

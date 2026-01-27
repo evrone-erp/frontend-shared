@@ -1,4 +1,4 @@
-import { ColorName, Sx } from 'design-system';
+import type { ColorName, Sx } from 'design-system';
 
 export type ConcreteIconProps = {
   className?: string;

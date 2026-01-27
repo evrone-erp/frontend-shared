@@ -1,4 +1,5 @@
-import { styled, Link, LinkProps } from '@mui/material';
+import type { LinkProps } from '@mui/material';
+import { styled, Link } from '@mui/material';
 
 export const StyledLink = styled(Link)<LinkProps>(({ theme: { transitions } }) => ({
   typography: 'text',

@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+
 import { bindPropsSxMerge } from 'design-system';
 
 export const HelpContainer = bindPropsSxMerge(Box, {

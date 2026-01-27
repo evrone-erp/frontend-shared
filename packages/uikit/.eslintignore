@@ -1,3 +1,2 @@
-.eslintrc.js
-.storybook
 /node_modules
+/dist

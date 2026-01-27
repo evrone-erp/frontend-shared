@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { IconRoot } from 'components/base-icon/view/IconRoot';
-import { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
+import type { ConcreteIconProps } from 'components/base-icon/types/concrete-icon-props';
 
 export function HintIcon(props: ConcreteIconProps) {
   return (

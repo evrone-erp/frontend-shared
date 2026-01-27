@@ -1,6 +1,9 @@
-import React, { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
+import React from 'react';
 
-import { mergeSx, Sx } from 'design-system';
+import type { Sx } from 'design-system';
+import { mergeSx } from 'design-system';
+
 import { BaseTextButton } from 'components/base-text-button';
 
 type AccountButtonProps = {

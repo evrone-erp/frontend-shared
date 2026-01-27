@@ -1,7 +1,10 @@
-import { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
+
 import { BasePlate, BasePlateHeader } from 'components/base-plate';
-import { BaseGrid, BaseGridProps } from './BaseGrid';
+
+import type { BaseGridProps } from './BaseGrid';
+import { BaseGrid } from './BaseGrid';
 
 export default {
   title: 'UI/BaseGrid',

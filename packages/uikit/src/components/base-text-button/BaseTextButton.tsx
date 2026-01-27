@@ -1,9 +1,14 @@
-import React, { forwardRef, ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React, { forwardRef } from 'react';
 import { CircularProgress } from '@mui/material';
 
-import { BaseComponentProps } from 'design-system/types';
-import { BaseIcon, IconType } from 'components/base-icon';
-import { StyledTextButton, StyledTextButtonProps } from './view/StyledTextButton';
+import type { BaseComponentProps } from 'design-system/types';
+
+import type { IconType } from 'components/base-icon';
+import { BaseIcon } from 'components/base-icon';
+
+import type { StyledTextButtonProps } from './view/StyledTextButton';
+import { StyledTextButton } from './view/StyledTextButton';
 import { StyledIconContainer } from './view/StyledIconContainer';
 
 export type BaseTextButtonProps = {

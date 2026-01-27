@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-import { Sx } from 'design-system';
+import type { Sx } from 'design-system';
 
 export type BaseProgressProps = {
   sx?: Sx;

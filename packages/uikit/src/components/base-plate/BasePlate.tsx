@@ -1,8 +1,11 @@
-import React, { ElementType, PropsWithChildren } from 'react';
+import type { ElementType, PropsWithChildren } from 'react';
+import React from 'react';
 import classNames from 'classnames';
-
 import { Box } from '@mui/material';
-import { mergeSx, Sx } from 'design-system';
+
+import type { Sx } from 'design-system';
+import { mergeSx } from 'design-system';
+
 import { BaseLoader } from 'components/base-loader';
 
 const commonSx = {

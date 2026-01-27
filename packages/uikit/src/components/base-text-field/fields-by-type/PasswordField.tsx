@@ -1,9 +1,11 @@
-import React, { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
+import React from 'react';
 import { InputAdornment } from '@mui/material';
+
 import { BaseIconButton } from 'components/base-icon-button';
 import { BaseIcon } from 'components/base-icon';
 import { StyledMuiTextField } from 'components/base-text-field/view/StyledMuiTextField';
-import { PasswordFieldProps } from 'components/base-text-field/types';
+import type { PasswordFieldProps } from 'components/base-text-field/types';
 
 export const PasswordField = (props: PropsWithChildren<PasswordFieldProps>) => {
   const [isValueVisibile, setIsValueVisible] = React.useState(false);

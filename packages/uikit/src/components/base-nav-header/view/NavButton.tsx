@@ -1,9 +1,13 @@
-import React, { memo, ReactNode, useCallback, useContext, useRef } from 'react';
+import type { ReactNode } from 'react';
+import React, { memo, useCallback, useContext, useRef } from 'react';
 import { Typography } from '@mui/material';
 
-import { BaseComponentProps } from 'design-system/types';
 import { mergeSx } from 'design-system';
-import { BaseTextButton, BaseTextButtonProps } from 'components/base-text-button';
+
+import type { BaseComponentProps } from 'design-system/types';
+
+import type { BaseTextButtonProps } from 'components/base-text-button';
+import { BaseTextButton } from 'components/base-text-button';
 import { SubmenuContext } from 'components/base-nav-header/model';
 
 type SubmenuFnProps = {

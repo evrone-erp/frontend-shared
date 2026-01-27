@@ -1,8 +1,11 @@
-import React, { MouseEvent } from 'react';
+import type { MouseEvent } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { Box } from '@mui/material';
 
-import { Sx, mergeSx } from 'design-system';
+import type { Sx } from 'design-system';
+import { mergeSx } from 'design-system';
+
 import { BaseCloseButton } from 'components/base-close-button';
 
 import { HelpContainer } from './view/HelpContainer';

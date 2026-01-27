@@ -1,8 +1,12 @@
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import React from 'react';
 import { IconButton } from '@mui/material';
 
-import { ColorName, mergeSx, Sx } from 'design-system';
-import { BaseIcon, IconType } from 'components/base-icon';
+import type { ColorName, Sx } from 'design-system';
+import { mergeSx } from 'design-system';
+
+import type { IconType } from 'components/base-icon';
+import { BaseIcon } from 'components/base-icon';
 
 export type BaseIconButtonProps = {
   sx?: Sx;

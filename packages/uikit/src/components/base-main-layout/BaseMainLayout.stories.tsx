@@ -1,9 +1,12 @@
-import { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
+
 import { BasePlate, BasePlateHeader } from 'components/base-plate';
 import { BaseGrid } from 'components/base-grid/BaseGrid';
 import { BaseNavHeader } from 'components/base-nav-header';
-import { BaseMainLayout, BaseMainLayoutProps } from './BaseMainLayout';
+
+import type { BaseMainLayoutProps } from './BaseMainLayout';
+import { BaseMainLayout } from './BaseMainLayout';
 
 export default {
   title: 'UI/BaseMainLayout',

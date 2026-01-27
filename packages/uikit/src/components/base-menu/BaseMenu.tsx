@@ -1,11 +1,12 @@
-import React, { memo, FC, ReactNode, NamedExoticComponent, MemoExoticComponent } from 'react';
-import Select, { SelectProps, SelectChangeEvent } from '@mui/material/Select';
+import type { FC, ReactNode, NamedExoticComponent, MemoExoticComponent } from 'react';
+import React, { memo } from 'react';
+import type { SelectProps } from '@mui/material/Select';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
 import { mergeSx } from 'design-system';
 
 import { Icon } from './ui/Icon';
-
 import { styles } from './BaseMenu.styles';
 
 type BaseMenuCompose = {

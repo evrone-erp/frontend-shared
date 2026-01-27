@@ -1,6 +1,8 @@
 import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
-import { BaseButton, BaseButtonProps } from './BaseButton';
+import type { Meta, StoryFn } from '@storybook/react';
+
+import type { BaseButtonProps } from './BaseButton';
+import { BaseButton } from './BaseButton';
 
 export default {
   title: 'UI/BaseButton',

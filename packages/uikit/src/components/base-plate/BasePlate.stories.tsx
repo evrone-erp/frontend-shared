@@ -1,13 +1,16 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import React from 'react';
-import { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import { Box } from '@mui/material';
+
 import { BaseTextButton } from 'components/base-text-button';
 import { BaseCheckBox } from 'components/base-check-box';
 import { BaseButton } from 'components/base-button';
 import { BaseLink } from 'components/base-link';
-import { BasePlate, BasePlateProps } from './BasePlate';
+
+import type { BasePlateProps } from './BasePlate';
+import { BasePlate } from './BasePlate';
 import { BasePlateHeader } from './BasePlateHeader';
 import { BasePlateFooter } from './BasePlateFooter';
 

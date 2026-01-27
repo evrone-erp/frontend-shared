@@ -1,4 +1,4 @@
-import { ThemeKey } from 'design-system/types';
+import type { ThemeKey } from 'design-system/types';
 
 export const getSystemColorScheme = (defaultKey: ThemeKey): ThemeKey => {
   if (typeof window !== 'undefined' && window.matchMedia) {

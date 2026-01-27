@@ -1,4 +1,5 @@
-import { Button, ButtonProps, styled } from '@mui/material';
+import type { ButtonProps } from '@mui/material';
+import { Button, styled } from '@mui/material';
 
 export type StyledButtonProps = Partial<Omit<ButtonProps, 'nonce'>> & { isRound?: boolean };
 

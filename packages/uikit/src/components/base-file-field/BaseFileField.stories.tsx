@@ -1,6 +1,8 @@
-import { Meta, StoryFn } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
-import { BaseFileField, BaseFileFieldProps } from './BaseFileField';
+
+import type { BaseFileFieldProps } from './BaseFileField';
+import { BaseFileField } from './BaseFileField';
 
 export default {
   title: 'UI/BaseFileField',

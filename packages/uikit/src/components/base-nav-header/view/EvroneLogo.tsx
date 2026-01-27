@@ -1,7 +1,9 @@
-import React, { memo, PropsWithChildren, ReactNode } from 'react';
+import type { PropsWithChildren, ReactNode } from 'react';
+import React, { memo } from 'react';
 import Link from '@mui/material/Link';
 
-import { mergeSx, Sx } from 'design-system';
+import type { Sx } from 'design-system';
+import { mergeSx } from 'design-system';
 
 export type EvroneLogoProps = {
   href?: string;
