@@ -78,7 +78,7 @@
     "@zerollup/ts-transform-paths": "^1.7.18",
     "babel-loader": "^8.2.4",
     "babel-plugin-tsconfig-paths-module-resolver": "^1.0.3",
-    "eslint": "^8.53.0",
+    "eslint": "^9.26.0",
     "eslint-config-airbnb": "^15.0.0",
     "eslint-config-next": "^14.0.2",
     "eslint-plugin-storybook": "^0.6.15",
