@@ -8,20 +8,20 @@
     "src"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=24"
   },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
-    "lint": "tsdx lint",
+    "lint": "eslint src",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "eslint src"
     }
   },
   "name": "@evrone-erp/money",
@@ -42,6 +42,7 @@
     }
   ],
   "devDependencies": {
+    "@evrone-erp/eslint-config": "^2.0.0",
     "@size-limit/preset-small-lib": "^7.0.8",
     "husky": "^7.0.4",
     "size-limit": "^7.0.8",

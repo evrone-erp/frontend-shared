@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import React, { forwardRef } from 'react';
 import { CircularProgress } from '@mui/material';
 
-import type { BaseComponentProps } from 'design-system/types';
+import type { BaseComponentProps } from 'design-system';
 
 import type { IconType } from 'components/base-icon';
 import { BaseIcon } from 'components/base-icon';

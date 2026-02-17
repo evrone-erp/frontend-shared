@@ -20,6 +20,6 @@
     "incremental": true,
     "noFallthroughCasesInSwitch": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

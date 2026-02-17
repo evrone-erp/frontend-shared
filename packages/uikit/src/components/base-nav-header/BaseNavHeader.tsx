@@ -2,7 +2,7 @@ import type { ReactNode, NamedExoticComponent, FC } from 'react';
 import React, { memo, useRef } from 'react';
 import type { AppBarProps } from '@mui/material';
 
-import type { BaseComponentProps } from 'design-system/types';
+import type { BaseComponentProps } from 'design-system';
 
 import { SubmenuProvider } from './model/submenuContext';
 import { MenuBar } from './view/MenuBar';

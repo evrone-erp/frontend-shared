@@ -1,1 +1,2 @@
-export { BaseButton, BaseButtonProps } from './BaseButton';
+export { BaseButton } from './BaseButton';
+export type { BaseButtonProps } from './BaseButton';

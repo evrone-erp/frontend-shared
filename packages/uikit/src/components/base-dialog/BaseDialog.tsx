@@ -34,9 +34,9 @@ const positionSx = {
 
 export const BaseDialog = memo(({ children, open, sx, onClose, header, position }: BaseDialogProps) => {
   const transitionSx = useMemo(() => {
-    const positionIsValid = position && position in BaseDialogPosition;
+    const key: BaseDialogPosition = position && position in BaseDialogPosition ? position : BaseDialogPosition.center;
     return {
-      '& .BaseDialog__transition': positionIsValid ? positionSx[position] : positionSx.center,
+      '& .BaseDialog__transition': positionSx[key],
     };
   }, [position]);
 

@@ -3,8 +3,7 @@ import React, { useCallback } from 'react';
 
 import type { ThemeKey } from 'design-system';
 import { useTheme, mergeSx } from 'design-system';
-
-import type { BaseComponentProps } from 'design-system/types';
+import type { BaseComponentProps } from 'design-system';
 
 import { BaseIconButton } from 'components/base-icon-button';
 

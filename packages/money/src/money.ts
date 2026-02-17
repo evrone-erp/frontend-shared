@@ -1,5 +1,6 @@
-import { CURRENCY_UI_PROPS, ECurrency } from "./currency";
-import { groupNumberString } from "./group-number-string";
+import type { ECurrency } from './currency';
+import { CURRENCY_UI_PROPS } from './currency';
+import { groupNumberString } from './group-number-string';
 
 const FLOAT_MODIFIER = 100;
 
@@ -41,7 +42,7 @@ export class Money {
       return currencySign ? `${currencySign}\u00A0${formattedAmount}` : formattedAmount;
     }
 
-    return currencySign ? `${formattedAmount}\u00A0${currencySign}` : formattedAmount
+    return currencySign ? `${formattedAmount}\u00A0${currencySign}` : formattedAmount;
   }
 
   private action(arg: number, action: string) {

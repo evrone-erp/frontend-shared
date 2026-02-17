@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import classNames from 'classnames';
 
-import type { BaseComponentProps } from 'design-system/types';
+import type { BaseComponentProps } from 'design-system';
 
 export type BasePlateFooterProps = {
   primaryAction: JSX.Element;

@@ -4,7 +4,7 @@ import { Group } from '@visx/group';
 import { AxisBottom } from '@visx/axis';
 import { Bar, Line } from '@visx/shape';
 import { Text } from '@visx/text';
-import { Category, ChartProps, DataElement, NavPoint } from './types';
+import type { Category, ChartProps, DataElement, NavPoint } from './types';
 import {
   CATEGORY_LABEL_WIDTH,
   MAX_BAR_WIDTH,

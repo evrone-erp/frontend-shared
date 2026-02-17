@@ -1,2 +1,1 @@
-export { CookiesProvider, useCookie } from "./cookie-context";
-
+export { CookiesProvider, useCookie } from './cookie-context';

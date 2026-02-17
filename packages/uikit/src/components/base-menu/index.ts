@@ -1,1 +1,2 @@
-export { BaseMenu, BaseMenuProps, BaseMenuChangeEvent } from './BaseMenu';
+export { BaseMenu } from './BaseMenu';
+export type { BaseMenuProps, BaseMenuChangeEvent } from './BaseMenu';

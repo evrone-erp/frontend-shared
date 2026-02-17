@@ -1,4 +1,5 @@
-import { createRef, RefObject, useCallback, useRef } from "react";
+import type { RefObject } from 'react';
+import { createRef, useCallback, useRef } from 'react';
 
 type Key = string | number;
 
@@ -18,6 +19,6 @@ export function useGetRef<T>() {
       refsObject[key] = newRef;
       return newRef;
     },
-    [refsObject]
+    [refsObject],
   );
 }

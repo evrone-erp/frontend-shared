@@ -1,1 +1,2 @@
-export { BaseLoader, BaseLoaderProps } from './BaseLoader';
+export { BaseLoader } from './BaseLoader';
+export type { BaseLoaderProps } from './BaseLoader';
