@@ -1,5 +1,4 @@
-// Генерирует запрет на импорты вышележащих слоёв из ниже лежащих для https://feature-sliced.design/
-const genRestrictedPaths = (paths = []) =>
+export const genRestrictedPaths = (paths = []) =>
   paths
     .reverse()
     .map((path, index, arr) => [path, arr.slice(index + 1)])
@@ -9,7 +8,3 @@ const genRestrictedPaths = (paths = []) =>
         from,
       })),
     );
-
-module.exports = {
-  genRestrictedPaths,
-};

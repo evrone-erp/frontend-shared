@@ -1,5 +1,6 @@
 import React from 'react';
-import Backdrop, { BackdropProps } from '@mui/material/Backdrop';
+import type { BackdropProps } from '@mui/material/Backdrop';
+import Backdrop from '@mui/material/Backdrop';
 
 import { mergeSx } from 'design-system';
 
@@ -13,4 +14,4 @@ export const BaseBackdrop = React.memo(({ children, sx, onClick, open }: Backdro
   </Backdrop>
 ));
 
-export { BackdropProps as BaseBackdropProps };
+export type { BackdropProps as BaseBackdropProps };

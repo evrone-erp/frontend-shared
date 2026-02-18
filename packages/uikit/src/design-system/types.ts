@@ -10,7 +10,3 @@ export type ColorName =
   | keyof typeof tokens.color.exception
   | `${keyof typeof tokens.color.dark}-${keyof typeof tokens.color.dark.bg}`
   | `${keyof typeof tokens.color.dark}-${keyof typeof tokens.color.dark.element}`;
-export type BaseComponentProps = {
-  sx?: Sx;
-  className?: string;
-};

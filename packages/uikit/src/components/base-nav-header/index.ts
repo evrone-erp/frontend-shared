@@ -1,3 +1,4 @@
-export * from './BaseNavHeader';
+export { BaseNavHeader } from './BaseNavHeader';
+export type { BaseNavHeaderProps } from './BaseNavHeader';
 export * from './model';
-export { SubmenuProps } from './view/Submenu';
+export type { SubmenuProps } from './view/Submenu';

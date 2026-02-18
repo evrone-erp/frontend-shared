@@ -1,6 +1,6 @@
 import React from 'react';
-import type { ImageLoaderProps } from 'next/image';
-import Image from 'next/image';
+import type { ImageLoaderProps } from 'next/legacy/image';
+import Image from 'next/legacy/image';
 import { Box, Typography } from '@mui/material';
 
 import type { Sx } from 'design-system';

@@ -1,17 +1,12 @@
-module.exports = {
-  '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+const typescriptRules = {
+  'no-unused-vars': 'off',
+  'no-use-before-define': 'off',
+  '@stylistic/comma-dangle': ['error', 'always-multiline'],
   '@typescript-eslint/consistent-type-imports': [
     'error',
     {
       prefer: 'type-imports',
       disallowTypeAnnotations: false,
-    },
-  ],
-  '@typescript-eslint/ban-types': [
-    'error',
-    {
-      types: { '{}': false },
-      extendDefaults: true,
     },
   ],
   '@typescript-eslint/no-explicit-any': ['error'],
@@ -22,17 +17,14 @@ module.exports = {
   '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
   '@typescript-eslint/naming-convention': [
     'error',
-    // From airbnb-eslint-typescript
     {
       selector: 'typeLike',
       format: ['PascalCase'],
     },
-    // From airbnb-eslint-typescript
     {
       selector: 'function',
       format: ['camelCase', 'PascalCase'],
     },
-    // Name interfaces using I letter
     {
       selector: 'interface',
       format: ['PascalCase'],
@@ -41,7 +33,6 @@ module.exports = {
         match: true,
       },
     },
-    // Name types using T letter
     {
       selector: 'typeAlias',
       format: ['PascalCase'],
@@ -51,4 +42,7 @@ module.exports = {
       },
     },
   ],
+  'import/extensions': 'off',
 };
+
+export default typescriptRules;

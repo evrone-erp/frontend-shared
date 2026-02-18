@@ -19,12 +19,16 @@ const defaultState: UseMeasureRect = {
   right: 0,
 };
 
+interface WindowWithResizeObserver extends Window {
+  ResizeObserver: new (callback: ResizeObserverCallback) => ResizeObserver;
+}
+
 function useElementMeasure(element: HTMLElement): UseMeasureResult {
   const [rect, setRect] = useState<UseMeasureRect>(defaultState);
 
   const observer = useMemo(
     () =>
-      new (window as any).ResizeObserver((entries: ResizeObserverEntry[]) => {
+      new (window as WindowWithResizeObserver).ResizeObserver((entries: ResizeObserverEntry[]) => {
         if (entries[0]) {
           const { x, y, width, height, top, left, bottom, right } = entries[0].contentRect;
           setRect({ x, y, width, height, top, left, bottom, right });
@@ -45,6 +49,8 @@ function useElementMeasure(element: HTMLElement): UseMeasureResult {
 }
 
 const useElementMeasureExport =
-  isBrowser && typeof (window as any).ResizeObserver !== 'undefined' ? useElementMeasure : () => defaultState;
+  isBrowser && typeof (window as WindowWithResizeObserver).ResizeObserver !== 'undefined'
+    ? useElementMeasure
+    : () => defaultState;
 
 export { useElementMeasureExport as useElementMeasure };

@@ -1,2 +1,3 @@
 export { BaseDialog } from './BaseDialog';
-export { BaseDialogProps, BaseDialogPosition } from './types';
+export { BaseDialogPosition } from './types';
+export type { BaseDialogProps } from './types';

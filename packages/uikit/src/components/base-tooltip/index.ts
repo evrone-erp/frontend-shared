@@ -1,1 +1,2 @@
-export { BaseTooltip, BaseTooltipProps } from './BaseTooltip';
+export { BaseTooltip } from './BaseTooltip';
+export type { BaseTooltipProps } from './BaseTooltip';

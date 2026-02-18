@@ -3,8 +3,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 
 import { mergeSx } from 'design-system';
-
-import type { BaseComponentProps } from 'design-system/types';
+import type { BaseComponentProps } from 'design-system';
 
 export type GroupProps = {
   children?: ReactNode;

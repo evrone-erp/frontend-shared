@@ -2,7 +2,7 @@ import React from 'react';
 import { Group } from '@visx/group';
 import { Circle, Line } from '@visx/shape';
 import { Text } from '@visx/text';
-import { NavigationProps } from './types';
+import type { NavigationProps } from './types';
 import { CATEGORY_LABEL_WIDTH, X_AXIS_HEIGHT } from './consts';
 
 export const Navigation: React.FC<NavigationProps> = ({

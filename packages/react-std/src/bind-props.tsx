@@ -19,10 +19,8 @@ export function createBindProps<MergeObject extends Record<string, unknown>>(mer
         const newProps = mergeProps(boundProps as MergeObject, props as MergeObject) as Props;
 
         return <Component {...newProps} ref={ref} />;
-
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       },
-    ) as any;
+    ) as unknown as React.FC<Omit<Props, Exclude<BoundKeys, keyof MergeObject>>>;
     BindedComponent.displayName = newName ?? Component.displayName ?? Component.name;
     BindedComponent.defaultProps = Component.defaultProps;
     BindedComponent.contextTypes = Component.contextTypes;

@@ -1,7 +1,6 @@
 import type { TextFieldProps } from '@mui/material';
-import type { PatternFormatProps } from 'react-number-format';
 
-import type { BaseComponentProps } from 'design-system/types';
+import type { BaseComponentProps } from 'design-system';
 
 export type BaseTextFieldProps =
   | CustomizedPasswordFieldProps
@@ -21,7 +20,7 @@ type BasePasswordField = {
 
 export type PhoneFieldProps = BasePhoneField & Omit<MuiProps, 'ref'>;
 type CustomizedPhoneFieldProps = Omit<BasePhoneField, 'onChange'> & CustomMuiProps;
-type BasePhoneField = Omit<PatternFormatProps, 'onChange'> & {
+type BasePhoneField = {
   type: 'tel';
 };
 

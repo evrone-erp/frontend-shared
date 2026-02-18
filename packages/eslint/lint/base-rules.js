@@ -1,6 +1,4 @@
-const { genRestrictedPaths } = require('./helpers');
-
-module.exports = {
+const baseRules = {
   'prettier/prettier': [
     'error',
     {
@@ -34,6 +32,7 @@ module.exports = {
   'react/react-in-jsx-scope': 'off',
   'react/require-default-props': 'off',
   'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
+  'react/no-array-index-key': 'error',
   'react-perf/jsx-no-new-array-as-prop': 'off',
   'react-perf/jsx-no-new-object-as-prop': 'off',
   'react-perf/jsx-no-new-function-as-prop': 'off',
@@ -44,32 +43,8 @@ module.exports = {
   'import/prefer-default-export': 'off',
   'import/extensions': ['error', 'ignorePackages', { ts: 'never', tsx: 'never', js: 'never', jsx: 'never' }],
 
-  // To support https://feature-sliced.design/
-  'import/no-restricted-paths': [
-    'error',
-    {
-      zones: [
-        ...genRestrictedPaths([
-          './src/1-app',
-          './src/2-processes',
-          './src/3-pages',
-          './src/4-widgets',
-          './src/5-features',
-          './src/6-entities',
-          './src/7-shared',
-        ]),
-      ],
-    },
-  ],
-  'no-restricted-syntax': [
-    'error',
-    {
-      selector:
-        'ImportDeclaration[source.value=/(1-app|2-processes|3-pages|4-widgets|5-features|6-entities|7-shared)/]',
-      message: 'Layer access only by alias',
-    },
-  ],
-  'no-restricted-imports': ['error', { patterns: ['../*'] }],
   'no-param-reassign': 'off',
   'react/no-danger': 'off',
 };
+
+export default baseRules;

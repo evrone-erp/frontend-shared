@@ -14,7 +14,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
+    "lint": "eslint src",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why"
@@ -24,7 +24,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "eslint src"
     }
   },
   "name": "@evrone-erp/react-std",
@@ -45,6 +45,7 @@
     }
   ],
   "devDependencies": {
+    "@evrone-erp/eslint-config": "^2.0.0",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",

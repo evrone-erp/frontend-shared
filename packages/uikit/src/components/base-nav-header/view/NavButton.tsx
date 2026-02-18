@@ -3,8 +3,7 @@ import React, { memo, useCallback, useContext, useRef } from 'react';
 import { Typography } from '@mui/material';
 
 import { mergeSx } from 'design-system';
-
-import type { BaseComponentProps } from 'design-system/types';
+import type { BaseComponentProps } from 'design-system';
 
 import type { BaseTextButtonProps } from 'components/base-text-button';
 import { BaseTextButton } from 'components/base-text-button';

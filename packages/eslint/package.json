@@ -1,28 +1,42 @@
 {
   "name": "@evrone-erp/eslint-config",
-  "version": "1.0.66",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Гибкая конфигурация ESLint: базовый конфиг (JS/TS/React) и опциональные конфиги для Next.js, Storybook и FSD",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./next": "./configs/next.config.js",
+    "./storybook": "./configs/storybook.config.js",
+    "./fsd": "./configs/fsd.config.js",
+    "./package.json": "./package.json",
+    "./tsconfig.json": "./tsconfig.json"
+  },
   "scripts": {
-    "lint": "eslint '**/*.{js,jsx,ts,tsx}'"
+    "lint": "eslint '**/*.{js,jsx,ts,tsx,mjs}'"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^14.2.35",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^18.0.0",
-    "eslint-config-prettier": "^9.1.2",
-    "eslint-import-resolver-typescript": "^3.10.1",
+    "@stylistic/eslint-plugin": "^5.8.0",
+    "eslint": "^9.26.0",
+    "eslint-config-airbnb-extended": "^3.0.1",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-perf": "^3.3.3",
-    "eslint-plugin-storybook": "^0.6.15",
-    "prettier": "^3.1.0",
-    "typescript": "^5.2.2"
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.55.0"
+  },
+  "peerDependencies": {
+    "@next/eslint-plugin-next": ">=16.0.0",
+    "eslint-plugin-storybook": ">=9.0.7"
+  },
+  "peerDependenciesMeta": {
+    "@next/eslint-plugin-next": { "optional": true },
+    "eslint-plugin-storybook": { "optional": true }
   },
   "repository": "https://github.com/evrone-erp/frontend-shared",
   "publishConfig": {

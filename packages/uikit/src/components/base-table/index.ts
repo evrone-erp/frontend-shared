@@ -1,2 +1,9 @@
 export { BaseTable } from './BaseTable';
-export * from './types';
+export type {
+  BaseTableProps,
+  BaseTableBodyProps,
+  BaseTableCellProps,
+  BaseTableContainerProps,
+  BaseTableHeadProps,
+  BaseTableRowProps,
+} from './types';

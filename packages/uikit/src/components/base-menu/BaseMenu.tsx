@@ -1,7 +1,7 @@
 import type { FC, ReactNode, NamedExoticComponent, MemoExoticComponent } from 'react';
 import React, { memo } from 'react';
-import type { SelectProps } from '@mui/material/Select';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import type { SelectProps, SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
 import { mergeSx } from 'design-system';
@@ -13,9 +13,9 @@ type BaseMenuCompose = {
   Item: MemoExoticComponent<typeof MenuItem>;
 };
 
-interface BaseMenuProps extends SelectProps {
+type BaseMenuProps = SelectProps & {
   children: ReactNode;
-}
+};
 
 const inputProps = {
   sx: styles.input,
@@ -43,4 +43,5 @@ const MemoizedMenu = memo(BaseMenu) as NamedExoticComponent<BaseMenuProps> & Bas
 
 MemoizedMenu.Item = memo(MenuItem);
 
-export { MemoizedMenu as BaseMenu, SelectChangeEvent as BaseMenuChangeEvent, BaseMenuProps };
+export { MemoizedMenu as BaseMenu };
+export type { SelectChangeEvent as BaseMenuChangeEvent, BaseMenuProps };

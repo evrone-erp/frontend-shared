@@ -1,4 +1,4 @@
-import { Margin } from './types';
+import type { Margin } from './types';
 
 export const MIN_WIDTH = 720;
 

@@ -4,15 +4,13 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "test": "tsdx test",
     "lint": "eslint src",
     "lint:fix": "yarn lint --fix",
     "types": "tsc",
-    "prepare": "tsdx build"
+    "prepare": "yarn lint && yarn types && tsdx build"
   },
   "author": "Evrone-ERP",
   "repository": "https://github.com/evrone-erp/frontend-shared",
@@ -20,12 +18,9 @@
     "@evrone-erp:registry": "https://npm.pkg.github.com/evrone-erp"
   },
   "devDependencies": {
-    "@evrone-erp/eslint-config": "^1.0.42",
+    "@evrone-erp/eslint-config": "^2.0.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.5.0",
     "typescript": "^4.9.5"
-  },
-  "dependencies": {
-    "@evrone-erp/eslint-config": "^1.0.66"
   }
 }
