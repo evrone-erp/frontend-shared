@@ -1,5 +1,5 @@
 {
-  "version": "1.0.14",
+  "version": "1.0.15",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -57,8 +57,8 @@
     "@babel/core": "^7.17.8",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@evrone-erp/eslint-config": "^2.0.0",
-    "@evrone-erp/prettier-config": "^1.0.41",
+    "@evrone-erp/eslint-config": "^2.0.1",
+    "@evrone-erp/prettier-config": "^1.0.42",
     "@mui/lab": "^5.0.0-alpha.75",
     "@mui/material": "^5.5.3",
     "@next/eslint-plugin-next": "^16.1.6",
@@ -89,7 +89,7 @@
     "typescript-transform-paths": "^3.5.6"
   },
   "dependencies": {
-    "@evrone-erp/react-std": "^0.2.94",
+    "@evrone-erp/react-std": "^0.2.95",
     "@mui/x-date-pickers": "^5.0.7",
     "browser-image-compression": "^1.0.17",
     "classnames": "^2.3.1",

@@ -1,6 +1,6 @@
 {
   "name": "@evrone-erp/eslint-config",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Гибкая конфигурация ESLint: базовый конфиг (JS/TS/React) и опциональные конфиги для Next.js, Storybook и FSD",
   "type": "module",
   "main": "index.js",
@@ -35,8 +35,12 @@
     "eslint-plugin-storybook": ">=9.0.7"
   },
   "peerDependenciesMeta": {
-    "@next/eslint-plugin-next": { "optional": true },
-    "eslint-plugin-storybook": { "optional": true }
+    "@next/eslint-plugin-next": {
+      "optional": true
+    },
+    "eslint-plugin-storybook": {
+      "optional": true
+    }
   },
   "repository": "https://github.com/evrone-erp/frontend-shared",
   "publishConfig": {
