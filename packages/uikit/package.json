@@ -76,7 +76,7 @@
     "babel-plugin-tsconfig-paths-module-resolver": "^1.0.3",
     "eslint-plugin-storybook": "9.0.7",
     "husky": "^7.0.4",
-    "next": "^14.0.2",
+    "next": "^15.5.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup-plugin-copy": "^3.4.0",
