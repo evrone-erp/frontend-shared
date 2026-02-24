@@ -1,5 +1,5 @@
 {
-  "version": "1.0.28",
+  "version": "1.0.29",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -42,7 +42,7 @@
     }
   ],
   "devDependencies": {
-    "@evrone-erp/eslint-config": "^2.0.1",
+    "@evrone-erp/eslint-config": "^2.0.2",
     "@size-limit/preset-small-lib": "^7.0.8",
     "husky": "^7.0.4",
     "size-limit": "^7.0.8",

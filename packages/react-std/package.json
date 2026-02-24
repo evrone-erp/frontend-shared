@@ -1,5 +1,5 @@
 {
-  "version": "0.2.95",
+  "version": "0.2.96",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -45,7 +45,7 @@
     }
   ],
   "devDependencies": {
-    "@evrone-erp/eslint-config": "^2.0.1",
+    "@evrone-erp/eslint-config": "^2.0.2",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",

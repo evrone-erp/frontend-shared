@@ -1,6 +1,6 @@
 {
   "name": "@evrone-erp/eslint-config",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Гибкая конфигурация ESLint: базовый конфиг (JS/TS/React) и опциональные конфиги для Next.js, Storybook и FSD",
   "type": "module",
   "main": "index.js",
