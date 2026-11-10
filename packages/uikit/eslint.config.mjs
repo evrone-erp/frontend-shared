@@ -13,6 +13,9 @@ const config = [
     rules: {
       '@typescript-eslint/naming-convention': 'off',
       '@next/next/no-html-link-for-pages': 'off',
+      // enable rules and fix code in task https://tracker.yandex.ru/ERP-2287
+      'react-hooks/set-state-in-effect': 'off',
+      'react-hooks/refs': 'off',
       'import/order': [
         'error',
         {
