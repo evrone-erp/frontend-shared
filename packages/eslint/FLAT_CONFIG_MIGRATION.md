@@ -67,7 +67,7 @@ export default [
       },
     },
     rules: {
-      'import/unused-modules': ['error', { ... }],
+      'import-x/unused-modules': ['error', { ... }],
       'no-param-reassign': 'off',
       'react/no-danger': 'off',
     },

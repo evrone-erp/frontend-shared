@@ -42,7 +42,7 @@ const typescriptRules = {
       },
     },
   ],
-  'import/extensions': 'off',
+  'import-x/extensions': 'off',
 };
 
 export default typescriptRules;

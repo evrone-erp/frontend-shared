@@ -37,11 +37,11 @@ const baseRules = {
   'react-perf/jsx-no-new-object-as-prop': 'off',
   'react-perf/jsx-no-new-function-as-prop': 'off',
 
-  'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
-  'import/no-anonymous-default-export': 'error',
-  'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-  'import/prefer-default-export': 'off',
-  'import/extensions': ['error', 'ignorePackages', { ts: 'never', tsx: 'never', js: 'never', jsx: 'never' }],
+  'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level'],
+  'import-x/no-anonymous-default-export': 'error',
+  'import-x/no-extraneous-dependencies': ['error', { devDependencies: true }],
+  'import-x/prefer-default-export': 'off',
+  'import-x/extensions': ['error', 'ignorePackages', { ts: 'never', tsx: 'never', js: 'never', jsx: 'never' }],
 
   'no-param-reassign': 'off',
   'react/no-danger': 'off',

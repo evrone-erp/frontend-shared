@@ -1,7 +1,7 @@
 import stylistic from '@stylistic/eslint-plugin';
 import { configs } from 'eslint-config-airbnb-extended';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import importPlugin from 'eslint-plugin-import';
+import importXPlugin from 'eslint-plugin-import-x';
 import prettier from 'eslint-plugin-prettier';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
@@ -19,7 +19,7 @@ const config = [
       'react-hooks': reactHooks,
       'jsx-a11y': jsxA11y,
       '@typescript-eslint': tseslint.plugin,
-      import: importPlugin,
+      'import-x': importXPlugin,
       prettier,
       'react-perf': reactPerf,
     },
@@ -56,7 +56,7 @@ const config = [
   {
     files: ['configs/**', 'lint/**', 'index.js', 'eslint.config.js'],
     rules: {
-      'import/extensions': ['error', 'ignorePackages', { js: 'always', jsx: 'never', ts: 'never', tsx: 'never' }],
+      'import-x/extensions': ['error', 'ignorePackages', { js: 'always', jsx: 'never', ts: 'never', tsx: 'never' }],
     },
   },
 ];
