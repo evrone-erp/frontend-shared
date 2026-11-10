@@ -12,7 +12,7 @@ const storybookConfig = [
   {
     plugins: { storybook: storybookPlugin },
     rules: {
-      'import/no-anonymous-default-export': 'off',
+      'import-x/no-anonymous-default-export': 'off',
       'storybook/await-interactions': 'error',
       'storybook/context-in-play-function': 'error',
       'storybook/default-exports': 'error',

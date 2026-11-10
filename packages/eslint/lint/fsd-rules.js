@@ -4,7 +4,7 @@ import { genRestrictedPaths } from './helpers.js';
  * Правила для проектов со структурой Feature-Sliced Design (https://feature-sliced.design/).
  */
 const fsdRules = {
-  'import/no-restricted-paths': [
+  'import-x/no-restricted-paths': [
     'error',
     {
       zones: [

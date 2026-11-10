@@ -16,7 +16,7 @@ const config = [
       // enable rules and fix code in task https://tracker.yandex.ru/ERP-2287
       'react-hooks/set-state-in-effect': 'off',
       'react-hooks/refs': 'off',
-      'import/order': [
+      'import-x/order': [
         'error',
         {
           'newlines-between': 'always',
